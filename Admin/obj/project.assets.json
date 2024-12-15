@@ -1,0 +1,161 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dominio.dll": {}
+        }
+      },
+      "Infraestrutura/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infraestrutura.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infraestrutura.dll": {}
+        }
+      },
+      "InjecaoDependencia/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Infraestrutura": "1.0.0",
+          "RegraNegocio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InjecaoDependencia.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InjecaoDependencia.dll": {}
+        }
+      },
+      "RegraNegocio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RegraNegocio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RegraNegocio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dominio/1.0.0": {
+      "type": "project",
+      "path": "../Dominio/Dominio.csproj",
+      "msbuildProject": "../Dominio/Dominio.csproj"
+    },
+    "Infraestrutura/1.0.0": {
+      "type": "project",
+      "path": "../Infraestrutura/Infraestrutura.csproj",
+      "msbuildProject": "../Infraestrutura/Infraestrutura.csproj"
+    },
+    "InjecaoDependencia/1.0.0": {
+      "type": "project",
+      "path": "../InjecaoDependencia/InjecaoDependencia.csproj",
+      "msbuildProject": "../InjecaoDependencia/InjecaoDependencia.csproj"
+    },
+    "RegraNegocio/1.0.0": {
+      "type": "project",
+      "path": "../RegraNegocio/RegraNegocio.csproj",
+      "msbuildProject": "../RegraNegocio/RegraNegocio.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "InjecaoDependencia >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Lucas\\source\\repos\\Gaia\\Admin\\Admin.csproj",
+      "projectName": "Admin",
+      "projectPath": "C:\\Users\\Lucas\\source\\repos\\Gaia\\Admin\\Admin.csproj",
+      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucas\\source\\repos\\Gaia\\Admin\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\Lucas\\source\\repos\\Gaia\\InjecaoDependencia\\InjecaoDependencia.csproj": {
+              "projectPath": "C:\\Users\\Lucas\\source\\repos\\Gaia\\InjecaoDependencia\\InjecaoDependencia.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
