@@ -1,77 +1,32 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/style-admin.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Web.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-@*         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+<div class="login-page">
+    <div class="login-from-wrap">
+        <form method="post" asp-controller="Account" asp-action="Login" class="login-from">
+            <h1 class="site-title">
+                <a href="#">
+                    <img src="assets/images/logo.png" alt="">
+                </a>
+            </h1>
+            <div class="form-group">
+                <label for="login">Login</label>
+                <input type="text" name="login" class="form-control" required />
             </div>
-        </nav> *@
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            <h2>Login</h2>
-            <div class="login-page">
-                <div class="login-from-wrap">
-                    <form method="post" asp-controller="Account" asp-action="Login" class="login-from">
-                        <h1 class="site-title">
-                            <a href="#">
-                                <img src="assets/images/logo.png" alt="">
-                            </a>
-                        </h1>
-                        <div class="form-group">
-                            <label for="login">Login</label>
-                            <input type="text" name="login" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" class="form-control" required />
-                        </div>
-                        <button type="submit" class="btn btn-primary">Entrar</button>
-                    </form>
-                </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" required />
             </div>
-            
-@*             @if (!ViewData.ModelState.IsValid)
-            {
-                    <div class="alert alert-danger">
-                    @Html.ValidationSummary()
-                    </div>
-            } *@
-        </main>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
     </div>
-    <footer class="border-top footer text-muted">
-       @*  <div class="container">
-            &copy; 2024 - Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div> *@
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @* @await RenderSectionAsync("Scripts", required: false) *@
-</body>
-</html>
+</div>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+    @Html.ValidationSummary()
+    </div>
+}
