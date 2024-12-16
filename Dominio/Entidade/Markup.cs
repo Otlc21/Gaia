@@ -9,6 +9,9 @@ namespace Dominio.Entidade
 {
     public class Markup
     {
+        [Key]
+        public int Id {  get; set; }
+
         [Required]
         public float PercentualAereo {  get; set; }
 

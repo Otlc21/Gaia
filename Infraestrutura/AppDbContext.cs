@@ -12,7 +12,7 @@ using Infraestrutura.Repositorio;
 
 namespace Infraestrutura
 {
-    public class AppDbContext : IdentityDbContext<ApplicationUser>
+    public class AppDbContext : IdentityDbContext<IdentityUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

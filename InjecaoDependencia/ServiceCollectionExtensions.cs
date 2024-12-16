@@ -18,22 +18,45 @@ namespace InjecaoDependencia
         {
 
             services.AddScoped<IAereoServico, AereoServico>();
+            services.AddScoped<IAeroportoServico, AeroportoServico>();
+
             services.AddScoped<ICarroServico, CarroServico>();
+            services.AddScoped<ICompanhiaAereaServico, CompanhiaAereaServico>();
+
             services.AddScoped<IHotelServico, HotelServico>();
-            services.AddScoped<IPacoteServico, PacoteServico>();
-            services.AddScoped<IUsuarioServico, UsuarioServico>();
+            services.AddScoped<ILocalizacaoServico, LocalizacaoServico>();
+
+
             services.AddScoped<IMarkupServico, MarkupServico>();
+            services.AddScoped<IPacoteServico, PacoteServico>();
+
+            services.AddScoped<IQuartoServico, QuartoServico>();
+            services.AddScoped<IUsuarioServico, UsuarioServico>();
+
+
 
             return services;
         }
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IAereoRepositorio, AereoRepositorio>();
+            services.AddScoped<IAeroportoRepositorio, AeroportoRepositorio>();
+
             services.AddScoped<ICarroRepositorio, CarroRepositorio>();
+            services.AddScoped<ICompanhiaAereaRepositorio, CompanhiaAereaRepositorio>();
+
             services.AddScoped<IHotelRepositorio, HotelRepositorio>();
-            services.AddScoped<IPacoteRepositorio, PacoteRepositorio>();
-            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<ILocalizacaoRepositorio, LocalizacaoRepositorio>();
+
             services.AddScoped<IMarkupRepositorio, MarkupRepositorio>();
+
+            services.AddScoped<IPacoteRepositorio, PacoteRepositorio>();
+
+            services.AddScoped<IQuartoRepositorio, QuartoRepositorio>();
+
+            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+
+
 
             return services;
         }

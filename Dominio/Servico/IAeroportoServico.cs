@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio.Entidade;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,11 @@ namespace Dominio.Servico
 {
     public interface IAeroportoServico
     {
+        Task<int> Count(Aeroporto item);
+        Task<Aeroporto> Get(int id);
+        Task<List<Aeroporto>> Get(Aeroporto item, int skip, int take);
+        Task Insert(Aeroporto item);
+        Task Update(Aeroporto item);
+        Task Delete(int id);
     }
 }
