@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "DynkCa+bays=",
+  "dgSpecHash": "Dh6tGZCEWP0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lucas\\source\\repos\\Gaia\\RegraNegocio\\RegraNegocio.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Lucas\\OneDrive\\Documentos\\GitHub\\Gaia\\RegraNegocio\\RegraNegocio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\serilog.sinks.file\\6.0.0\\serilog.sinks.file.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
