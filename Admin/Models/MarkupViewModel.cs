@@ -39,5 +39,7 @@ namespace Admin.Models
 
         [Required]
         public float PercentualHotel { get; set; }
+
+        public List<Markup> Itens { get; set; }
     }
 }

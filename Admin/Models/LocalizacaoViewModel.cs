@@ -44,5 +44,7 @@ namespace Admin.Models
 
         [Required]
         public DateTime Criacao { get; set; }
+
+        public List<Localizacao> Itens { get; set; }
     }
 }

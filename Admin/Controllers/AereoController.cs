@@ -9,8 +9,6 @@ using System.Diagnostics;
 namespace Admin.Controllers
 {
     [Authorize]
-    [ApiController]
-    [Route("api/[controller]")]
     public class AereoController : Controller
     {
         private readonly IAereoServico _servico;
@@ -27,8 +25,8 @@ namespace Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Get(AereoViewModel item)
         {
-            var itens = await _servico.Get(item.Convert(), item.Skip, item.Take);
-            return Ok(itens);
+            item.Itens = await _servico.Get(item.Convert(), item.Skip, item.Take);
+            return Ok(item);
         }
 
         public IActionResult Insert()

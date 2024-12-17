@@ -24,8 +24,8 @@ namespace Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Get(MarkupViewModel item)
         {
-            var itens = await _servico.Get(item.Convert(), item.Skip, item.Take);
-            return Ok(itens);
+            item.Itens = await _servico.Get(item.Convert(), item.Skip, item.Take);
+            return Ok(item);
         }
 
         public IActionResult Insert()

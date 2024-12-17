@@ -1,8 +1,12 @@
 using Infraestrutura;
 using InjecaoDependencia;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using Serilog;
+using System.Globalization;
 
 namespace Admin
 {
@@ -20,6 +24,8 @@ namespace Admin
 
                 var builder = WebApplication.CreateBuilder(args);
 
+                builder.Services.AddLocalization();
+
                 builder.Services.AddDbContext<AppDbContext>(options =>
                     options.UseMySQL("Server=localhost;Database=Gaia;User=gaia;Password=123456;"));
 
@@ -27,13 +33,28 @@ namespace Admin
                     .AddEntityFrameworkStores<AppDbContext>();
 
                 // Add services to the container.
-                builder.Services.AddControllersWithViews();
+                builder.Services.AddControllersWithViews()
+                    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                    .AddDataAnnotationsLocalization();
 
                 builder.Services.AddDomainServices()
                     .AddInfrastructure(builder.Configuration);
 
                 var app = builder.Build();
 
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("en-US"),
+                    new CultureInfo("pt-BR")
+                };
+
+                app.UseRequestLocalization(new RequestLocalizationOptions
+                {
+                    DefaultRequestCulture = new RequestCulture("en-US"),
+                    SupportedCultures = supportedCultures,
+                    SupportedUICultures = supportedCultures
+                });
+                
                 app.UseAuthentication();
 
                 // Configure the HTTP request pipeline.

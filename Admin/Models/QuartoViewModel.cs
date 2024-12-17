@@ -59,5 +59,7 @@ namespace Admin.Models
 
         [Required]
         public DateTime Criacao { get; set; }
+
+        public List<Quarto> Itens { get; set; }
     }
 }
