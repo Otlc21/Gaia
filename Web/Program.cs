@@ -1,8 +1,11 @@
 using Infraestrutura;
 using InjecaoDependencia;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Globalization;
 
 namespace Web
 {
@@ -26,12 +29,27 @@ namespace Web
                     .AddEntityFrameworkStores<AppDbContext>();
 
                 // Add services to the container.
-                builder.Services.AddControllersWithViews();
+                builder.Services.AddControllersWithViews()
+                    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                    .AddDataAnnotationsLocalization();
 
                 builder.Services.AddDomainServices()
                     .AddInfrastructure(builder.Configuration);
 
                 var app = builder.Build();
+
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("en-US"),
+                    new CultureInfo("pt-BR")
+                };
+
+                app.UseRequestLocalization(new RequestLocalizationOptions
+                {
+                    DefaultRequestCulture = new RequestCulture("en-US"),
+                    SupportedCultures = supportedCultures,
+                    SupportedUICultures = supportedCultures
+                });
 
                 app.UseAuthentication();
 

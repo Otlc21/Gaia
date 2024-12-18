@@ -1,8 +1,150 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container search-box">
+	<!-- Abas -->
+	<ul class="nav nav-pills mb-3" id="searchTabs" role="tablist">
+		<li class="nav-item" role="presentation">
+			<button class="nav-link active" id="stays-tab" data-bs-toggle="pill" data-bs-target="#stays" type="button" role="tab">Stays</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="flights-tab" data-bs-toggle="pill" data-bs-target="#flights" type="button" role="tab">Flights</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="cars-tab" data-bs-toggle="pill" data-bs-target="#cars" type="button" role="tab">Cars</button>
+		</li>
+	</ul>
+
+	<div class="tab-content" id="searchTabContent">
+		<div class="tab-pane fade show active" id="stays" role="tabpanel">
+			<form>
+				<div class="form-container">
+					<div class="form-group">
+						<label>Destination</label>
+
+						<div class="input-icon">
+							<i class="fas fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="Enter a city">
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Check-in</label>
+						<div class="input-icon">
+							<i class="fas fa-calendar-alt"></i>
+							<input type="date" class="form-control" placeholder="Check-in">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Check-out</label>
+						<div class="input-icon">
+							<i class="fas fa-calendar-alt"></i>
+							<input type="date" class="form-control" placeholder="Check-out">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Travelers</label>
+						<div class="input-icon">
+							<i class="fas fa-user"></i>
+							<input type="number" class="form-control" placeholder="Travelers" min="1">
+						</div>
+					</div>
+					<div class="form-group">
+						<label></label>
+						<button type="submit" class="btn-search">Search</button>
+					</div>
+
+				</div>
+			</form>
+		</div>
+
+		<div class="tab-pane fade" id="flights" role="tabpanel">
+			<form>
+				<div class="form-container">
+					<div class="form-group">
+						<label>From</label>
+						<div class="input-icon">
+							<i class="fas fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="Departure city">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>To</label>
+						<div class="input-icon">
+							<i class="fas fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="Destination city">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Departure date</label>
+						<div class="input-icon">
+							<i class="fas fa-calendar-alt"></i>
+							<input type="date" class="form-control" placeholder="Departure">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Travelers</label>
+						<div class="input-icon">
+							<i class="fas fa-user"></i>
+							<input type="number" class="form-control" placeholder="Travelers" min="1">
+						</div>
+					</div>
+					<div class="form-group">
+						<label></label>
+						<button type="submit" class="btn-search">Search</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+
+		<div class="tab-pane fade" id="cars" role="tabpanel">
+			<form>
+				<div class="form-container">
+					<div class="form-group">
+						<label>Pick-up Location</label>
+						<div class="input-icon">
+							<i class="fas fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="Pick-up location">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Pick-up date</label>
+						<div class="input-icon">
+							<i class="fas fa-calendar-alt"></i>
+							<input type="date" class="form-control" placeholder="Pick-up date">
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label>Drop-off location</label>
+						<div class="input-icon">
+							<i class="fas fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="Drop-off location">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>Drop-off date</label>
+						<div class="input-icon">
+							<i class="fas fa-calendar-alt"></i>
+							<input type="date" class="form-control" placeholder="Drop-off date">
+						</div>
+					</div>
+					<div class="form-group">
+						<label></label>
+						<button type="submit" class="btn-search">Search</button>
+					</div>
+
+				</div>
+			</form>
+		</div>
+	</div>
 </div>

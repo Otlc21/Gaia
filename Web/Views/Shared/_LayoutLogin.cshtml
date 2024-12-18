@@ -1,9 +1,15 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using System.Globalization;
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.Name">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>@ViewData["Title"]</title>
+	<link rel="icon" type="image/png" href="~/image/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="~/image/favicon.svg" />
+	<link rel="shortcut icon" href="~/image/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="~/image/apple-touch-icon.png" />
+	<link rel="manifest" href="~/image/site.webmanifest" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Realize Travel - @ViewData["Title"]</title>
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +17,6 @@
 	<style>
 		body {
 			background-color: #f5f5f5;
-			font-family: Arial, sans-serif;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -36,7 +41,7 @@
 		}
 
 			.login-header img {
-				width: 150px;
+				width: 220px;
 			}
 
 		.form-control {
@@ -45,6 +50,12 @@
 
 		.btn-primary {
 			height: 48px;
+			background-color: #12407A;
+		}
+
+		.btn-primary:hover {
+			height: 48px;
+				background-color: #0a2445;
 		}
 
 		.forgot-link {
@@ -55,7 +66,7 @@
 
 			.forgot-link a {
 				text-decoration: none;
-				color: #0071c2;
+				color: #12407A;
 			}
 
 				.forgot-link a:hover {
@@ -88,13 +99,13 @@
 			top: 10px;
 			left: 10px;
 			font-size: 24px;
-			color: #0071c2;
+			color: #12407A;
 			cursor: pointer;
 			text-decoration: none;
 		}
 
 			.back-arrow:hover {
-				color: #005f9c;
+				color: #0a2445;
 			}
 	</style>
 </head>

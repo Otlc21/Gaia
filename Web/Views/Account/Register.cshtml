@@ -8,12 +8,12 @@
 
 <div class="login-container">
 
-	<a asp-controller="Account" asp-action="Login" class="back-arrow">
+	<a asp-controller="Home" asp-action="Index" class="back-arrow">
 		<i class="fa fa-arrow-left"></i>
 	</a>
 
 	<div class="login-header">
-		<img src="https://www.orbitz.com/_dms/header/logo.svg" alt="Logo">
+		<img src="~/image/realize-full-blue-one-line.png" alt="Logo">
 	</div>
 
 	<form method="post" asp-controller="Account" asp-action="Register">
@@ -44,7 +44,7 @@
 		OR
 	</div>
 
-	<div class="text-center mt-4">
-		<span>Already have an account? <a asp-controller="Account" asp-action="Login" class="text-primary">Sign in</a></span>
+	<div class="text-center mt-4 forgot-link">
+		<span>Already have an account? <a asp-controller="Account" asp-action="Login">Sign in</a></span>
 	</div>
 </div>

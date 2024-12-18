@@ -9,11 +9,7 @@
 
 
 <div class="login-container">
-
-	@* <a href="#" class="back-arrow">
-		<i class="fa fa-arrow-left"></i>
-	</a> *@
-
+@* 
 	<h1>@Localizer["Hello"]</h1>
 
 	<a asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl="@Context.Request.Path">
@@ -21,10 +17,10 @@
 	</a>
 	<a asp-controller="Language" asp-action="SetLanguage" asp-route-culture="pt-BR" asp-route-returnUrl="@Context.Request.Path">
 		Português
-	</a>
+	</a> *@
 
 	<div class="login-header">
-		<img src="https://www.orbitz.com/_dms/header/logo.svg" alt="Logo">
+		<img src="~/image/realize-full-blue-one-line.png" alt="Logo">
 	</div>
 
 	<form method="post" asp-controller="Account" asp-action="Login">
@@ -51,7 +47,7 @@
 		OR
 	</div>
 
-	<div class="text-center mt-4">
-		<span>Don't have an account? <a asp-controller="Account" asp-action="Register" class="text-primary">Create one</a></span>
+	<div class="text-center mt-4 forgot-link">
+		<span>Don't have an account? <a asp-controller="Account" asp-action="Register">Create one</a></span>
 	</div>
 </div>

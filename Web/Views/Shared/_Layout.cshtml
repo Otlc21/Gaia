@@ -1,53 +1,125 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using System.Globalization;
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.Name">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/lib/datatables/datatables.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/style-admin.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Web.styles.css" asp-append-version="true" />
+	<link rel="icon" type="image/png" href="~/image/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="~/image/favicon.svg" />
+	<link rel="shortcut icon" href="~/image/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="~/image/apple-touch-icon.png" />
+	<link rel="manifest" href="~/image/site.webmanifest" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Realize Travel - @ViewData["Title"]</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/lib/datatables/datatables.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/lib/fontawesome-free-6.7.1-web/css/all.min.css" />
+	@*     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style-admin.css" asp-append-version="true" /> *@
+	<link rel="stylesheet" href="~/Web.styles.css" asp-append-version="true" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-main">
+			<div class="container-fluid">
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/datatables/datatables.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+				<a class="navbar-brand" href="@Url.Action("Index", "Home")">
+					<img src="~/image/realize-logo.png" alt="Logo" class="img-fluid" style="width: 30px;">
+					Realize Travel
+				</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarContent">
+
+					<ul class="navbar-nav ms-auto d-flex">
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-white" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fa-solid fa-globe"></i> <b>Idioma</b>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+								<li>
+									<a class="dropdown-item" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl="@Context.Request.Path">
+
+										<i class="fa-solid fa-flag"></i> Português
+									</a>
+								</li>
+								<li>
+									<a class="dropdown-item" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="pt-BR" asp-route-returnUrl="@Context.Request.Path">
+										<i class="fa-solid fa-flag-usa"></i> English
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						@if (User.Identity?.IsAuthenticated ?? false)
+						{
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="fa-solid fa-user-circle"></i> <b> @User.Identity.Name</b>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+									<li>
+										<form method="post" asp-action="Logout" asp-controller="Account" class="m-0">
+											<button class="dropdown-item">
+												<i class="fa-solid fa-user"></i> Gerenciar Conta
+											</button>
+										</form>
+
+									</li>
+									<li>
+										<form method="post" asp-action="Logout" asp-controller="Account" class="m-0">
+											<button class="dropdown-item">
+												<i class="fa-solid fa-calendar-check"></i> Meus Bookings
+											</button>
+										</form>
+
+									</li>
+									<li>
+										<form method="post" asp-action="Logout" asp-controller="Account" class="m-0">
+											<button type="submit" class="dropdown-item">
+												<i class="fa-solid fa-sign-out-alt"></i> Logout
+											</button>
+										</form>
+									</li>
+								</ul>
+							</li>
+						}
+						else
+						{
+							<li class="nav-item">
+								<a class="nav-link text-white" href="@Url.Action("Login", "Account")">
+									<i class="fa-solid fa-user-circle"></i> <b>Login</b>
+								</a>
+							</li>
+						}
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			&copy; 2024 - Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+		</div>
+	</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/lib/datatables/datatables.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
