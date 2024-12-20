@@ -17,10 +17,10 @@ namespace Dominio.Entidade
         public string Nome { get; set; }
 
         [Required]
-        public int LocalizacaoId { get; set; }
+        public int LocationId { get; set; }
 
-        [ForeignKey("LocalizacaoId")]
-        public Localizacao Localizacao { get; set; }
+        [ForeignKey("LocationId")]
+        public Location Location { get; set; }
 
         [Required]
         public float Avaliacao { get; set; }

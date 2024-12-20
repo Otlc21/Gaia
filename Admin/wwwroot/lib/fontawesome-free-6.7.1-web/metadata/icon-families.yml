@@ -8896,7 +8896,7 @@ caret-up:
       - upgrade
   unicode: f0d8
   voted: false
-carrot:
+Cart:
   aliases:
     unicodes:
       composite:
@@ -8920,11 +8920,11 @@ carrot:
     pro:
       - family: classic
         style: solid
-  label: Carrot
+  label: Cart
   search:
     terms:
       - bugs bunny
-      - carrot
+      - Cart
       - food
       - orange
       - vegan

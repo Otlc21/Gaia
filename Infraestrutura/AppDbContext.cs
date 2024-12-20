@@ -18,14 +18,14 @@ namespace Infraestrutura
         {
         }
 
-        public DbSet<Aereo> Aereos { get; set; }
-        public DbSet<Aeroporto> Aeroportos { get; set; }
-        public DbSet<Carro> Carros { get; set; }
-        public DbSet<CompanhiaAerea> CompanhiaAereas { get; set; }
+        public DbSet<Flight> Flights { get; set; }
+        public DbSet<Airport> Airports { get; set; }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Airline> Airlines { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
-        public DbSet<Localizacao> Localizacaos { get; set; }
+        public DbSet<Location> Locations { get; set; }
         public DbSet<Markup> Markups { get; set; }
-        public DbSet<Quarto> Quartos { get; set; }
+        public DbSet<Room> Rooms { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

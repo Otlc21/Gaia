@@ -7390,7 +7390,7 @@ caret-up:
     - solid
   unicode: f0d8
   voted: false
-carrot:
+Cart:
   aliases:
     unicodes:
       composite:
@@ -7407,11 +7407,11 @@ carrot:
     - 6.5.0
     - 6.6.0
     - 6.7.0
-  label: Carrot
+  label: Cart
   search:
     terms:
       - bugs bunny
-      - carrot
+      - Cart
       - food
       - orange
       - vegan

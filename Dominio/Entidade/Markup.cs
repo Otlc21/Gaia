@@ -13,10 +13,10 @@ namespace Dominio.Entidade
         public int Id {  get; set; }
 
         [Required]
-        public float PercentualAereo {  get; set; }
+        public float PercentualFlight {  get; set; }
 
         [Required]
-        public float PercentualCarro { get; set; }
+        public float PercentualCar { get; set; }
 
         [Required]
         public float PercentualHotel { get; set; }

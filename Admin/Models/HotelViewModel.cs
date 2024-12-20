@@ -15,7 +15,7 @@ namespace Admin.Models
         {
             Id = item.Id;
             Nome = item.Nome;
-            LocalizacaoId = item.LocalizacaoId;
+            LocationId = item.LocationId;
             Avaliacao = item.Avaliacao;
             Descricao = item.Descricao;
             Criacao = item.Criacao;
@@ -27,7 +27,7 @@ namespace Admin.Models
             {
                 Id = this.Id,
                 Nome = this.Nome,
-                LocalizacaoId = this.LocalizacaoId,
+                LocationId = this.LocationId,
                 Avaliacao = this.Avaliacao,
                 Descricao = this.Descricao,
                 Criacao = this.Criacao,
@@ -40,10 +40,10 @@ namespace Admin.Models
         public string Nome { get; set; }
 
         [Required]
-        public int LocalizacaoId { get; set; }
+        public int LocationId { get; set; }
 
-        [ForeignKey("LocalizacaoId")]
-        public Localizacao Localizacao { get; set; }
+        [ForeignKey("LocationId")]
+        public Location Location { get; set; }
 
         [Required]
         public float Avaliacao { get; set; }

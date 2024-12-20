@@ -13,8 +13,8 @@ namespace Admin.Models
         public MarkupViewModel(Markup item)
         {
             Id = item.Id;
-            PercentualAereo = item.PercentualAereo;
-            PercentualCarro = item.PercentualCarro;
+            PercentualFlight = item.PercentualFlight;
+            PercentualCar = item.PercentualCar;
             PercentualHotel = item.PercentualHotel;
         }
 
@@ -23,8 +23,8 @@ namespace Admin.Models
             return new Markup()
             {
                 Id = this.Id,
-                PercentualAereo = this.PercentualAereo,
-                PercentualCarro = this.PercentualCarro,
+                PercentualFlight = this.PercentualFlight,
+                PercentualCar = this.PercentualCar,
                 PercentualHotel = this.PercentualHotel,
             };
         }
@@ -32,10 +32,10 @@ namespace Admin.Models
         public int Id { get; set; }
 
         [Required]
-        public float PercentualAereo { get; set; }
+        public float PercentualFlight { get; set; }
 
         [Required]
-        public float PercentualCarro { get; set; }
+        public float PercentualCar { get; set; }
 
         [Required]
         public float PercentualHotel { get; set; }

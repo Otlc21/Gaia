@@ -17,20 +17,20 @@ namespace InjecaoDependencia
         public static IServiceCollection AddDomainServices(this IServiceCollection services)
         {
 
-            services.AddScoped<IAereoServico, AereoServico>();
-            services.AddScoped<IAeroportoServico, AeroportoServico>();
+            services.AddScoped<IFlightServico, FlightServico>();
+            services.AddScoped<IAirportServico, AirportServico>();
 
-            services.AddScoped<ICarroServico, CarroServico>();
-            services.AddScoped<ICompanhiaAereaServico, CompanhiaAereaServico>();
+            services.AddScoped<ICarServico, CarServico>();
+            services.AddScoped<IAirlineServico, AirlineServico>();
 
             services.AddScoped<IHotelServico, HotelServico>();
-            services.AddScoped<ILocalizacaoServico, LocalizacaoServico>();
+            services.AddScoped<ILocationServico, LocationServico>();
 
 
             services.AddScoped<IMarkupServico, MarkupServico>();
             services.AddScoped<IPacoteServico, PacoteServico>();
 
-            services.AddScoped<IQuartoServico, QuartoServico>();
+            services.AddScoped<IRoomServico, RoomServico>();
             services.AddScoped<IUsuarioServico, UsuarioServico>();
 
 
@@ -39,20 +39,20 @@ namespace InjecaoDependencia
         }
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IAereoRepositorio, AereoRepositorio>();
-            services.AddScoped<IAeroportoRepositorio, AeroportoRepositorio>();
+            services.AddScoped<IFlightRepositorio, FlightRepositorio>();
+            services.AddScoped<IAirportRepositorio, AirportRepositorio>();
 
-            services.AddScoped<ICarroRepositorio, CarroRepositorio>();
-            services.AddScoped<ICompanhiaAereaRepositorio, CompanhiaAereaRepositorio>();
+            services.AddScoped<ICarRepositorio, CarRepositorio>();
+            services.AddScoped<IAirlineRepositorio, AirlineRepositorio>();
 
             services.AddScoped<IHotelRepositorio, HotelRepositorio>();
-            services.AddScoped<ILocalizacaoRepositorio, LocalizacaoRepositorio>();
+            services.AddScoped<ILocationRepositorio, LocationRepositorio>();
 
             services.AddScoped<IMarkupRepositorio, MarkupRepositorio>();
 
             services.AddScoped<IPacoteRepositorio, PacoteRepositorio>();
 
-            services.AddScoped<IQuartoRepositorio, QuartoRepositorio>();
+            services.AddScoped<IRoomRepositorio, RoomRepositorio>();
 
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 

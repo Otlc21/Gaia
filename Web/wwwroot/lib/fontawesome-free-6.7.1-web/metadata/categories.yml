@@ -1104,7 +1104,7 @@ food-beverage:
     - burger
     - cake-candles
     - candy-cane
-    - carrot
+    - Cart
     - champagne-glasses
     - cheese
     - cloud-meatball
@@ -1143,7 +1143,7 @@ food-beverage:
 fruits-vegetables:
   icons:
     - apple-whole
-    - carrot
+    - Cart
     - leaf
     - lemon
     - pepper-hot
@@ -1272,7 +1272,7 @@ hands:
 holidays:
   icons:
     - candy-cane
-    - carrot
+    - Cart
     - champagne-glasses
     - cookie-bite
     - face-grin-hearts
