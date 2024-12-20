@@ -1,5 +1,4 @@
-﻿@using System.Globalization;
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="@CultureInfo.CurrentUICulture.Name">
 <head>
 	<link rel="icon" type="image/png" href="~/image/favicon-96x96.png" sizes="96x96" />
@@ -41,7 +40,7 @@
 
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle text-white" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								<i class="fa-solid fa-globe"></i> <b>Idioma</b>
+								<i class="fa-solid fa-globe"></i> <b>@Localizer["Language"]</b>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
 								<li>
@@ -68,7 +67,7 @@
 									<li>
 										<form method="post" asp-action="Logout" asp-controller="Account" class="m-0">
 											<button class="dropdown-item">
-												<i class="fa-solid fa-user"></i> Gerenciar Conta
+												<i class="fa-solid fa-user"></i> @Localizer["ManageAccount"]
 											</button>
 										</form>
 
@@ -76,7 +75,7 @@
 									<li>
 										<form method="post" asp-action="Logout" asp-controller="Account" class="m-0">
 											<button class="dropdown-item">
-												<i class="fa-solid fa-calendar-check"></i> Meus Bookings
+												<i class="fa-solid fa-calendar-check"></i> @Localizer["Bookings"]
 											</button>
 										</form>
 
@@ -84,7 +83,7 @@
 									<li>
 										<form method="post" asp-action="Logout" asp-controller="Account" class="m-0">
 											<button type="submit" class="dropdown-item">
-												<i class="fa-solid fa-sign-out-alt"></i> Logout
+												<i class="fa-solid fa-sign-out-alt"></i> @Localizer["Logout"]
 											</button>
 										</form>
 									</li>
@@ -95,7 +94,7 @@
 						{
 							<li class="nav-item">
 								<a class="nav-link text-white" href="@Url.Action("Login", "Account")">
-									<i class="fa-solid fa-user-circle"></i> <b>Login</b>
+									<i class="fa-solid fa-user-circle"></i> <b>@Localizer["Login"]</b>
 								</a>
 							</li>
 						}
@@ -113,7 +112,7 @@
 
 	<footer class="border-top footer text-muted">
 		<div class="container">
-			&copy; 2024 - Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+			&copy; 2024 - Web
 		</div>
 	</footer>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>

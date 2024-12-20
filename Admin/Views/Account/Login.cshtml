@@ -1,53 +1,50 @@
-﻿@* @using Microsoft.Extensions.Localization;
-@using Dominio.Resource;
-@inject IStringLocalizer<SharedResources> Localizer
- *@
-@{
-	ViewData["Title"] = "Login";
-	Layout = "_LayoutLogin";
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutLogin";
 }
 
+@model LoginViewModel;
 
 <div class="login-container">
 
-@* 	<h1>@Localizer["Hello"]</h1>
+    <div class="login-header">
+        <img src="~/image/realize-full-blue-one-line.png" alt="Logo">
+    </div>
 
-	<a asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl="@Context.Request.Path">
-		English
-	</a>
-	<a asp-controller="Language" asp-action="SetLanguage" asp-route-culture="pt-BR" asp-route-returnUrl="@Context.Request.Path">
-		Português
-	</a>
- *@
-	<div class="login-header">
-		<img src="~/image/realize-full-blue-one-line.png" alt="Logo">
-	</div>
+    <form method="post" asp-controller="Account" asp-action="Login">
+        <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+        </div>
+        <div class="mb-2">
+            <label for="password" class="form-label">@Localizer["Password"]</label>
+            <input type="password" name="password" class="form-control" placeholder="@Localizer["Password"]" required>
+        </div>
+        <br />
+        <div class="forgot-link">
+            <a asp-controller="Account" asp-action="ForgotPassword">
+                @Localizer["ForgotPassword"]
+            </a>
+        </div>
+        <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-primary">@Localizer["SignIn"]</button>
+        </div>
 
-	<form method="post" asp-controller="Account" asp-action="Login">
-		<div class="mb-3">
-			<label for="email" class="form-label">Email</label>
-			<input type="email" name="email" class="form-control" placeholder="Email" required>
-		</div>
-		<div class="mb-2">
-			<label for="password" class="form-label">Password</label>
-			<input type="password" name="password" class="form-control" placeholder="Password" required>
-		</div>
-		<br />
-		<div class="forgot-link">
-			<a asp-controller="Account" asp-action="ForgotPassword">
-				Forgot password?
-			</a>
-		</div>
-		<div class="d-grid mt-3">
-			<button type="submit" class="btn btn-primary">Sign In</button>
-		</div>
-	</form>
+        @if (ViewData["ErrorMessage"] != null)
+        {
+            <br />
+            <div class="alert alert-danger" role="alert">
+                @ViewData["ErrorMessage"]
+            </div>
+        }
+=
+    </form>
 
-	<div class="divider">
-		OR
-	</div>
+    <div class="divider">
+        @Localizer["Or"]
+    </div>
 
-	<div class="text-center mt-4 forgot-link">
-		<span>Don't have an account? <a asp-controller="Account" asp-action="Register">Create one</a></span>
-	</div>
+    <div class="text-center mt-4 forgot-link">
+        <span>@Localizer["DontHaveAccount"] <a asp-controller="Account" asp-action="Register">@Localizer["CreateOne"]</a></span>
+    </div>
 </div>

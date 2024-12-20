@@ -5,7 +5,7 @@ namespace Admin.Models
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "O email é obrigatório")]
-        public string Username { get; set; }
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "A senha é obrigatória")]
         [DataType(DataType.Password)]

@@ -18,26 +18,34 @@
 
 	<form method="post" asp-controller="Account" asp-action="Register">
 		<div class="mb-3">
-			<label for="username" class="form-label">Username</label>
-			<input type="text" name="username" class="form-control" placeholder="Username" required>
-			<span asp-validation-for="Username" class="text-danger"></span>
+			<label for="email" class="form-label">E-mail</label>
+			<input type="email" name="username" class="form-control" placeholder="E-mail" required>
+			<span asp-validation-for="Email" class="text-danger"></span>
 		</div>
 		<div class="mb-2">
-			<label for="password" class="form-label">Password</label>
-			<input type="password" name="password" class="form-control" placeholder="Password" required>
+			<label for="password" class="form-label">@Localizer["Password"]</label>
+			<input type="password" name="password" class="form-control" placeholder="@Localizer["Password"]" required>
 			<span asp-validation-for="Password" class="text-danger"></span>
 
 		</div>
 		<div class="mb-2">
-			<label for="ConfirmPassword" class="form-label">Confirm Password</label>
-			<input type="password" name="password" class="form-control" placeholder="Confirm Password" required>
+			<label for="ConfirmPassword" class="form-label">@Localizer["ConfirmPassword"]</label>
+			<input type="password" name="password" class="form-control" placeholder="@Localizer["ConfirmPassword"]" required>
 			<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
 
 		</div>
 		<br />
 		<div class="d-grid mt-3">
-			<button type="submit" class="btn btn-primary">Sign Up</button>
+			<button type="submit" class="btn btn-primary">@Localizer["SignUp"]</button>
 		</div>
+
+		@if (ViewData["ErrorMessage"] != null)
+		{
+			<br />
+			<div class="alert alert-danger" role="alert">
+				@ViewData["ErrorMessage"]
+			</div>
+		}
 	</form>
 
 	<div class="divider">
@@ -45,6 +53,6 @@
 	</div>
 
 	<div class="text-center mt-4 forgot-link">
-		<span>Already have an account? <a asp-controller="Account" asp-action="Login">Sign in</a></span>
+		<span>Already have an account? <a asp-controller="Account" asp-action="Login">@Localizer["SignIn"]</a></span>
 	</div>
 </div>

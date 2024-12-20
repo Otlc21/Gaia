@@ -28,31 +28,12 @@ namespace Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(string email, string password)
-        {
-            var result = await _signInManager.PasswordSignInAsync(email, password, false, false);
-
-            if (result.Succeeded)
-                return RedirectToAction("Index", "Home");
-
-            ModelState.AddModelError("", "Login inválido.");
-            return View();
-        }
-
-
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Register(RegisterViewModel model)
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
             //// Criar uma role "Admin" (opcional)
-            //if (!await roleManager.RoleExistsAsync("Admin"))
+            //if (!await _roleManager.RoleExistsAsync("Admin"))
             //{
-            //    await roleManager.CreateAsync(new IdentityRole("Admin"));
+            //    await _roleManager.CreateAsync(new IdentityRole("Admin"));
             //}
 
             //// Criar o usuário de teste
@@ -65,28 +46,41 @@ namespace Admin.Controllers
 
             //password = "Teste01*"; // Senha para o usuário
 
-            //var userExists = await userManager.FindByEmailAsync(user.Email);
+            //var userExists = await _userManager.FindByEmailAsync(user.Email);
             //if (userExists == null)
             //{
-            //    var result = await userManager.CreateAsync(user, password);
-            //    if (result.Succeeded)
+            //    var result1 = await _userManager.CreateAsync(user, password);
+            //    if (result1.Succeeded)
             //    {
             //        // Atribuir a role "Admin" ao usuário
-            //        await userManager.AddToRoleAsync(user, "Admin");
+            //        await _userManager.AddToRoleAsync(user, "Admin");
             //        Console.WriteLine("Usuário de teste criado com sucesso!");
             //    }
             //    else
             //    {
-            //        Console.WriteLine("Erro ao criar usuário: " + string.Join(", ", result.Errors.Select(e => e.Description)));
+            //        Console.WriteLine("Erro ao criar usuário: " + string.Join(", ", result1.Errors.Select(e => e.Description)));
             //    }
             //}
 
-            //var result = await _signInManager.PasswordSignInAsync(email, password, false, false);
+            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
 
-            //if (result.Succeeded)
-            //    return RedirectToAction("Index", "Home");
+            if (result.Succeeded)
+                return RedirectToAction("Index", "Home");
 
-            //ModelState.AddModelError("", "Login inválido.");
+            ModelState.AddModelError("", "Login inválido.");
+            return View(model);
+        }
+
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
             return View();
         }
 
