@@ -61,6 +61,15 @@ namespace Dominio.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ABOUT.
+        /// </summary>
+        public static string ABOUT {
+            get {
+                return ResourceManager.GetString("ABOUT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Airline.
         /// </summary>
         public static string Airline {
@@ -79,11 +88,29 @@ namespace Dominio.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All rights reserveds.
+        /// </summary>
+        public static string All_rights_reserveds {
+            get {
+                return ResourceManager.GetString("All rights reserveds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Already have an account?.
         /// </summary>
         public static string AlreadyHaveAccount {
             get {
                 return ResourceManager.GetString("AlreadyHaveAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book Now.
+        /// </summary>
+        public static string Book_Now {
+            get {
+                return ResourceManager.GetString("Book Now", resourceCulture);
             }
         }
         
@@ -124,6 +151,15 @@ namespace Dominio.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CONTACT INFORMATION.
+        /// </summary>
+        public static string CONTACT_INFORMATION {
+            get {
+                return ResourceManager.GetString("CONTACT INFORMATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create one.
         /// </summary>
         public static string CreateOne {
@@ -133,11 +169,56 @@ namespace Dominio.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Departure date.
+        /// </summary>
+        public static string Departure_date {
+            get {
+                return ResourceManager.GetString("Departure date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destination.
+        /// </summary>
+        public static string Destination {
+            get {
+                return ResourceManager.GetString("Destination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Don&apos;t have an account?.
         /// </summary>
         public static string DontHaveAccount {
             get {
                 return ResourceManager.GetString("DontHaveAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drop-off date.
+        /// </summary>
+        public static string Drop_off_date {
+            get {
+                return ResourceManager.GetString("Drop-off date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drop-off location.
+        /// </summary>
+        public static string Drop_off_location {
+            get {
+                return ResourceManager.GetString("Drop-off location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EXPLORE GREAT PLACES.
+        /// </summary>
+        public static string EXPLORE_GREAT_PLACES {
+            get {
+                return ResourceManager.GetString("EXPLORE GREAT PLACES", resourceCulture);
             }
         }
         
@@ -160,11 +241,29 @@ namespace Dominio.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string From {
+            get {
+                return ResourceManager.GetString("From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello.
         /// </summary>
         public static string Hello {
             get {
                 return ResourceManager.GetString("Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HELP.
+        /// </summary>
+        public static string HELP {
+            get {
+                return ResourceManager.GetString("HELP", resourceCulture);
             }
         }
         
@@ -232,11 +331,29 @@ namespace Dominio.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Members save 10% or more on over 100,000 hotels worldwide when signed in.
+        /// </summary>
+        public static string MemberSaveMessage {
+            get {
+                return ResourceManager.GetString("MemberSaveMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OR.
         /// </summary>
         public static string Or {
             get {
                 return ResourceManager.GetString("Or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Package.
+        /// </summary>
+        public static string Package {
+            get {
+                return ResourceManager.GetString("Package", resourceCulture);
             }
         }
         
@@ -250,11 +367,65 @@ namespace Dominio.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to per person.
+        /// </summary>
+        public static string per_person {
+            get {
+                return ResourceManager.GetString("per person", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick-up date.
+        /// </summary>
+        public static string Pick_up_date {
+            get {
+                return ResourceManager.GetString("Pick-up date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pick-up location.
+        /// </summary>
+        public static string Pick_up_location {
+            get {
+                return ResourceManager.GetString("Pick-up location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Policy.
+        /// </summary>
+        public static string Privacy_Policy {
+            get {
+                return ResourceManager.GetString("Privacy Policy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The {0} field is required..
         /// </summary>
         public static string RequiredField {
             get {
                 return ResourceManager.GetString("RequiredField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to reviews.
+        /// </summary>
+        public static string reviews {
+            get {
+                return ResourceManager.GetString("reviews", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
             }
         }
         
@@ -273,6 +444,78 @@ namespace Dominio.Resource {
         public static string SignUp {
             get {
                 return ResourceManager.GetString("SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SUBSCRIBE US.
+        /// </summary>
+        public static string SUBSCRIBE_US {
+            get {
+                return ResourceManager.GetString("SUBSCRIBE US", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Term &amp; Condition.
+        /// </summary>
+        public static string Term___Condition {
+            get {
+                return ResourceManager.GetString("Term & Condition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string To {
+            get {
+                return ResourceManager.GetString("To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Travelers.
+        /// </summary>
+        public static string Travelers {
+            get {
+                return ResourceManager.GetString("Travelers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Childrens.
+        /// </summary>
+        public static string TravelersChildren {
+            get {
+                return ResourceManager.GetString("TravelersChildren", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string Type {
+            get {
+                return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VIEW ALL.
+        /// </summary>
+        public static string VIEW_ALL {
+            get {
+                return ResourceManager.GetString("VIEW ALL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wish List.
+        /// </summary>
+        public static string Wish_List {
+            get {
+                return ResourceManager.GetString("Wish List", resourceCulture);
             }
         }
     }

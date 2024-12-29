@@ -26,7 +26,7 @@
 			<div class="container-fluid">
 
 				<a class="navbar-brand" href="@Url.Action("Index", "Home")">
-					<img src="~/image/realize-logo.png" alt="Logo" class="img-fluid" style="width: 30px;">
+					@* <img src="~/image/realize-logo.png" alt="Logo" class="img-fluid" style="width: 30px;"> *@
 					Realize Travel
 				</a>
 
@@ -89,13 +89,14 @@
 							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
 								<li>
 									<a class="dropdown-item" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl="@Context.Request.Path">
+										<i class="fa-solid fa-flag-usa"></i> English
 
-										<i class="fa-solid fa-flag"></i> Português
 									</a>
 								</li>
 								<li>
 									<a class="dropdown-item" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="pt-BR" asp-route-returnUrl="@Context.Request.Path">
-										<i class="fa-solid fa-flag-usa"></i> English
+										<i class="fa-solid fa-flag"></i> Português
+
 									</a>
 								</li>
 							</ul>
@@ -154,11 +155,11 @@
 		</main>
 	</div>
 
-	<footer class="border-top footer text-muted">
+@* 	<footer class="border-top footer text-muted">
 		<div class="container">
 			&copy; 2024 - Admin
 		</div>
-	</footer>
+	</footer> *@
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="~/js/site.js" asp-append-version="true"></script>

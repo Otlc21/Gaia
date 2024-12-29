@@ -1,0 +1,849 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/Temp/assets/vendors/bootstrap/css/bootstrap.min.css" media="all">
+<!-- Fonts Awesome CSS -->
+<link rel="stylesheet" type="text/css" href="~/Temp/assets/vendors/fontawesome/css/all.min.css">
+<!-- jquery-ui css -->
+<link rel="stylesheet" type="text/css" href="~/Temp/assets/vendors/jquery-ui/jquery-ui.min.css">
+<!-- modal video css -->
+<link rel="stylesheet" type="text/css" href="~/Temp/assets/vendors/modal-video/modal-video.min.css">
+<!-- light box css -->
+<link rel="stylesheet" type="text/css" href="~/Temp/assets/vendors/lightbox/dist/css/lightbox.min.css">
+<!-- slick slider css -->
+<link rel="stylesheet" type="text/css" href="~/Temp/assets/vendors/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="~/Temp/assets/vendors/slick/slick-theme.css">
+<!-- google fonts -->
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="~/Temp/style.css">
+
+
+<div class="container search-box">
+    <ul class="nav nav-pills mb-3" id="searchTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="stays-tab" data-bs-toggle="pill" data-bs-target="#stays" type="button" role="tab">@Localizer["Hotel"]</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="flights-tab" data-bs-toggle="pill" data-bs-target="#flights" type="button" role="tab">@Localizer["Flight"]</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="cars-tab" data-bs-toggle="pill" data-bs-target="#cars" type="button" role="tab">@Localizer["Car"]</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="searchTabContent">
+        <div class="tab-pane fade show active" id="stays" role="tabpanel">
+            <form>
+                <div class="form-container">
+                    <div class="form-group">
+                        <label>@Localizer["Destination"]</label>
+
+                        <div class="input-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" class="form-control" placeholder="@Localizer["Destination"]">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Check-in</label>
+                        <div class="input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" class="form-control" placeholder="Check-in">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Check-out</label>
+                        <div class="input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" class="form-control" placeholder="Check-out">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>@Localizer["Travelers"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="number" class="form-control" placeholder="@Localizer["Travelers"]" min="1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <button type="button" class="btn-search">@Localizer["Search"]</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="tab-pane fade" id="flights" role="tabpanel">
+            <form>
+                <div class="form-container">
+                    <div class="form-group">
+                        <label>@Localizer["From"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" class="form-control" placeholder="@Localizer["From"]">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>@Localizer["To"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" class="form-control" placeholder="@Localizer["To"]">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>@Localizer["Departure date"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" class="form-control" placeholder="Departure date">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>@Localizer["Travelers"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="number" class="form-control" placeholder="@Localizer["Travelers"]" min="1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <button type="button" class="btn-search">@Localizer["Search"]</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="tab-pane fade" id="cars" role="tabpanel">
+            <form>
+                <div class="form-container">
+                    <div class="form-group">
+                        <label>@Localizer["Pick-up location"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" class="form-control" placeholder="Pick-up location">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>@Localizer["Pick-up date"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" class="form-control" placeholder="Pick-up date">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>@Localizer["Drop-off location"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" class="form-control" placeholder="Drop-off location">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>@Localizer["Drop-off date"]</label>
+                        <div class="input-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" class="form-control" placeholder="Drop-off date">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <button type="button" class="btn-search">@Localizer["Search"]</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section class="destination-section">
+    <div class="container">
+        <div class="section-heading">
+            <div class="row align-items-end">
+                <div class="col-lg-7">
+                    <h5 class="dash-style">POPULAR DESTINATION</h5>
+                    <h2>TOP NOTCH DESTINATION</h2>
+                </div>
+                <div class="col-lg-5">
+                    <div class="section-disc">
+                        Aperiam sociosqu urna praesent, tristique, corrupti condimentum asperiores platea ipsum ad arcu. Nostrud. Aut nostrum, ornare quas provident laoreet nesciunt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="destination-inner destination-three-column">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="desti-item overlay-desti-item">
+                                <figure class="desti-image">
+                                    <img src="~/Temp/assets/images/img1.jpg" alt="">
+                                </figure>
+                                <div class="meta-cat bg-meta-cat">
+                                    <a href="#">NOVA YORK</a>
+                                </div>
+                                <div class="desti-content">
+                                    <h3>
+                                        <a href="#">Manhattan</a>
+                                    </h3>
+                                    <div class="rating-start" title="Rated 5 out of 4">
+                                        <span style="width: 53%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="desti-item overlay-desti-item">
+                                <figure class="desti-image">
+                                    <img src="~/Temp/assets/images/img2.jpg" alt="">
+                                </figure>
+                                <div class="meta-cat bg-meta-cat">
+                                    <a href="#">LOS ANGELES</a>
+                                </div>
+                                <div class="desti-content">
+                                    <h3>
+                                        <a href="#">Holywood</a>
+                                    </h3>
+                                    <div class="rating-start" title="Rated 5 out of 5">
+                                        <span style="width: 100%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-md-6 col-xl-12">
+                            <div class="desti-item overlay-desti-item">
+                                <figure class="desti-image">
+                                    <img src="~/Temp/assets/images/img3.jpg" alt="">
+                                </figure>
+                                <div class="meta-cat bg-meta-cat">
+                                    <a href="#">BOSTON</a>
+                                </div>
+                                <div class="desti-content">
+                                    <h3>
+                                        <a href="#">Back Bay</a>
+                                    </h3>
+                                    <div class="rating-start" title="Rated 5 out of 5">
+                                        <span style="width: 100%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
+                            <div class="desti-item overlay-desti-item">
+                                <figure class="desti-image">
+                                    <img src="~/Temp/assets/images/img4.jpg" alt="">
+                                </figure>
+                                <div class="meta-cat bg-meta-cat">
+                                    <a href="#">LAS VEGAS</a>
+                                </div>
+                                <div class="desti-content">
+                                    <h3>
+                                        <a href="#">Las Vegas Strip</a>
+                                    </h3>
+                                    <div class="rating-start" title="Rated 5 out of 4">
+                                        <span style="width: 60%"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap text-center">
+                <a href="#" class="button-primary">MORE DESTINATION</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="package-section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h5 class="dash-style">EXPLORE GREAT PLACES</h5>
+                    <h2>POPULAR PACKAGES</h2>
+                    <p>Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="package-inner">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="package-wrap">
+                        <figure class="feature-image">
+                            <a href="#">
+                                <img src="~/Temp/assets/images/img5.jpg" alt="">
+                            </a>
+                        </figure>
+                        <div class="package-price">
+                            <h6>
+                                <span>$1,900 </span> / per person
+                            </h6>
+                        </div>
+                        <div class="package-content-wrap">
+                            <div class="package-meta text-center">
+                                <ul>
+                                    <li>
+                                        <i class="far fa-clock"></i>
+                                        7D/6N
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-user-friends"></i>
+                                        People: 5
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        France
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-content">
+                                <h3>
+                                    <a href="#">Lorem ipsum dolor sit amet</a>
+                                </h3>
+                                <div class="review-area">
+                                    <span class="review-text">(25 reviews)</span>
+                                    <div class="rating-start" title="Rated 5 out of 5">
+                                        <span style="width: 60%"></span>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+                                <div class="btn-wrap">
+                                    <a href="#" class="button-text width-6">Book Now<i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="package-wrap">
+                        <figure class="feature-image">
+                            <a href="#">
+                                <img src="~/Temp/assets/images/img6.jpg" alt="">
+                            </a>
+                        </figure>
+                        <div class="package-price">
+                            <h6>
+                                <span>$1,230 </span> / per person
+                            </h6>
+                        </div>
+                        <div class="package-content-wrap">
+                            <div class="package-meta text-center">
+                                <ul>
+                                    <li>
+                                        <i class="far fa-clock"></i>
+                                        5D/4N
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-user-friends"></i>
+                                        People: 8
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Canada
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-content">
+                                <h3>
+                                    <a href="#">Lorem ipsum dolor sit amet</a>
+                                </h3>
+                                <div class="review-area">
+                                    <span class="review-text">(17 reviews)</span>
+                                    <div class="rating-start" title="Rated 5 out of 5">
+                                        <span style="width: 100%"></span>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+                                <div class="btn-wrap">
+                                    <a href="#" class="button-text width-6">Book Now<i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="package-wrap">
+                        <figure class="feature-image">
+                            <a href="#">
+                                <img src="~/Temp/assets/images/img7.jpg" alt="">
+                            </a>
+                        </figure>
+                        <div class="package-price">
+                            <h6>
+                                <span>$2,000 </span> / per person
+                            </h6>
+                        </div>
+                        <div class="package-content-wrap">
+                            <div class="package-meta text-center">
+                                <ul>
+                                    <li>
+                                        <i class="far fa-clock"></i>
+                                        6D/5N
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-user-friends"></i>
+                                        People: 6
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Norway
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-content">
+                                <h3>
+                                    <a href="#">Lorem ipsum dolor sit amet</a>
+                                </h3>
+                                <div class="review-area">
+                                    <span class="review-text">(22 reviews)</span>
+                                    <div class="rating-start" title="Rated 5 out of 5">
+                                        <span style="width: 80%"></span>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+                                <div class="btn-wrap">
+                                    <a href="#" class="button-text width-6">Book Now<i class="fas fa-arrow-right"></i></a>
+                                    <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap text-center">
+                <a href="#" class="button-primary">VIEW ALL PACKAGES</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="activity-section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h5 class="dash-style">TRAVEL BY ACTIVITY</h5>
+                    <h2>ADVENTURE & ACTIVITY</h2>
+                    <p>Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="activity-inner row">
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <a href="#">
+                            <img src="~/Temp/assets/images/icon6.png" alt="">
+                        </a>
+                    </div>
+                    <div class="activity-content">
+                        <h4>
+                            <a href="#">Adventure</a>
+                        </h4>
+                        <p>15 Destination</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <a href="#">
+                            <img src="~/Temp/assets/images/icon10.png" alt="">
+                        </a>
+                    </div>
+                    <div class="activity-content">
+                        <h4>
+                            <a href="#">Trekking</a>
+                        </h4>
+                        <p>12 Destination</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <a href="#">
+                            <img src="~/Temp/assets/images/icon9.png" alt="">
+                        </a>
+                    </div>
+                    <div class="activity-content">
+                        <h4>
+                            <a href="#">Camp Fire</a>
+                        </h4>
+                        <p>7 Destination</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <a href="#">
+                            <img src="~/Temp/assets/images/icon8.png" alt="">
+                        </a>
+                    </div>
+                    <div class="activity-content">
+                        <h4>
+                            <a href="#">Off Road</a>
+                        </h4>
+                        <p>15 Destination</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <a href="#">
+                            <img src="~/Temp/assets/images/icon7.png" alt="">
+                        </a>
+                    </div>
+                    <div class="activity-content">
+                        <h4>
+                            <a href="#">Camping</a>
+                        </h4>
+                        <p>13 Destination</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <a href="#">
+                            <img src="~/Temp/assets/images/icon11.png" alt="">
+                        </a>
+                    </div>
+                    <div class="activity-content">
+                        <h4>
+                            <a href="#">Exploring</a>
+                        </h4>
+                        <p>25 Destination</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="special-section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h5 class="dash-style">TRAVEL OFFER & DISCOUNT</h5>
+                    <h2>SPECIAL TRAVEL OFFER</h2>
+                    <p>Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="special-inner">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                        <figure class="special-img">
+                            <img src="~/Temp/assets/images/img9.jpg" alt="">
+                        </figure>
+                        <div class="badge-dis">
+                            <span>
+                                <strong>20%</strong>
+                                off
+                            </span>
+                        </div>
+                        <div class="special-content">
+                            <div class="meta-cat">
+                                <a href="#">BRAZIL</a>
+                            </div>
+                            <h3>
+                                <a href="#">Lorem ipsum dolor sit amet</a>
+                            </h3>
+                            <div class="package-price">
+                                Price:
+                                <del>$1500</del>
+                                <ins>$1200</ins>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                        <figure class="special-img">
+                            <img src="~/Temp/assets/images/img10.jpg" alt="">
+                        </figure>
+                        <div class="badge-dis">
+                            <span>
+                                <strong>15%</strong>
+                                off
+                            </span>
+                        </div>
+                        <div class="special-content">
+                            <div class="meta-cat">
+                                <a href="#">JAPAN</a>
+                            </div>
+                            <h3>
+                                <a href="#">Lorem ipsum dolor sit amet</a>
+                            </h3>
+                            <div class="package-price">
+                                Price:
+                                <del>$1300</del>
+                                <ins>$1105</ins>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                        <figure class="special-img">
+                            <img src="~/Temp/assets/images/img11.jpg" alt="">
+                        </figure>
+                        <div class="badge-dis">
+                            <span>
+                                <strong>15%</strong>
+                                off
+                            </span>
+                        </div>
+                        <div class="special-content">
+                            <div class="meta-cat">
+                                <a href="#">NEW ZEALAND</a>
+                            </div>
+                            <h3>
+                                <a href="#">Lorem ipsum dolor sit amet</a>
+                            </h3>
+                            <div class="package-price">
+                                Price:
+                                <del>$1800</del>
+                                <ins>$1476</ins>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="subscribe-section" style="background-image: url('@Url.Content("~/Temp/assets/images/img16.jpg")');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="section-heading section-heading-white">
+                    <h5 class="dash-style">HOLIDAY PACKAGE OFFER</h5>
+                    <h2>HOLIDAY SPECIAL 25% OFF !</h2>
+                    <h4>Sign up now to recieve hot special offers and information about the best tour packages, updates and discounts !!</h4>
+                    <div class="newsletter-form">
+                        <form>
+                            <input type="email" name="s" placeholder="Your Email Address">
+                            <input type="submit" name="signup" value="SIGN UP NOW!">
+                        </form>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Eaque adipiscing, luctus eleifend temporibus occaecat luctus eleifend tempo ribus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br />
+<div class="testimonial-section" style="background-image: url('@Url.Content("~/Temp/assets/images/img23.jpg")');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="testimonial-inner testimonial-slider">
+                    <div class="testimonial-item text-center">
+                        <figure class="testimonial-img">
+                            <img src="~/Temp/assets/images/img20.jpg" alt="">
+                        </figure>
+                        <div class="testimonial-content">
+                            <p>" Dolorum aenean dolorem minima! Voluptatum? Corporis condimentum ac primis fusce, atque! Vivamus. Non cupiditate natus excepturi, quod quo, aute facere? Deserunt aliquip, egestas ipsum, eu.Dolorum aenean dolorem minima!? Corporis condi mentum acpri! "</p>
+                            <cite>
+                                Lucas Lima
+                                <span class="company">Travel Agent</span>
+                            </cite>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <figure class="testimonial-img">
+                            <img src="~/Temp/assets/images/img21.jpg" alt="">
+                        </figure>
+                        <div class="testimonial-content">
+                            <p>" Dolorum aenean dolorem minima! Voluptatum? Corporis condimentum ac primis fusce, atque! Vivamus. Non cupiditate natus excepturi, quod quo, aute facere? Deserunt aliquip, egestas ipsum, eu.Dolorum aenean dolorem minima!? Corporis condi mentum acpri! "</p>
+                            <cite>
+                                William Housten
+                                <span class="company">Travel Agent</span>
+                            </cite>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <figure class="testimonial-img">
+                            <img src="~/Temp/assets/images/img22.jpg" alt="">
+                        </figure>
+                        <div class="testimonial-content">
+                            <p>" Dolorum aenean dolorem minima! Voluptatum? Corporis condimentum ac primis fusce, atque! Vivamus. Non cupiditate natus excepturi, quod quo, aute facere? Deserunt aliquip, egestas ipsum, eu.Dolorum aenean dolorem minima!? Corporis condi mentum acpri! "</p>
+                            <cite>
+                                Alison Wright
+                                <span class="company">Travel Guide</span>
+                            </cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="colophon" class="site-footer footer-primary">
+    <div class="top-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <aside class="widget widget_text">
+                        <h3 class="widget-title">
+                            About Travel
+                        </h3>
+                        <div class="textwidget widget-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                        </div>
+                        <div class="award-img">
+                            <!-- <a href="#"><img src="~/Temp/assets/images/logo6.png" alt=""></a>
+                            <a href="#"><img src="~/Temp/assets/images/logo2.png" alt=""></a> -->
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <aside class="widget widget_text">
+                        <h3 class="widget-title">CONTACT INFORMATION</h3>
+                        <div class="textwidget widget-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-phone-alt"></i>
+                                        +01 (999) 9999 99
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-envelope"></i>
+                                        email@domain.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    9999 Rolling Hills, California
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <aside class="widget widget_recent_post">
+                        <h3 class="widget-title">Latest Post</h3>
+                        <ul>
+                            <li>
+                                <h5>
+                                    <a href="#">Lorem ipsum dolor sit amet</a>
+                                </h5>
+                                <div class="entry-meta">
+                                    <span class="post-on">
+                                        <a href="#">August 21, 2024</a>
+                                    </span>
+                                    <span class="comments-link">
+                                        <a href="#">No Comments</a>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <h5>
+                                    <a href="#">Lorem ipsum dolor sit amet</a>
+                                </h5>
+                                <div class="entry-meta">
+                                    <span class="post-on">
+                                        <a href="#">August 21, 2024</a>
+                                    </span>
+                                    <span class="comments-link">
+                                        <a href="#">No Comments</a>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <aside class="widget widget_newslatter">
+                        <h3 class="widget-title">SUBSCRIBE US</h3>
+                        <div class="widget-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                        <form class="newslatter-form">
+                            <input type="email" name="s" placeholder="Your Email..">
+                            <input type="submit" name="s" value="SUBSCRIBE NOW">
+                        </form>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttom-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="footer-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Term & Condition</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="footer-logo">
+                        <a href="#"><img src="~/Temp/assets/images/Realize Travel-logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="copy-right text-right">Copyright © 2024 Realize Travel. All rights reserveds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<a id="backTotop" href="#" class="to-top-icon">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+<script src="~/Temp/assets/js/jquery.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="~/Temp/assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Temp/assets/vendors/jquery-ui/jquery-ui.min.js"></script>
+<script src="~/Temp/assets/vendors/countdown-date-loop-counter/loopcounter.js"></script>
+<script src="~/Temp/assets/js/jquery.counterup.js"></script>
+<script src="~/Temp/assets/vendors/modal-video/jquery-modal-video.min.js"></script>
+<script src="~/Temp/assets/vendors/masonry/masonry.pkgd.min.js"></script>
+<script src="~/Temp/assets/vendors/lightbox/dist/js/lightbox.min.js"></script>
+<script src="~/Temp/assets/vendors/slick/slick.min.js"></script>
+<script src="~/Temp/assets/js/jquery.slicknav.js"></script>
+<script src="~/Temp/assets/js/custom.min.js"></script>

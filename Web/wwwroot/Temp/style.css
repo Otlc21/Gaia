@@ -252,7 +252,7 @@ body {
   font-size: 15px;
   color: #383838;
   background-color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.6;
@@ -286,7 +286,7 @@ blockquote, pre {
   -o-box-shadow: none;
   box-shadow: none;
   color: #1a1a1a;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-style: italic;
   margin: 0 0 15px 0;
   padding: 25px 22px;
@@ -309,7 +309,7 @@ blockquote:before {
   background-color: #fff;
   color: #333333;
   content: "\f10d";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   font-weight: 900;
   font-size: 20px;
   float: left;
@@ -390,7 +390,7 @@ img {
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
   color: #101F46;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -927,7 +927,7 @@ form label {
 .form-group label .custom-checkbox:before {
   background-color: #D5302E;
   content: "\f00c";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   height: 100%;
   width: 100%;
   position: absolute;
@@ -974,7 +974,7 @@ form label {
   border-radius: 100%;
   content: "\f00c";
   color: #ffffff;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   font-size: 8px;
   font-weight: 900;
   width: 100%;
@@ -1679,7 +1679,7 @@ input[type=submit]:focus {
   display: inline-block;
   float: right;
   font-size: 14px;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   font-weight: 900;
   font-weight: 900;
   margin-left: 8PX;
@@ -2257,7 +2257,7 @@ input[type=submit]:focus {
   -ms-border-radius: 100%;
   border-radius: 100%;
   display: block;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   font-weight: 900;
   height: 40px;
   width: 40px;
@@ -2688,7 +2688,7 @@ input[type=submit]:focus {
 }
 .desti-item .meta-cat a {
   display: inline-block;
-  font-family: "Raleway", Sans-serif;
+  font-family: "Rubik", Sans-serif;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
@@ -2755,7 +2755,7 @@ input[type=submit]:focus {
   color: #ccd6df;
   content: "\f005\f005\f005\f005\f005";
   display: block;
-  font-family: "Font Awesome 5 free";
+  font-family: "Rubik";
   font-weight: 900;
 }
 .rating-start span {
@@ -2769,7 +2769,7 @@ input[type=submit]:focus {
   color: #D5302E;
   content: "\f005\f005\f005\f005\f005";
   display: inline-block;
-  font-family: "Font Awesome 5 free";
+  font-family: "Rubik";
   font-weight: 900;
 }
 
@@ -2863,13 +2863,13 @@ input[type=submit]:focus {
 .package-wrap .package-price h6 {
   color: #ffffff;
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1.1;
   margin-bottom: 0;
   padding: 8px 16px;
 }
 .package-wrap .package-price h6 span {
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
@@ -3182,7 +3182,7 @@ input[type=submit]:focus {
 }
 .support-area h3 {
   color: #D5302E;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 30px;
   font-weight: 900;
   line-height: 1.1;
@@ -3607,7 +3607,7 @@ input[type=submit]:focus {
 .special-item .badge-dis strong {
   color: #ffffff;
   display: block;
-  font-family: "Raleway", Sans-serif;
+  font-family: "Rubik", Sans-serif;
   font-size: 23px;
   font-weight: 700;
   line-height: 1.2;
@@ -3623,7 +3623,7 @@ input[type=submit]:focus {
 }
 .special-content .meta-cat a {
   color: #0791BE;
-  font-family: "Raleway", Sans-serif;
+  font-family: "Rubik", Sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -3633,7 +3633,7 @@ input[type=submit]:focus {
 .special-content .package-price {
   color: #D5302E;
   font-size: 18px;
-  font-family: "Raleway", Sans-serif;
+  font-family: "Rubik", Sans-serif;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -4190,7 +4190,7 @@ Due to the split circle of progress-left and progress right, we must use the ani
 }
 .testimonial-item .testimonial-content cite {
   color: #0791BE;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.3;
@@ -4971,7 +4971,7 @@ procduct details css
   }
 }
 
-.tab-content {
+/*.tab-content {
   padding: 30px;
   border-width: 0 1px 1px 1px;
   border-style: solid;
@@ -4989,7 +4989,7 @@ procduct details css
   .tab-content {
     padding: 20px;
   }
-}
+}*/
 
 .itinerary-content {
   margin-bottom: 30px;
@@ -5034,7 +5034,7 @@ procduct details css
 }
 .itinerary-timeline-wrap .day-count span {
   display: block;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
@@ -5112,7 +5112,7 @@ procduct details css
 }
 .summary-review .review-score span {
   background-color: #fff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   border-radius: 50%;
   width: 90px;
   display: block;
@@ -5169,7 +5169,7 @@ procduct details css
 }
 .sidebar .package-price .price {
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 .sidebar .package-price .price span {
   font-size: 30px;
@@ -5263,7 +5263,7 @@ procduct details css
 .sidebar .travel-package-content ul li a {
   color: #ffffff;
   line-height: 1.3;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 18px;
   font-weight: 700;
 }
@@ -5374,7 +5374,7 @@ procduct details css
   line-height: 1.1;
 }
 .inner-banner-wrap .entry-meta a:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   margin-right: 10px;
   font-weight: 900;
   -webkit-transition: all 0.3s;
@@ -5405,7 +5405,7 @@ procduct details css
   content: "\f02c";
   color: #1a1a1a;
   display: inline-block;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   margin-right: 5px;
   font-weight: 900;
 }
@@ -5518,7 +5518,7 @@ procduct details css
 }
 .post-navigation .nav-prev a:before,
 .post-navigation .nav-next a:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   font-weight: 900;
   font-size: 14px;
   display: block;
@@ -5772,7 +5772,7 @@ procduct details css
 }
 .service-header .service-count {
   color: rgba(7, 145, 190, 0.4);
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 65px;
   font-weight: 900;
   line-height: 0.9;
@@ -6066,7 +6066,7 @@ procduct details css
 }
 .comming-soon-section .time-counter .counter-time [class*=counter-] {
   font-size: 80px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 900;
   line-height: 1.1;
 }
@@ -6187,7 +6187,7 @@ procduct details css
 .no-content-wrap span {
   color: rgba(255, 255, 255, 0.32);
   font-size: 300px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 900;
   line-height: 1;
 }
@@ -6301,7 +6301,7 @@ procduct details css
 }
 .accordion .card button {
   color: #383838;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 15px;
   display: block;
   width: 100%;
@@ -6320,7 +6320,7 @@ procduct details css
   content: "\f106";
   display: block;
   font-weight: 900;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   float: right;
   position: absolute;
   top: 50%;
@@ -6629,7 +6629,7 @@ procduct details css
 }
 .career-detail-section .job-description li {
   color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   list-style: none;
   display: inline-block;
   padding: 0 8px;
@@ -6903,7 +6903,7 @@ procduct details css
 .product-item .product-content .product-price {
   font-size: 23px;
   font-weight: 700;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   padding: 0 20px;
   color: #0791BE;
 }
@@ -6977,7 +6977,7 @@ procduct details css
   color: #ddd;
   content: "\f005\f005\f005\f005\f005";
   display: block;
-  font-family: "Font Awesome 5 free";
+  font-family: "Rubik";
 }
 .procduct-rate span {
   float: left;
@@ -6992,7 +6992,7 @@ procduct details css
   color: #FEBF00;
   content: "\f005\f005\f005\f005\f005";
   display: block;
-  font-family: "Font Awesome 5 free";
+  font-family: "Rubik";
   font-weight: 900;
   position: absolute;
   top: 0;
@@ -7084,14 +7084,14 @@ procduct details css
 }
 .product-summary .product-meta strong {
   color: #151515;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-transform: capitalize;
   margin-right: 5px;
 }
 .product-summary .product-meta a {
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 14px;
   color: #383838;
 }
@@ -7133,12 +7133,12 @@ procduct details css
 .product-outer-wrap .comment-area {
   margin-top: 0;
 }
-@media screen and (max-width: 575px) {
+/*@media screen and (max-width: 575px) {
   .product-outer-wrap .tab-content {
     padding: 30px 15px;
   }
 }
-
+*/
 /*---------------------------
 Related product css
 ----------------------------*/
@@ -7279,7 +7279,7 @@ product checkout css
 .cart-list-inner .table thead tr th {
   background-color: #f5f5f5;
   border: none;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 700;
   font-size: 15px;
 }
@@ -7493,7 +7493,7 @@ product checkout css
 .step-link-wrap .step-item {
   font-size: 18px;
   font-weight: 700;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   width: 33.33%;
   position: relative;
 }
@@ -7634,7 +7634,7 @@ product checkout css
   font-weight: 400;
 }
 .widget-support-wrap .support-content .phone {
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 30px;
   display: block;
   margin-bottom: 10px;
@@ -7801,7 +7801,7 @@ product checkout css
 .ui-datepicker .ui-datepicker-prev span:before,
 .ui-datepicker .ui-datepicker-next span:before {
   font-size: 13px;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   font-weight: 900;
 }
 .ui-datepicker .ui-datepicker-prev.ui-state-hover,
@@ -7930,7 +7930,7 @@ product checkout css
   border-radius: 0px;
   content: "\f00d";
   font-weight: 900;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Rubik";
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -8389,7 +8389,7 @@ product checkout css
   color: inherit;
 }
 .widget.widget_recent_post li h5 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 10px;
@@ -8726,7 +8726,7 @@ product checkout css
 }
 .widget.widget_category_product_thumb li .product-content .count {
   color: #D5302E;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 600;
   font-size: 14px;
 }

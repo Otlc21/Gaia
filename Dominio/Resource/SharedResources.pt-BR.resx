@@ -117,14 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ABOUT" xml:space="preserve">
+    <value>SOBRE</value>
+  </data>
   <data name="Airline" xml:space="preserve">
     <value>Companhia Aérea</value>
   </data>
   <data name="Airport" xml:space="preserve">
     <value>Aeroporto</value>
   </data>
+  <data name="All rights reserveds" xml:space="preserve">
+    <value>Todos os direitos reservados</value>
+  </data>
   <data name="AlreadyHaveAccount" xml:space="preserve">
     <value>Já tem uma conta?</value>
+  </data>
+  <data name="Book Now" xml:space="preserve">
+    <value>Reservar</value>
   </data>
   <data name="Bookings" xml:space="preserve">
     <value>Reservas</value>
@@ -138,11 +147,29 @@
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirme sua Senha</value>
   </data>
+  <data name="CONTACT INFORMATION" xml:space="preserve">
+    <value>CONTATO</value>
+  </data>
   <data name="CreateOne" xml:space="preserve">
     <value>Crie uma aqui</value>
   </data>
+  <data name="Departure date" xml:space="preserve">
+    <value>Data de partida</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Destino</value>
+  </data>
   <data name="DontHaveAccount" xml:space="preserve">
     <value>Você não tem uma conta?</value>
+  </data>
+  <data name="Drop-off date" xml:space="preserve">
+    <value>Data de entrega</value>
+  </data>
+  <data name="Drop-off location" xml:space="preserve">
+    <value>Local de entrega</value>
+  </data>
+  <data name="EXPLORE GREAT PLACES" xml:space="preserve">
+    <value>EXPLORE LUGARES INCRÍVEIS</value>
   </data>
   <data name="Flight" xml:space="preserve">
     <value>Aéreo</value>
@@ -150,8 +177,14 @@
   <data name="ForgotPassword" xml:space="preserve">
     <value>Esqueceu a sua senha?</value>
   </data>
+  <data name="From" xml:space="preserve">
+    <value>Origem</value>
+  </data>
   <data name="Hello" xml:space="preserve">
     <value>Olá</value>
+  </data>
+  <data name="HELP" xml:space="preserve">
+    <value>AJUDA</value>
   </data>
   <data name="Hotel" xml:space="preserve">
     <value>Hotel</value>
@@ -174,19 +207,67 @@
   <data name="Markup" xml:space="preserve">
     <value>Marcação</value>
   </data>
+  <data name="MemberSaveMessage" xml:space="preserve">
+    <value>Os membros economizam 10% ou mais em mais de 100.000 hotéis em todo o mundo quando fazem login</value>
+  </data>
   <data name="Or" xml:space="preserve">
     <value>OU</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Pacotes</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Senha</value>
   </data>
+  <data name="per person" xml:space="preserve">
+    <value>por pessoa</value>
+  </data>
+  <data name="Pick-up date" xml:space="preserve">
+    <value>Data de retirada</value>
+  </data>
+  <data name="Pick-up location" xml:space="preserve">
+    <value>Local de retirada</value>
+  </data>
+  <data name="Privacy Policy" xml:space="preserve">
+    <value>Politica de Privacidade</value>
+  </data>
   <data name="RequiredField" xml:space="preserve">
     <value>O campo {0} é obrigatório</value>
+  </data>
+  <data name="reviews" xml:space="preserve">
+    <value>avaliações</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pesquisar</value>
   </data>
   <data name="SignIn" xml:space="preserve">
     <value>Entrar</value>
   </data>
   <data name="SignUp" xml:space="preserve">
     <value>Cadastrar</value>
+  </data>
+  <data name="SUBSCRIBE US" xml:space="preserve">
+    <value>SE INSCREVA</value>
+  </data>
+  <data name="Term &amp; Condition" xml:space="preserve">
+    <value>Termos e Condições</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="Travelers" xml:space="preserve">
+    <value>Viajantes</value>
+  </data>
+  <data name="TravelersChildren" xml:space="preserve">
+    <value>Crianças</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="VIEW ALL" xml:space="preserve">
+    <value>Veja todos</value>
+  </data>
+  <data name="Wish List" xml:space="preserve">
+    <value>Lista de Desejos</value>
   </data>
 </root>

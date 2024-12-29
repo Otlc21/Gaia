@@ -3,16 +3,18 @@
 }
 
 <div class="container search-box">
-	<!-- Abas -->
 	<ul class="nav nav-pills mb-3" id="searchTabs" role="tablist">
 		<li class="nav-item" role="presentation">
-			<button class="nav-link active" id="stays-tab" data-bs-toggle="pill" data-bs-target="#stays" type="button" role="tab">Stays</button>
+			<button class="nav-link active" id="stays-tab" data-bs-toggle="pill" data-bs-target="#stays" type="button" role="tab">@Localizer["Hotel"]</button>
 		</li>
 		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="flights-tab" data-bs-toggle="pill" data-bs-target="#flights" type="button" role="tab">Flights</button>
+			<button class="nav-link" id="flights-tab" data-bs-toggle="pill" data-bs-target="#flights" type="button" role="tab">@Localizer["Flight"]</button>
 		</li>
 		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="cars-tab" data-bs-toggle="pill" data-bs-target="#cars" type="button" role="tab">Cars</button>
+			<button class="nav-link" id="cars-tab" data-bs-toggle="pill" data-bs-target="#cars" type="button" role="tab">@Localizer["Car"]</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="package-tab" data-bs-toggle="pill" data-bs-target="#package" type="button" role="tab">@Localizer["Package"]</button>
 		</li>
 	</ul>
 
@@ -21,39 +23,47 @@
 			<form>
 				<div class="form-container">
 					<div class="form-group">
-						<label>Destination</label>
+						<label>@Localizer["Destination"]</label>
 
 						<div class="input-icon">
-							<i class="fas fa-map-marker-alt"></i>
-							<input type="text" class="form-control" placeholder="Enter a city">
+							<i class="fa fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["Destination"]">
 						</div>
 					</div>
 					<div class="form-group">
 						<label>Check-in</label>
 						<div class="input-icon">
-							<i class="fas fa-calendar-alt"></i>
-							<input type="date" class="form-control" placeholder="Check-in">
+							<i class="fa fa-calendar-alt"></i>
+							<input type="text" class="form-control" placeholder="Check-in">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label>Check-out</label>
 						<div class="input-icon">
-							<i class="fas fa-calendar-alt"></i>
-							<input type="date" class="form-control" placeholder="Check-out">
+							<i class="fa fa-calendar-alt"></i>
+							<input type="text" class="form-control" placeholder="Check-out">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label>Travelers</label>
+						<label>@Localizer["Travelers"]</label>
 						<div class="input-icon">
-							<i class="fas fa-user"></i>
-							<input type="number" class="form-control" placeholder="Travelers" min="1">
+							<i class="fa fa-user"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["Travelers"]" min="1" max="12">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>@Localizer["TravelersChildren"]</label>
+						<div class="input-icon">
+							<i class="fa fa-user"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["TravelersChildren"]" min="1" max="12">
 						</div>
 					</div>
 					<div class="form-group">
 						<label></label>
-						<button type="submit" class="btn-search">Search</button>
+						<button type="button" class="btn btn-primary">@Localizer["Search"]</button>
 					</div>
 
 				</div>
@@ -64,39 +74,47 @@
 			<form>
 				<div class="form-container">
 					<div class="form-group">
-						<label>From</label>
+						<label>@Localizer["From"]</label>
 						<div class="input-icon">
-							<i class="fas fa-map-marker-alt"></i>
-							<input type="text" class="form-control" placeholder="Departure city">
+							<i class="fa fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["From"]">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label>To</label>
+						<label>@Localizer["To"]</label>
 						<div class="input-icon">
-							<i class="fas fa-map-marker-alt"></i>
-							<input type="text" class="form-control" placeholder="Destination city">
+							<i class="fa fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["To"]">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label>Departure date</label>
+						<label>@Localizer["Departure date"]</label>
 						<div class="input-icon">
-							<i class="fas fa-calendar-alt"></i>
-							<input type="date" class="form-control" placeholder="Departure">
+							<i class="fa fa-calendar-alt"></i>
+							<input type="text" class="form-control" placeholder="Departure date">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label>Travelers</label>
+						<label>@Localizer["Travelers"]</label>
 						<div class="input-icon">
-							<i class="fas fa-user"></i>
-							<input type="number" class="form-control" placeholder="Travelers" min="1">
+							<i class="fa fa-user"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["Travelers"]" min="1" max="12">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>@Localizer["TravelersChildren"]</label>
+						<div class="input-icon">
+							<i class="fa fa-user"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["TravelersChildren"]" min="1" max="12">
 						</div>
 					</div>
 					<div class="form-group">
 						<label></label>
-						<button type="submit" class="btn-search">Search</button>
+						<button type="button" class="btn btn-primary">@Localizer["Search"]</button>
 					</div>
 				</div>
 
@@ -107,40 +125,48 @@
 			<form>
 				<div class="form-container">
 					<div class="form-group">
-						<label>Pick-up Location</label>
+						<label>@Localizer["Pick-up location"]</label>
 						<div class="input-icon">
-							<i class="fas fa-map-marker-alt"></i>
-							<input type="text" class="form-control" placeholder="Pick-up location">
+							<i class="fa fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["Pick-up location"]">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label>Pick-up date</label>
+						<label>@Localizer["Pick-up date"]</label>
 						<div class="input-icon">
-							<i class="fas fa-calendar-alt"></i>
-							<input type="date" class="form-control" placeholder="Pick-up date">
+							<i class="fa fa-calendar-alt"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["Pick-up date"]">
 						</div>
 					</div>
 
 
 					<div class="form-group">
-						<label>Drop-off location</label>
+						<label>@Localizer["Drop-off location"]</label>
 						<div class="input-icon">
-							<i class="fas fa-map-marker-alt"></i>
-							<input type="text" class="form-control" placeholder="Drop-off location">
+							<i class="fa fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["Drop-off location"]">
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label>Drop-off date</label>
+						<label>@Localizer["Drop-off date"]</label>
 						<div class="input-icon">
-							<i class="fas fa-calendar-alt"></i>
-							<input type="date" class="form-control" placeholder="Drop-off date">
+							<i class="fa fa-calendar-alt"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["Drop-off date"]">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>@Localizer["Type"]</label>
+						<div class="input-icon">
+							<i class="fa fa-map-marker-alt"></i>
+							<input type="text" class="form-control" placeholder="@Localizer["Type"]">
 						</div>
 					</div>
 					<div class="form-group">
 						<label></label>
-						<button type="submit" class="btn-search">Search</button>
+						<button type="button" class="btn btn-primary">@Localizer["Search"]</button>
 					</div>
 
 				</div>
@@ -148,3 +174,373 @@
 		</div>
 	</div>
 </div>
+
+@if (!User.Identity?.IsAuthenticated ?? false)
+{
+	<div class="container my-4">
+		<div class="signed-save alert alert-primary d-flex align-items-center justify-content-between">
+			<div>
+				<i class="fa-solid fa-tags"></i>
+				<strong> @Localizer["MemberSaveMessage"]</strong>
+			</div>
+			<button class="btn btn-primary">@Localizer["SignIn"]</button>
+		</div>
+	</div>
+}
+
+
+<section class="package-section">
+	<div class="container">
+		<div class="section-heading">
+			<div class="row">
+				<div class="col-lg-8">
+					<h4 class="dash-style">@Localizer["EXPLORE GREAT PLACES"]</h4>
+				</div>
+			</div>
+		</div>
+		<div class="package-inner">
+			<div class="row">
+				<div class="col-lg-3 col-md-3">
+					<div class="package-wrap">
+						<figure class="feature-image">
+							<a href="#">
+								<img src="~/Temp/assets/images/img5.jpg" alt="">
+							</a>
+						</figure>
+						<div class="package-price">
+							<h6>
+								<span>$1,900 </span> / @Localizer["per person"]
+							</h6>
+						</div>
+						<div class="package-content-wrap">
+							<div class="package-meta text-center">
+								<ul>
+									<li>
+										<i class="far fa-clock"></i>
+										7D/6N
+									</li>
+									<li>
+										<i class="fas fa-user-friends"></i>
+										5
+									</li>
+									<li>
+										<i class="fas fa-map-marker-alt"></i>
+										France
+									</li>
+								</ul>
+							</div>
+							<div class="package-content">
+								<h3>
+									<a href="#">Lorem ipsum dolor sit amet</a>
+								</h3>
+								<div class="review-area">
+									<span class="review-text">(25 @Localizer["reviews"])</span>
+									<div class="rating-start" title="Rated 5 out of 5">
+										<span style="width: 60%"></span>
+									</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+								<div class="btn-wrap">
+									<a href="#" class="button-text width-6">@Localizer["Book Now"]<i class="fas fa-arrow-right"></i></a>
+									<a href="#" class="button-text width-6">@Localizer["Wish List"]<i class="far fa-heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3">
+					<div class="package-wrap">
+						<figure class="feature-image">
+							<a href="#">
+								<img src="~/Temp/assets/images/img6.jpg" alt="">
+							</a>
+						</figure>
+						<div class="package-price">
+							<h6>
+								<span>$1,230 </span> / @Localizer["per person"]
+							</h6>
+						</div>
+						<div class="package-content-wrap">
+							<div class="package-meta text-center">
+								<ul>
+									<li>
+										<i class="far fa-clock"></i>
+										5D/4N
+									</li>
+									<li>
+										<i class="fas fa-user-friends"></i>
+										8
+									</li>
+									<li>
+										<i class="fas fa-map-marker-alt"></i>
+										Canada
+									</li>
+								</ul>
+							</div>
+							<div class="package-content">
+								<h3>
+									<a href="#">Lorem ipsum dolor sit amet</a>
+								</h3>
+								<div class="review-area">
+									<span class="review-text">(17 @Localizer["reviews"])</span>
+									<div class="rating-start" title="Rated 5 out of 5">
+										<span style="width: 100%"></span>
+									</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+								<div class="btn-wrap">
+									<a href="#" class="button-text width-6">@Localizer["Book Now"]<i class="fas fa-arrow-right"></i></a>
+									<a href="#" class="button-text width-6">@Localizer["Wish List"]<i class="far fa-heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3">
+					<div class="package-wrap">
+						<figure class="feature-image">
+							<a href="#">
+								<img src="~/Temp/assets/images/img7.jpg" alt="">
+							</a>
+						</figure>
+						<div class="package-price">
+							<h6>
+								<span>$2,000 </span> / @Localizer["per person"]
+							</h6>
+						</div>
+						<div class="package-content-wrap">
+							<div class="package-meta text-center">
+								<ul>
+									<li>
+										<i class="far fa-clock"></i>
+										6D/5N
+									</li>
+									<li>
+										<i class="fas fa-user-friends"></i>
+										6
+									</li>
+									<li>
+										<i class="fas fa-map-marker-alt"></i>
+										Norway
+									</li>
+								</ul>
+							</div>
+							<div class="package-content">
+								<h3>
+									<a href="#">Lorem ipsum dolor sit amet</a>
+								</h3>
+								<div class="review-area">
+									<span class="review-text">(22 @Localizer["reviews"])</span>
+									<div class="rating-start" title="Rated 5 out of 5">
+										<span style="width: 80%"></span>
+									</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+								<div class="btn-wrap">
+									<a href="#" class="button-text width-6">@Localizer["Book Now"]<i class="fas fa-arrow-right"></i></a>
+									<a href="#" class="button-text width-6">@Localizer["Wish List"]<i class="far fa-heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3">
+					<div class="package-wrap">
+						<figure class="feature-image">
+							<a href="#">
+								<img src="~/Temp/assets/images/imgj.jpg" alt="">
+							</a>
+						</figure>
+						<div class="package-price">
+							<h6>
+								<span>$2,900 </span> / @Localizer["per person"]
+							</h6>
+						</div>
+						<div class="package-content-wrap">
+							<div class="package-meta text-center">
+								<ul>
+									<li>
+										<i class="far fa-clock"></i>
+										7D/6N
+									</li>
+									<li>
+										<i class="fas fa-user-friends"></i>
+										5
+									</li>
+									<li>
+										<i class="fas fa-map-marker-alt"></i>
+										Japan
+									</li>
+								</ul>
+							</div>
+							<div class="package-content">
+								<h3>
+									<a href="#">Lorem ipsum dolor sit amet</a>
+								</h3>
+								<div class="review-area">
+									<span class="review-text">(25 @Localizer["reviews"])</span>
+									<div class="rating-start" title="Rated 5 out of 5">
+										<span style="width: 100%"></span>
+									</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+								<div class="btn-wrap">
+									<a href="#" class="button-text width-6">@Localizer["Book Now"]<i class="fas fa-arrow-right"></i></a>
+									<a href="#" class="button-text width-6">@Localizer["Wish List"]<i class="far fa-heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+@* 				<div class="col-lg-2 col-md-3">
+					<div class="package-wrap">
+						<figure class="feature-image">
+							<a href="#">
+								<img src="~/Temp/assets/images/img5.jpg" alt="">
+							</a>
+						</figure>
+						<div class="package-price">
+							<h6>
+								<span>$1,900 </span> / @Localizer["per person"]
+							</h6>
+						</div>
+						<div class="package-content-wrap">
+							<div class="package-meta text-center">
+								<ul>
+									<li>
+										<i class="far fa-clock"></i>
+										7D/6N
+									</li>
+									<li>
+										<i class="fas fa-user-friends"></i>
+										People: 5
+									</li>
+									<li>
+										<i class="fas fa-map-marker-alt"></i>
+										France
+									</li>
+								</ul>
+							</div>
+							<div class="package-content">
+								<h3>
+									<a href="#">Lorem ipsum dolor sit amet</a>
+								</h3>
+								<div class="review-area">
+									<span class="review-text">(25 @Localizer["reviews"])</span>
+									<div class="rating-start" title="Rated 5 out of 5">
+										<span style="width: 60%"></span>
+									</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+								<div class="btn-wrap">
+									<a href="#" class="button-text width-6">@Localizer["Book Now"]<i class="fas fa-arrow-right"></i></a>
+									<a href="#" class="button-text width-6">@Localizer["Wish List"]<i class="far fa-heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3">
+					<div class="package-wrap">
+						<figure class="feature-image">
+							<a href="#">
+								<img src="~/Temp/assets/images/img6.jpg" alt="">
+							</a>
+						</figure>
+						<div class="package-price">
+							<h6>
+								<span>$1,230 </span> / @Localizer["per person"]
+							</h6>
+						</div>
+						<div class="package-content-wrap">
+							<div class="package-meta text-center">
+								<ul>
+									<li>
+										<i class="far fa-clock"></i>
+										5D/4N
+									</li>
+									<li>
+										<i class="fas fa-user-friends"></i>
+										People: 8
+									</li>
+									<li>
+										<i class="fas fa-map-marker-alt"></i>
+										Canada
+									</li>
+								</ul>
+							</div>
+							<div class="package-content">
+								<h3>
+									<a href="#">Lorem ipsum dolor sit amet</a>
+								</h3>
+								<div class="review-area">
+									<span class="review-text">(17 @Localizer["reviews"])</span>
+									<div class="rating-start" title="Rated 5 out of 5">
+										<span style="width: 100%"></span>
+									</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+								<div class="btn-wrap">
+									<a href="#" class="button-text width-6">@Localizer["Book Now"]<i class="fas fa-arrow-right"></i></a>
+									<a href="#" class="button-text width-6">@Localizer["Wish List"]<i class="far fa-heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3">
+					<div class="package-wrap">
+						<figure class="feature-image">
+							<a href="#">
+								<img src="~/Temp/assets/images/img7.jpg" alt="">
+							</a>
+						</figure>
+						<div class="package-price">
+							<h6>
+								<span>$2,000 </span> / @Localizer["per person"]
+							</h6>
+						</div>
+						<div class="package-content-wrap">
+							<div class="package-meta text-center">
+								<ul>
+									<li>
+										<i class="far fa-clock"></i>
+										6D/5N
+									</li>
+									<li>
+										<i class="fas fa-user-friends"></i>
+										People: 6
+									</li>
+									<li>
+										<i class="fas fa-map-marker-alt"></i>
+										Norway
+									</li>
+								</ul>
+							</div>
+							<div class="package-content">
+								<h3>
+									<a href="#">Lorem ipsum dolor sit amet</a>
+								</h3>
+								<div class="review-area">
+									<span class="review-text">(22 @Localizer["reviews"])</span>
+									<div class="rating-start" title="Rated 5 out of 5">
+										<span style="width: 80%"></span>
+									</div>
+								</div>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit luctus nec ullam. Ut elit tellus, luctus nec ullam elit tellpus.</p>
+								<div class="btn-wrap">
+									<a href="#" class="button-text width-6">@Localizer["Book Now"]<i class="fas fa-arrow-right"></i></a>
+									<a href="#" class="button-text width-6">@Localizer["Wish List"]<i class="far fa-heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> *@
+			</div>
+			<div class="btn-wrap text-center">
+				<a href="#" class="button-primary">@Localizer["VIEW ALL"]</a>
+			</div>
+		</div>
+	</div>
+</section>
