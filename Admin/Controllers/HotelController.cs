@@ -1,5 +1,5 @@
 using Admin.Models;
-using Dominio.Servico;
+using Dominio.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,8 +10,8 @@ namespace Admin.Controllers
     public class HotelController : Controller
     {
 
-        private readonly IHotelServico _servico;
-        public HotelController(IHotelServico servico)
+        private readonly IHotelService _servico;
+        public HotelController(IHotelService servico)
         {
             _servico = servico;
         }

@@ -1,6 +1,6 @@
-﻿using Dominio.Entidade;
-using Dominio.Repositorio;
-using Dominio.Servico;
+﻿using Dominio.Entity;
+using Dominio.Repository;
+using Dominio.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace RegraNegocio.Servico
 {
-    public class LocationServico : ILocationServico
+    public class LocationServico : ILocationService
     {
-        private readonly ILocationRepositorio _repositorio;
+        private readonly ILocationRepository _repositorio;
 
-        public LocationServico(ILocationRepositorio repositorio)
+        public LocationServico(ILocationRepository repositorio)
         {
             _repositorio = repositorio;
         }

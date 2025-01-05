@@ -1,6 +1,6 @@
 using Admin.Models;
-using Dominio.Entidade;
-using Dominio.Servico;
+using Dominio.Entity;
+using Dominio.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MySqlX.XDevAPI;
@@ -11,8 +11,8 @@ namespace Admin.Controllers
     [Authorize]
     public class FlightController : Controller
     {
-        private readonly IFlightServico _servico;
-        public FlightController(IFlightServico servico)
+        private readonly IFlightService _servico;
+        public FlightController(IFlightService servico)
         {
             _servico = servico;
         }

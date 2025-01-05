@@ -1,0 +1,121 @@
+﻿@model Web.Models.LocationViewModel
+@inject IStringLocalizer<SharedResources> Localizer
+
+<div class="container mt-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary" style="color: #383838 !important; font-family: 'Roboto', sans-serif;">
+            @Localizer["Locations"]
+        </h2>
+        <a href="@Url.Action("Create")" class="btn btn-success">
+            <i class="fa fa-plus"></i> @Localizer["CreateLocation"]
+        </a>
+    </div>
+
+    <!-- Filtros de Pesquisa -->
+    <form method="get" class="row g-3 mb-4">
+        <div class="col-md-4">
+            <input type="text" name="City" class="form-control" placeholder="@Localizer["City"]" value="@Model.City" style="font-family: 'Roboto', sans-serif; color: #383838;">
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="State" class="form-control" placeholder="@Localizer["State"]" value="@Model.State" style="font-family: 'Roboto', sans-serif; color: #383838;">
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="Country" class="form-control" placeholder="@Localizer["Country"]" value="@Model.Country" style="font-family: 'Roboto', sans-serif; color: #383838;">
+        </div>
+        <div class="col-12 text-end">
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-search"></i> @Localizer["Search"]
+            </button>
+        </div>
+    </form>
+
+    <!-- Grid Responsivo -->
+    <div class="table-responsive shadow rounded">
+        <table class="table table-hover align-middle">
+            <thead style="background-color: #12407A; color: white;">
+                <tr>
+                    <th>@Localizer["Id"]</th>
+                    <th>@Localizer["City"]</th>
+                    <th>@Localizer["State"]</th>
+                    <th>@Localizer["Country"]</th>
+                    <th class="d-none d-md-table-cell">@Localizer["CreationDate"]</th>
+                    <th>@Localizer["Active"]</th>
+                    <th class="text-end">@Localizer["Actions"]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Itens)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.City</td>
+                        <td>@item.State</td>
+                        <td>@item.Country</td>
+                        <td class="d-none d-md-table-cell">@item.Creation.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            <span class="badge @(item.Active ? "bg-success" : "bg-danger")">
+                                @(item.Active ? Localizer["Yes"] : Localizer["No"])
+                            </span>
+                        </td>
+                        <td class="text-end">
+                            <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-sm btn-outline-primary">
+                                <i class="fa fa-edit"></i> @Localizer["Edit"]
+                            </a>
+                            <button class="btn btn-sm btn-outline-danger" type="button" data-bs-toggle="modal" data-bs-target="#confirmInactivateModal" data-id="@item.Id">
+                                <i class="fa fa-times"></i> @Localizer["Inactivate"]
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Paginação -->
+    <nav aria-label="@Localizer["Pagination"]">
+        <ul class="pagination justify-content-center mt-4">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(Model.Page == i ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { city = Model.City, state = Model.State, country = Model.Country, page = i })">
+                        @i
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
+
+
+<!-- Modal de confirmação -->
+<div class="modal fade" id="confirmInactivateModal" tabindex="-1" aria-labelledby="confirmInactivateLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmInactivateLabel">@Localizer["ConfirmAction"]</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @Localizer["AreYouSureToInactivate"]
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer["Cancel"]</button>
+                <form id="inactivateForm" method="post" asp-action="Inactivate">
+                    <input type="hidden" id="inactivateId" name="id" />
+                    <button type="submit" class="btn btn-danger">@Localizer["Confirm"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Passar o ID do item para o modal
+    const confirmInactivateModal = document.getElementById('confirmInactivateModal');
+    confirmInactivateModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget; // Botão que abriu o modal
+        const id = button.getAttribute('data-id'); // Obter o ID do botão
+        document.getElementById('inactivateId').value = id; // Atribuir o ID ao formulário
+    });
+</script>

@@ -1,0 +1,110 @@
+﻿@model Web.Models.FlightViewModel
+@inject IStringLocalizer<SharedResources> Localizer
+
+<div class="container mt-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary" style="color: #383838; font-family: 'Roboto', sans-serif;">
+            @Localizer["Flights"]
+        </h2>
+        <a href="@Url.Action("Create")" class="btn btn-success">
+            <i class="fa fa-plus"></i> @Localizer["CreateFlight"]
+        </a>
+    </div>
+
+    <!-- Filtros de Pesquisa -->
+    <form method="get" class="row g-3 mb-4">
+@*         <div class="col-md-4">
+            <select name="AirportOrigemId" class="form-select" style="font-family: 'Roboto', sans-serif; color: #383838;">
+                <option value="">@Localizer["SelectOrigemAirport"]</option>
+                @foreach (var airport in Model.Airports)
+                {
+                    <option value="@airport.Value" @(airport.Selected ? "selected" : "")>@airport.Text</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select name="AirportDestinoId" class="form-select" style="font-family: 'Roboto', sans-serif; color: #383838;">
+                <option value="">@Localizer["SelectDestinoAirport"]</option>
+                @foreach (var airport in Model.Airports)
+                {
+                    <option value="@airport.Value" @(airport.Selected ? "selected" : "")>@airport.Text</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select name="AirlineId" class="form-select" style="font-family: 'Roboto', sans-serif; color: #383838;">
+                <option value="">@Localizer["SelectAirline"]</option>
+                @foreach (var airline in Model.Airlines)
+                {
+                    <option value="@airline.Value" @(airline.Selected ? "selected" : "")>@airline.Text</option>
+                }
+            </select>
+        </div> *@
+        <div class="col-12 text-end">
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-search"></i> @Localizer["Search"]
+            </button>
+        </div>
+    </form>
+
+    <!-- Grid Responsivo -->
+    <div class="table-responsive shadow rounded">
+        <table class="table table-hover align-middle">
+            <thead style="background-color: #12407A; color: white;">
+                <tr>
+                    <th>@Localizer["Id"]</th>
+                    <th>@Localizer["Origem"]</th>
+                    <th>@Localizer["Destino"]</th>
+                    <th>@Localizer["Airline"]</th>
+                    <th class="d-none d-md-table-cell">@Localizer["Departure"]</th>
+                    <th class="d-none d-md-table-cell">@Localizer["Arrival"]</th>
+                    <th>@Localizer["Active"]</th>
+                    <th class="text-end">@Localizer["Actions"]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var flight in Model.Itens)
+                {
+                    <tr>
+                        <td>@flight.Id</td>
+                        <td>@flight.AirportOrigem?.Location.City</td>
+                        <td>@flight.AirportDestino?.Location.City</td>
+                        <td>@flight.Airline?.Name</td>
+                        <td class="d-none d-md-table-cell">@flight.Departure.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td class="d-none d-md-table-cell">@flight.Arrival.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>
+                            <span class="badge @(flight.Active ? "bg-success" : "bg-danger")">
+                                @(flight.Active ? Localizer["Yes"] : Localizer["No"])
+                            </span>
+                        </td>
+                        <td class="text-end">
+                            <a href="@Url.Action("Edit", new { id = flight.Id })" class="btn btn-sm btn-outline-primary">
+                                <i class="fa fa-edit"></i> @Localizer["Edit"]
+                            </a>
+                            <form method="post" asp-action="Inactivate" asp-route-id="@flight.Id" class="d-inline">
+                                <button class="btn btn-sm btn-outline-danger" type="submit">
+                                    <i class="fa fa-times"></i> @Localizer["Inactivate"]
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Paginação -->
+    <nav aria-label="@Localizer["Pagination"]">
+        <ul class="pagination justify-content-center mt-4">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(Model.Page == i ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { airportOrigemId = Model.AirportOrigemId, airportDestinoId = Model.AirportDestinoId, airlineId = Model.AirlineId, page = i })">
+                        @i
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>

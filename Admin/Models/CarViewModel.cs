@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,13 +14,13 @@ namespace Admin.Models
         public CarViewModel(Car item)
         {
             Id = item.Id;
-            Modelo = item.Modelo;
-            Marca = item.Marca;
-            Ano = item.Ano;
-            Categoria = item.Categoria;
+            Modelo = item.Model;
+            Marca = item.Brand;
+            Ano = item.Year;
+            Categoria = item.Category;
             LocationId = item.LocationId;
-            Preco = item.Preco;
-            Quantidade = item.Quantidade;
+            Preco = item.Price;
+            Quantidade = item.Amount;
             Criacao = item.Criacao;
         }
 
@@ -29,13 +29,13 @@ namespace Admin.Models
             return new Car()
             {
                 Id = this.Id,
-                Modelo = this.Modelo,
-                Marca = this.Marca,
-                Ano = this.Ano,
-                Categoria = this.Categoria,
+                Model = this.Modelo,
+                Brand = this.Marca,
+                Year = this.Ano,
+                Category = this.Categoria,
                 LocationId = this.LocationId,
-                Preco = this.Preco,
-                Quantidade = this.Quantidade,
+                Price = this.Preco,
+                Amount = this.Quantidade,
                 Criacao = this.Criacao,
             };
         }

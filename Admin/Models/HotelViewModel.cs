@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,10 +14,10 @@ namespace Admin.Models
         public HotelViewModel(Hotel item)
         {
             Id = item.Id;
-            Nome = item.Nome;
+            Nome = item.Name;
             LocationId = item.LocationId;
-            Avaliacao = item.Avaliacao;
-            Descricao = item.Descricao;
+            Avaliacao = item.Rating;
+            Descricao = item.Description;
             Criacao = item.Criacao;
         }
 
@@ -26,10 +26,10 @@ namespace Admin.Models
             return new Hotel()
             {
                 Id = this.Id,
-                Nome = this.Nome,
+                Name = this.Nome,
                 LocationId = this.LocationId,
-                Avaliacao = this.Avaliacao,
-                Descricao = this.Descricao,
+                Rating = this.Avaliacao,
+                Description = this.Descricao,
                 Criacao = this.Criacao,
             };
         }

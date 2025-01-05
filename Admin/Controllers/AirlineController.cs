@@ -1,5 +1,5 @@
 using Admin.Models;
-using Dominio.Servico;
+using Dominio.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,8 +10,8 @@ namespace Admin.Controllers
     public class AirlineController : Controller
     {
 
-        private readonly IAirlineServico _servico;
-        public AirlineController(IAirlineServico servico)
+        private readonly IAirlineService _servico;
+        public AirlineController(IAirlineService servico)
         {
             _servico = servico;
         }

@@ -1,5 +1,5 @@
 using Admin.Models;
-using Dominio.Servico;
+using Dominio.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,8 +10,8 @@ namespace Admin.Controllers
     public class CarController : Controller
     {
 
-        private readonly ICarServico _servico;
-        public CarController(ICarServico servico)
+        private readonly ICarService _servico;
+        public CarController(ICarService servico)
         {
             _servico = servico;
         }

@@ -1,15 +1,17 @@
-﻿using Dominio.Entidade;
-using Dominio.Repositorio;
+﻿using Dominio.Entity;
+using Dominio.Repository;
+using LinqKit;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Infraestrutura.Repositorio
 {
-    public class MarkupRepositorio : IMarkupRepositorio
+    public class MarkupRepositorio : IMarkupRepository
     {
         private readonly AppDbContext _context;
         private readonly DbSet<Markup> _dbSet;
@@ -42,12 +44,28 @@ namespace Infraestrutura.Repositorio
 
         public async Task<List<Markup>> Get(Markup item, int skip, int take)
         {
-            return await _dbSet.Where(x => 1 == 1)
+            Expression<Func<Markup, bool>> filter = MakeFilter(item);
+
+            return await _dbSet.Where(filter)
                 .OrderByDescending(x => x.Id)
                 .Skip(skip)
                 .Take(take)
                 .ToListAsync();
         }
+
+        private Expression<Func<Markup, bool>> MakeFilter(Markup item)
+        {
+            Expression<Func<Markup, bool>> filter = PredicateBuilder.New<Markup>();
+
+            if (item == null)
+                return filter;
+
+            if (item.Id != 0)
+                filter = filter.And(x => x.Id == item.Id);
+
+            return filter;
+        }
+
 
         public async Task Insert(Markup item)
         {

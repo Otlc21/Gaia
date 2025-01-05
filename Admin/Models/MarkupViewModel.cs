@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations;
 
 namespace Admin.Models
@@ -13,9 +13,9 @@ namespace Admin.Models
         public MarkupViewModel(Markup item)
         {
             Id = item.Id;
-            PercentualFlight = item.PercentualFlight;
-            PercentualCar = item.PercentualCar;
-            PercentualHotel = item.PercentualHotel;
+            PercentualFlight = item.Flight;
+            PercentualCar = item.Car;
+            PercentualHotel = item.Hotel;
         }
 
         public Markup Convert()
@@ -23,9 +23,9 @@ namespace Admin.Models
             return new Markup()
             {
                 Id = this.Id,
-                PercentualFlight = this.PercentualFlight,
-                PercentualCar = this.PercentualCar,
-                PercentualHotel = this.PercentualHotel,
+                Flight = this.PercentualFlight,
+                Car = this.PercentualCar,
+                Hotel = this.PercentualHotel,
             };
         }
         [Key]

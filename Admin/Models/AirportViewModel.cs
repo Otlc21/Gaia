@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,8 +14,8 @@ namespace Admin.Models
         public AirportViewModel(Airport item)
         {
             Id = item.Id;
-            Codigo = item.Codigo;
-            Descricao = item.Descricao;
+            Codigo = item.Code;
+            Descricao = item.Description;
             LocationId = item.LocationId;
             Criacao = item.Criacao;
         }
@@ -25,8 +25,8 @@ namespace Admin.Models
             return new Airport()
             {
                 Id = this.Id,
-                Codigo = this.Codigo,
-                Descricao = this.Descricao,
+                Code = this.Codigo,
+                Description = this.Descricao,
                 LocationId = this.LocationId,
                 Criacao = this.Criacao,
             };

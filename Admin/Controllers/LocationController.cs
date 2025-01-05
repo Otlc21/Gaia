@@ -1,5 +1,5 @@
 using Admin.Models;
-using Dominio.Servico;
+using Dominio.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,8 +10,8 @@ namespace Admin.Controllers
     public class LocationController : Controller
     {
 
-        private readonly ILocationServico _servico;
-        public LocationController(ILocationServico servico)
+        private readonly ILocationService _servico;
+        public LocationController(ILocationService servico)
         {
             _servico = servico;
         }

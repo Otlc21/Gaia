@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;

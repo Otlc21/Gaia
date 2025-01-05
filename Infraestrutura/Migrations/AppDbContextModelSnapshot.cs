@@ -19,20 +19,23 @@ namespace Infraestrutura.Migrations
                 .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("Dominio.Entidade.Airline", b =>
+            modelBuilder.Entity("Dominio.Entity.Airline", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Criacao")
-                        .HasColumnType("datetime(6)");
+                    b.Property<bool>("Active")
+                        .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("Country")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Pais")
+                    b.Property<DateTime>("Creation")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -41,20 +44,23 @@ namespace Infraestrutura.Migrations
                     b.ToTable("Airlines");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Airport", b =>
+            modelBuilder.Entity("Dominio.Entity.Airport", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Codigo")
+                    b.Property<bool>("Active")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<DateTime>("Criacao")
+                    b.Property<DateTime>("Creation")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Descricao")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -68,38 +74,44 @@ namespace Infraestrutura.Migrations
                     b.ToTable("Airports");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Car", b =>
+            modelBuilder.Entity("Dominio.Entity.Car", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<short>("Ano")
-                        .HasColumnType("smallint");
+                    b.Property<bool>("Active")
+                        .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("Categoria")
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Brand")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<DateTime>("Criacao")
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("Creation")
                         .HasColumnType("datetime(6)");
 
                     b.Property<int>("LocationId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Marca")
+                    b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Modelo")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("Path")
+                        .HasColumnType("int");
 
-                    b.Property<float>("Preco")
+                    b.Property<float>("Price")
                         .HasColumnType("float");
 
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
+                    b.Property<short>("Year")
+                        .HasColumnType("smallint");
 
                     b.HasKey("Id");
 
@@ -108,11 +120,14 @@ namespace Infraestrutura.Migrations
                     b.ToTable("Cars");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Flight", b =>
+            modelBuilder.Entity("Dominio.Entity.Flight", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<int>("AirlineId")
                         .HasColumnType("int");
@@ -123,24 +138,27 @@ namespace Infraestrutura.Migrations
                     b.Property<int>("AirportOrigemId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Chegada")
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Arrival")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Classe")
+                    b.Property<string>("Class")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<DateTime>("Criacao")
+                    b.Property<DateTime>("Creation")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("Partida")
+                    b.Property<DateTime>("Departure")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<float>("Preco")
-                        .HasColumnType("float");
-
-                    b.Property<int>("Quantidade")
+                    b.Property<int>("Path")
                         .HasColumnType("int");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -153,28 +171,34 @@ namespace Infraestrutura.Migrations
                     b.ToTable("Flights");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Hotel", b =>
+            modelBuilder.Entity("Dominio.Entity.Hotel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<float>("Avaliacao")
-                        .HasColumnType("float");
+                    b.Property<bool>("Active")
+                        .HasColumnType("tinyint(1)");
 
-                    b.Property<DateTime>("Criacao")
+                    b.Property<DateTime>("Creation")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Descricao")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("LocationId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<int>("Path")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Rating")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -183,24 +207,27 @@ namespace Infraestrutura.Migrations
                     b.ToTable("Hotels");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Location", b =>
+            modelBuilder.Entity("Dominio.Entity.Location", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Cidade")
+                    b.Property<bool>("Active")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<DateTime>("Criacao")
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("Creation")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Estado")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Pais")
+                    b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -209,19 +236,19 @@ namespace Infraestrutura.Migrations
                     b.ToTable("Locations");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Markup", b =>
+            modelBuilder.Entity("Dominio.Entity.Markup", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<float>("PercentualCar")
+                    b.Property<float>("Car")
                         .HasColumnType("float");
 
-                    b.Property<float>("PercentualFlight")
+                    b.Property<float>("Flight")
                         .HasColumnType("float");
 
-                    b.Property<float>("PercentualHotel")
+                    b.Property<float>("Hotel")
                         .HasColumnType("float");
 
                     b.HasKey("Id");
@@ -229,28 +256,31 @@ namespace Infraestrutura.Migrations
                     b.ToTable("Markups");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Room", b =>
+            modelBuilder.Entity("Dominio.Entity.Room", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<byte>("Capacidade")
+                    b.Property<bool>("Active")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<byte>("Capacity")
                         .HasColumnType("tinyint unsigned");
 
-                    b.Property<DateTime>("Criacao")
+                    b.Property<DateTime>("Creation")
                         .HasColumnType("datetime(6)");
 
                     b.Property<int>("HotelId")
                         .HasColumnType("int");
 
-                    b.Property<float>("Preco")
+                    b.Property<float>("Price")
                         .HasColumnType("float");
 
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Tipo")
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -453,9 +483,9 @@ namespace Infraestrutura.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Airport", b =>
+            modelBuilder.Entity("Dominio.Entity.Airport", b =>
                 {
-                    b.HasOne("Dominio.Entidade.Location", "Location")
+                    b.HasOne("Dominio.Entity.Location", "Location")
                         .WithMany()
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -464,9 +494,9 @@ namespace Infraestrutura.Migrations
                     b.Navigation("Location");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Car", b =>
+            modelBuilder.Entity("Dominio.Entity.Car", b =>
                 {
-                    b.HasOne("Dominio.Entidade.Location", "Location")
+                    b.HasOne("Dominio.Entity.Location", "Location")
                         .WithMany()
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -475,21 +505,21 @@ namespace Infraestrutura.Migrations
                     b.Navigation("Location");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Flight", b =>
+            modelBuilder.Entity("Dominio.Entity.Flight", b =>
                 {
-                    b.HasOne("Dominio.Entidade.Airline", "Airline")
+                    b.HasOne("Dominio.Entity.Airline", "Airline")
                         .WithMany()
                         .HasForeignKey("AirlineId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Dominio.Entidade.Airport", "AirportDestino")
+                    b.HasOne("Dominio.Entity.Airport", "AirportDestino")
                         .WithMany()
                         .HasForeignKey("AirportDestinoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Dominio.Entidade.Airport", "AirportOrigem")
+                    b.HasOne("Dominio.Entity.Airport", "AirportOrigem")
                         .WithMany()
                         .HasForeignKey("AirportOrigemId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -502,9 +532,9 @@ namespace Infraestrutura.Migrations
                     b.Navigation("AirportOrigem");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Hotel", b =>
+            modelBuilder.Entity("Dominio.Entity.Hotel", b =>
                 {
-                    b.HasOne("Dominio.Entidade.Location", "Location")
+                    b.HasOne("Dominio.Entity.Location", "Location")
                         .WithMany()
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -513,9 +543,9 @@ namespace Infraestrutura.Migrations
                     b.Navigation("Location");
                 });
 
-            modelBuilder.Entity("Dominio.Entidade.Room", b =>
+            modelBuilder.Entity("Dominio.Entity.Room", b =>
                 {
-                    b.HasOne("Dominio.Entidade.Hotel", "Hotel")
+                    b.HasOne("Dominio.Entity.Hotel", "Hotel")
                         .WithMany()
                         .HasForeignKey("HotelId")
                         .OnDelete(DeleteBehavior.Cascade)

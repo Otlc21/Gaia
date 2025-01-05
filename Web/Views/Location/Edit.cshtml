@@ -1,0 +1,46 @@
+﻿@model Web.Models.LocationViewModel
+@inject IStringLocalizer<SharedResources> Localizer
+
+<div class="container mt-4">
+    <h2 class="text-primary" style="color: #383838 !important; font-family: 'Roboto', sans-serif;">
+        @Localizer["Locations"]
+    </h2>
+    <form method="post">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="City" class="form-label">@Localizer["City"]</label>
+                <input asp-for="City" class="form-control" placeholder="@Localizer["EnterCity"]" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="State" class="form-label">@Localizer["State"]</label>
+                <input asp-for="State" class="form-control" placeholder="@Localizer["EnterState"]" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Country" class="form-label">@Localizer["Country"]</label>
+                <input asp-for="Country" class="form-control" placeholder="@Localizer["EnterCountry"]" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Creation" class="form-label">@Localizer["CreationDate"]</label>
+                <input asp-for="Creation" type="date" class="form-control" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="Creation" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input asp-for="Active" class="form-check-input" />
+                    <label asp-for="Active" class="form-check-label">@Localizer["IsActive"]</label>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+            <a href="@Url.Action("Index", "Location")" class="btn btn-secondary">
+                @Localizer["Back"]
+            </a>
+            <button type="submit" class="btn btn-primary">
+                @Localizer["Save"]
+            </button>
+        </div>
+    </form>
+</div>

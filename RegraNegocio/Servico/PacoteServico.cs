@@ -1,4 +1,4 @@
-﻿using Dominio.Servico;
+﻿using Dominio.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RegraNegocio.Servico
 {
-    public class PacoteServico : IPacoteServico
+    public class PacoteServico : IPacoteService
     {
     }
 }

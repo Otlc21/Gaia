@@ -1,4 +1,37 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// Função para exibir o loader
+function showLoading() {
+    document.getElementById('loading').style.display = 'flex';
+}
 
-// Write your JavaScript code.
+// Função para ocultar o loader
+function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Mostrar o loader ao submeter formulários
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', function () {
+            showLoading();
+        });
+    });
+
+    // Mostrar o loader ao clicar em links
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', function (event) {
+            // Evitar ativar o loader para âncoras internas ou modais
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('#') || link.dataset.bsToggle === 'modal') return;
+
+            // Exibir o loader
+            showLoading();
+        });
+    });
+});
+
+// Ocultar o loader em caso de erro (exemplo para AJAX)
+window.addEventListener('error', function () {
+    hideLoading();
+});

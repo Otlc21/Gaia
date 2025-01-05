@@ -1,0 +1,62 @@
+﻿@model Web.Models.CarViewModel
+@inject IStringLocalizer<SharedResources> Localizer
+
+<div class="container mt-4">
+    <h2 class="mb-4" style="color: #383838; font-family: 'Roboto', sans-serif;">
+        @ViewData["Title"]
+    </h2>
+    <form method="post">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="Model" class="form-label">@Localizer["Model"]</label>
+                <input asp-for="Model" class="form-control" placeholder="@Localizer["EnterModel"]" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Brand" class="form-label">@Localizer["Brand"]</label>
+                <input asp-for="Brand" class="form-control" placeholder="@Localizer["EnterBrand"]" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Category" class="form-label">@Localizer["Category"]</label>
+                <input asp-for="Category" class="form-control" placeholder="@Localizer["EnterCategory"]" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="LocationId" class="form-label">@Localizer["Location"]</label>
+                <select asp-for="LocationId" asp-items="Model.Locations" class="form-select" style="font-family: 'Roboto', sans-serif; color: #383838;">
+                </select>
+                <span asp-validation-for="LocationId" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Price" class="form-label">@Localizer["Price"]</label>
+                <input asp-for="Price" type="number" step="0.01" class="form-control" placeholder="@Localizer["EnterPrice"]" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Amount" class="form-label">@Localizer["Amount"]</label>
+                <input asp-for="Amount" type="number" class="form-control" placeholder="@Localizer["EnterAmount"]" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Creation" class="form-label">@Localizer["CreationDate"]</label>
+                <input asp-for="Creation" type="date" class="form-control" style="font-family: 'Roboto', sans-serif; color: #383838;" />
+                <span asp-validation-for="Creation" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input asp-for="Active" class="form-check-input" />
+                    <label asp-for="Active" class="form-check-label">@Localizer["IsActive"]</label>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+            <a href="@Url.Action("Index", "Car")" class="btn btn-secondary">
+                @Localizer["Back"]
+            </a>
+            <button type="submit" class="btn btn-primary">
+                @Localizer["Save"]
+            </button>
+        </div>
+    </form>
+</div>

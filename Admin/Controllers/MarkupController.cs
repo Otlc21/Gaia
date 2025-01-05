@@ -1,5 +1,5 @@
 using Admin.Models;
-using Dominio.Servico;
+using Dominio.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,8 +10,8 @@ namespace Admin.Controllers
     public class MarkupController : Controller
     {
 
-        private readonly IMarkupServico _servico;
-        public MarkupController(IMarkupServico servico)
+        private readonly IMarkupService _servico;
+        public MarkupController(IMarkupService servico)
         {
             _servico = servico;
         }

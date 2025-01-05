@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations;
 
 namespace Admin.Models
@@ -13,9 +13,9 @@ namespace Admin.Models
         public LocationViewModel(Location item)
         {
             Id = item.Id;
-            Cidade = item.Cidade;
-            Estado = item.Estado;
-            Pais = item.Pais;
+            Cidade = item.City;
+            Estado = item.State;
+            Pais = item.Country;
             Criacao = item.Criacao;
         }
 
@@ -24,9 +24,9 @@ namespace Admin.Models
             return new Location()
             {
                 Id = this.Id,
-                Cidade = this.Cidade,
-                Estado = this.Estado,
-                Pais = this.Pais,
+                City = this.Cidade,
+                State = this.Estado,
+                Country = this.Pais,
                 Criacao = this.Criacao,
             };
         }

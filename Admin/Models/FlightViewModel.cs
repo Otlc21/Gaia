@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
@@ -18,12 +18,12 @@ namespace Admin.Models
             AirportOrigemId = item.AirportOrigemId;
             AirportDestinoId = item.AirportDestinoId;
             AirlineId = item.AirlineId;
-            Partida = item.Partida;
-            Chegada = item.Chegada;
-            Classe = item.Classe;
-            Preco = item.Preco;
-            Quantidade = item.Quantidade;
-            Criacao = item.Criacao;
+            Departure = item.Departure;
+            Arrival = item.Arrival;
+            Class = item.Class;
+            Price = item.Price;
+            Amount = item.Amount;
+            Creation = item.Creation;
         }
 
         public Flight Convert()
@@ -34,12 +34,12 @@ namespace Admin.Models
                 AirportOrigemId = this.AirportOrigemId,
                 AirportDestinoId = this.AirportDestinoId,
                 AirlineId = this.AirlineId,
-                Partida = this.Partida,
-                Chegada = this.Chegada,
-                Classe = this.Classe,
-                Preco = this.Preco,
-                Quantidade = this.Quantidade,
-                Criacao = this.Criacao,
+                Departure = this.Departure,
+                Arrival = this.Arrival,
+                Class = this.Class,
+                Price = this.Price,
+                Amount = this.Amount,
+                Creation = this.Creation,
             };
         }
 
@@ -65,22 +65,22 @@ namespace Admin.Models
         public Airline Airline { get; set; }
 
         [Required]
-        public DateTime Partida { get; set; }
+        public DateTime Departure { get; set; }
 
         [Required]
-        public DateTime Chegada { get; set; }
+        public DateTime Arrival { get; set; }
 
         [Required]
-        public string Classe { get; set; }
+        public string Class { get; set; }
 
         [Required]
-        public float Preco { get; set; }
+        public float Price { get; set; }
 
         [Required]
-        public int Quantidade { get; set; }
+        public int Amount { get; set; }
 
         [Required]
-        public DateTime Criacao { get; set; }
+        public DateTime Creation { get; set; }
 
         public List<Flight> Itens { get; set; }
     }

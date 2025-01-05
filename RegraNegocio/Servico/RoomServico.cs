@@ -1,6 +1,6 @@
-﻿using Dominio.Entidade;
-using Dominio.Repositorio;
-using Dominio.Servico;
+﻿using Dominio.Entity;
+using Dominio.Repository;
+using Dominio.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace RegraNegocio.Servico
 {
-    public class RoomServico : IRoomServico
+    public class RoomServico : IRoomService
     {
-        private readonly IRoomRepositorio _repositorio;
+        private readonly IRoomRepository _repositorio;
 
-        public RoomServico(IRoomRepositorio repositorio)
+        public RoomServico(IRoomRepository repositorio)
         {
             _repositorio = repositorio;
         }

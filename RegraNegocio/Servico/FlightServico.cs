@@ -1,6 +1,6 @@
-﻿using Dominio.Entidade;
-using Dominio.Repositorio;
-using Dominio.Servico;
+﻿using Dominio.Entity;
+using Dominio.Repository;
+using Dominio.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace RegraNegocio.Servico
 {
-    public class FlightServico : IFlightServico
+    public class FlightServico : IFlightService
     {
-        private readonly IFlightRepositorio _repositorio;
+        private readonly IFlightRepository _repositorio;
 
-        public FlightServico(IFlightRepositorio repositorio)
+        public FlightServico(IFlightRepository repositorio)
         {
             _repositorio = repositorio;
         }

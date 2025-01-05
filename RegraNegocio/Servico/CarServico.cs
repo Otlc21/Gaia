@@ -1,6 +1,6 @@
-﻿using Dominio.Entidade;
-using Dominio.Repositorio;
-using Dominio.Servico;
+﻿using Dominio.Entity;
+using Dominio.Repository;
+using Dominio.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace RegraNegocio.Servico
 {
-    public class CarServico : ICarServico
+    public class CarServico : ICarService
     {
-        private readonly ICarRepositorio _repositorio;
+        private readonly ICarRepository _repositorio;
 
-        public CarServico(ICarRepositorio repositorio)
+        public CarServico(ICarRepository repositorio)
         {
             _repositorio = repositorio;
         }

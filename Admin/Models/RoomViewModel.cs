@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
@@ -15,10 +15,10 @@ namespace Admin.Models
         {
             Id = item.Id;
             HotelId = item.HotelId;
-            Tipo = item.Tipo;
-            Capacidade = item.Capacidade;
-            Preco = item.Preco;
-            Quantidade = item.Quantidade;
+            Tipo = item.Type;
+            Capacidade = item.Capacity;
+            Preco = item.Price;
+            Quantidade = item.Amount;
             Criacao = item.Criacao;
         }
 
@@ -28,10 +28,10 @@ namespace Admin.Models
             {
                 Id = this.Id,
                 HotelId = this.HotelId,
-                Tipo = this.Tipo,
-                Capacidade = this.Capacidade,
-                Preco = this.Preco,
-                Quantidade = this.Quantidade,
+                Type = this.Tipo,
+                Capacity = this.Capacidade,
+                Price = this.Preco,
+                Amount = this.Quantidade,
                 Criacao = this.Criacao,
             };
         }

@@ -1,4 +1,4 @@
-using Dominio.Entidade;
+using Dominio.Entity;
 using System.ComponentModel.DataAnnotations;
 
 namespace Admin.Models
@@ -13,8 +13,8 @@ namespace Admin.Models
         public AirlineViewModel(Airline item)
         {
             Id = item.Id;
-            Nome = item.Nome;
-            Pais = item.Pais;
+            Nome = item.Name;
+            Pais = item.Country;
             Criacao = item.Criacao;
         }
 
@@ -23,8 +23,8 @@ namespace Admin.Models
             return new Airline()
             {
                 Id = this.Id,
-                Nome = this.Nome,
-                Pais = this.Pais,
+                Name = this.Nome,
+                Country = this.Pais,
                 Criacao = this.Criacao,
             };
         }

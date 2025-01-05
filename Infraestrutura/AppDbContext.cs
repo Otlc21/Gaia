@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySqlX.XDevAPI;
-using Dominio.Entidade;
+using Dominio.Entity;
 using Infraestrutura.Repositorio;
 
 namespace Infraestrutura

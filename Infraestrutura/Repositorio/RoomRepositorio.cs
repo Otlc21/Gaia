@@ -1,15 +1,17 @@
-﻿using Dominio.Entidade;
-using Dominio.Repositorio;
+﻿using Dominio.Entity;
+using Dominio.Repository;
+using LinqKit;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Infraestrutura.Repositorio
 {
-    public class RoomRepositorio : IRoomRepositorio
+    public class RoomRepositorio : IRoomRepository
     {
         private readonly AppDbContext _context;
         private readonly DbSet<Room> _dbSet;
@@ -42,12 +44,49 @@ namespace Infraestrutura.Repositorio
 
         public async Task<List<Room>> Get(Room item, int skip, int take)
         {
-            return await _dbSet.Where(x => 1 == 1)
+            Expression<Func<Room, bool>> filter = MakeFilter(item);
+
+            return await _dbSet.Where(filter)
                 .OrderByDescending(x => x.Id)
                 .Skip(skip)
                 .Take(take)
                 .ToListAsync();
         }
+
+        private Expression<Func<Room, bool>> MakeFilter(Room item)
+        {
+            Expression<Func<Room, bool>> filter = PredicateBuilder.New<Room>();
+
+            if (item == null)
+                return filter;
+
+            if (item.Id != 0)
+                filter = filter.And(x => x.Id == item.Id);
+
+            if (item.HotelId != 0)
+                filter = filter.And(x => x.HotelId == item.HotelId);
+
+            if (!string.IsNullOrEmpty(item.Type))
+                filter = filter.And(x => x.Type.ToLower().Contains(item.Type.ToLower()));
+
+            if (item.Capacity != 0)
+                filter = filter.And(x => x.Capacity == item.Capacity);
+
+            if (item.Price != 0)
+                filter = filter.And(x => x.Price == item.Price);
+
+            if (item.Amount != 0)
+                filter = filter.And(x => x.Amount == item.Amount);
+
+            if (item.Creation != DateTime.MinValue)
+                filter = filter.And(x => x.Creation == item.Creation);
+
+            if (item.Active)
+                filter = filter.And(x => x.Active == item.Active);
+
+            return filter;
+        }
+
 
         public async Task Insert(Room item)
         {

@@ -49,44 +49,44 @@ namespace Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            //// Criar uma role "Admin" (opcional)
-            //if (!await roleManager.RoleExistsAsync("Admin"))
-            //{
-            //    await roleManager.CreateAsync(new IdentityRole("Admin"));
-            //}
+            // Criar uma role "Admin" (opcional)
+            if (!await _roleManager.RoleExistsAsync("Admin"))
+            {
+                await _roleManager.CreateAsync(new IdentityRole("Admin"));
+            }
 
-            //// Criar o usuário de teste
-            //var user = new IdentityUser
-            //{
-            //    UserName = "admin",
-            //    Email = "admin@teste.com",
-            //    EmailConfirmed = true // Para evitar validação de email
-            //};
+            // Criar o usuário de teste
+            var user = new IdentityUser
+            {
+                UserName = "admin@teste.com",
+                Email = "admin@teste.com",
+                EmailConfirmed = true // Para evitar validação de email
+            };
 
-            //password = "Teste01*"; // Senha para o usuário
+            string password = "Teste01*"; // Senha para o usuário
 
-            //var userExists = await userManager.FindByEmailAsync(user.Email);
-            //if (userExists == null)
-            //{
-            //    var result = await userManager.CreateAsync(user, password);
-            //    if (result.Succeeded)
-            //    {
-            //        // Atribuir a role "Admin" ao usuário
-            //        await userManager.AddToRoleAsync(user, "Admin");
-            //        Console.WriteLine("Usuário de teste criado com sucesso!");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("Erro ao criar usuário: " + string.Join(", ", result.Errors.Select(e => e.Description)));
-            //    }
-            //}
+            var userExists = await _userManager.FindByEmailAsync(user.Email);
+            if (userExists == null)
+            {
+                var result2 = await _userManager.CreateAsync(user, password);
+                if (result2.Succeeded)
+                {
+                    // Atribuir a role "Admin" ao usuário
+                    await _userManager.AddToRoleAsync(user, "Admin");
+                    Console.WriteLine("Usuário de teste criado com sucesso!");
+                }
+                else
+                {
+                    Console.WriteLine("Erro ao criar usuário: " + string.Join(", ", result2.Errors.Select(e => e.Description)));
+                }
+            }
 
-            //var result = await _signInManager.PasswordSignInAsync(email, password, false, false);
+            var result = await _signInManager.PasswordSignInAsync("admin@teste.com", password, false, false);
 
-            //if (result.Succeeded)
-            //    return RedirectToAction("Index", "Home");
+            if (result.Succeeded)
+                return RedirectToAction("Index", "Home");
 
-            //ModelState.AddModelError("", "Login inválido.");
+            ModelState.AddModelError("", "Login inválido.");
             return View();
         }
 

@@ -1,15 +1,17 @@
-﻿using Dominio.Entidade;
-using Dominio.Repositorio;
+﻿using Dominio.Entity;
+using Dominio.Repository;
+using LinqKit;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Infraestrutura.Repositorio
 {
-    public class CarRepositorio : ICarRepositorio
+    public class CarRepositorio : ICarRepository
     {
         private readonly AppDbContext _context;
         private readonly DbSet<Car> _dbSet;
@@ -42,12 +44,55 @@ namespace Infraestrutura.Repositorio
 
         public async Task<List<Car>> Get(Car item, int skip, int take)
         {
-            return await _dbSet.Where(x => 1 == 1)
+            Expression<Func<Car, bool>> filter = MakeFilter(item);
+
+            return await _dbSet.Where(filter)
                 .OrderByDescending(x => x.Id)
                 .Skip(skip)
                 .Take(take)
                 .ToListAsync();
         }
+
+        private Expression<Func<Car, bool>> MakeFilter(Car item)
+        {
+            Expression<Func<Car, bool>> filter = PredicateBuilder.New<Car>();
+
+            if (item == null)
+                return filter;
+
+            if (item.Id != 0)
+                filter = filter.And(x => x.Id == item.Id);
+
+            if (!string.IsNullOrEmpty(item.Model))
+                filter = filter.And(x => x.Model.ToLower().Contains(item.Model.ToLower()));
+
+            if (!string.IsNullOrEmpty(item.Brand))
+                filter = filter.And(x => x.Brand.ToLower().Contains(item.Brand.ToLower()));
+
+            if (item.Year != 0)
+                filter = filter.And(x => x.Year == item.Year);
+
+            if (!string.IsNullOrEmpty(item.Category))
+                filter = filter.And(x => x.Category.ToLower().Contains(item.Category.ToLower()));
+
+            if (item.LocationId != 0)
+                filter = filter.And(x => x.LocationId == item.LocationId);
+
+            if (item.Price != 0)
+                filter = filter.And(x => x.Price == item.Price);
+
+            if (item.Amount != 0)
+                filter = filter.And(x => x.Amount == item.Amount);
+
+            if (item.Creation != DateTime.MinValue)
+                filter = filter.And(x => x.Creation == item.Creation);
+
+            if (item.Active)
+                filter = filter.And(x => x.Active == item.Active);
+
+            return filter;
+        }
+
 
         public async Task Insert(Car item)
         {
