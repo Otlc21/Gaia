@@ -1,12 +1,15 @@
 using System.Diagnostics;
 using Dominio.Resource;
 using Dominio.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Web.Models;
 
 namespace Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class LocationController : Controller
     {
 
