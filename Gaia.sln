@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{2F66ED0F-9FAF-4216-BB3E-6555B73388E0}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InjecaoDependencia", "InjecaoDependencia\InjecaoDependencia.csproj", "{D67B57C9-FD28-48FA-AAB2-EAA8860CD6FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegraNegocio", "RegraNegocio\RegraNegocio.csproj", "{8EAD845B-F45A-4002-87D3-D7A96F9F3EAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{6729DA45-5D83-4E29-B19B-27E75D516F17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{8EAD845B-F45A-4002-87D3-D7A96F9F3EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EAD845B-F45A-4002-87D3-D7A96F9F3EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EAD845B-F45A-4002-87D3-D7A96F9F3EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6729DA45-5D83-4E29-B19B-27E75D516F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6729DA45-5D83-4E29-B19B-27E75D516F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6729DA45-5D83-4E29-B19B-27E75D516F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6729DA45-5D83-4E29-B19B-27E75D516F17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
