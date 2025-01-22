@@ -296,9 +296,9 @@
     }
 }
 .benefit-section {
-    background-image: url('../img/bg/benefit-bg.png');
+    /*background-image: url('../img/bg/benefit-bg.png');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center;*/
 }
 .benefit-card {
     background: rgba($white, 0.85);
@@ -1213,9 +1213,9 @@
     @include rounded(10px);
 }
 .faq-section {
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(../img/bg/faq-bg.png);
+    background-image: url(../img/bg/faq-bg.png);*/
 }
 .faq-sec {
     padding: 60px;

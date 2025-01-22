@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Forgot Password";
     Layout = "_LayoutAccount";
 }
 
@@ -10,7 +10,7 @@
     </div>
 </div>
 <div class="card-body">
-    <form action="change-password.html">
+    <form href="@Url.Action("Change", "Account")">
         <div class="mb-3">
             <label class="form-label">Email</label>
             <div class="input-icon">
@@ -27,7 +27,7 @@
             <button type="submit" class="btn btn-xl btn-primary d-flex align-items-center justify-content-center w-100">Reset Password<i class="isax isax-arrow-right-3 ms-2"></i></button>
         </div>
         <div class="d-flex justify-content-center">
-            <p class="fs-14">Remember Password ? <a href="login.html" class="link-primary fw-medium">Sign In</a></p>
+            <p class="fs-14">Remember Password ? <a href="@Url.Action("Login", "Account")" class="link-primary fw-medium">Sign In</a></p>
         </div>
     </form>
 </div>

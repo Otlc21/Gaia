@@ -10,4 +10,8 @@
     <ProjectReference Include="..\InjecaoDependencia\InjecaoDependencia.csproj" />
   </ItemGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="sass wwwroot/scss/main.scss:wwwroot/css/style.css" />
+  </Target>
+
 </Project>

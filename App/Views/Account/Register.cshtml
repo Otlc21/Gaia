@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Sign Up";
     Layout = "_LayoutAccount";
 }
 
@@ -10,7 +10,7 @@
     </div>
 </div>
 <div class="card-body">
-    <form action="login.html">
+    <form href="@Url.Action("Login", "Account")">
         <div class="mb-3">
             <label class="form-label">Name</label>
             <div class="input-icon">
@@ -58,7 +58,7 @@
                 <div class="form-check d-flex align-items-center mb-2">
                     <input class="form-check-input mt-0" type="checkbox" value="" id="agree">
                     <label class="form-check-label ms-2 text-gray-9 fs-14" for="agree">
-                        I agree with the <a href="terms-conditions.html" class="link-primary fw-medium">Terms Of Service.</a>
+                        I agree with the <a href="@Url.Action("Term", "Home")" class="link-primary fw-medium">Terms Of Service.</a>
                     </label>
                 </div>
             </div>
@@ -71,14 +71,14 @@
         </div>
         <div class="d-flex align-items-center mb-3">
             <a href="javascript:void(0);" class="btn btn-light flex-fill d-flex align-items-center justify-content-center me-2">
-                <img src="assets/img/icons/google-icon.svg" class="me-2" alt="Img">Google
+                <img src="~/img/icons/google-icon.svg" class="me-2" alt="Img">Google
             </a>
             <a href="javascript:void(0);" class="btn btn-light flex-fill d-flex align-items-center justify-content-center">
-                <img src="assets/img/icons/fb-icon.svg" class="me-2" alt="Img">Facebook
+                <img src="~/img/icons/fb-icon.svg" class="me-2" alt="Img">Facebook
             </a>
         </div>
         <div class="d-flex justify-content-center">
-            <p class="fs-14">Already have an account? <a href="login.html" class="link-primary fw-medium">Sign In</a></p>
+            <p class="fs-14">Already have an account? <a href="@Url.Action("Login", "Account")" class="link-primary fw-medium">Sign In</a></p>
         </div>
     </form>
 </div>

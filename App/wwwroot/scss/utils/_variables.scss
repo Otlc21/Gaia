@@ -3,7 +3,7 @@
 ============================*/
 
 // Font import
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 // Base Font
 $font-size-base: 14px;
@@ -18,12 +18,14 @@ $font-weight-bold: 700;
 $font-weight-bolder: bolder;
 
 // Font Family
-$font-family-primary: "IBM Plex Sans", sans-serif;
+$font-family-primary: "Roboto", sans-serif;
 $font-awesome: "Fontawesome";
 $font-iconsax: "iconsax";
 	
 // Theme Colors Variables
-$primary: #CF3425;
+$master-color: #0a2345;
+$master-color2: #c83535;
+$primary: #0c2c56;
 $primary-hover: darken($primary, 10%);
 $secondary: #98AA30;
 $secondary-hover: darken($secondary, 10%);
@@ -48,15 +50,15 @@ $teal: #0E9384;
 $indigo: #3538CD;
 
 // Primary
-$primary-100: #FBDCD7;
-$primary-200: #F9CBC3;
-$primary-300: #F5B9B0;
-$primary-400: #F1A79C;
-$primary-500: #EC9689;
-$primary-600: #E78476;
-$primary-700: #E17163;
-$primary-800: #DB5D4F;
-$primary-900: #D4483B;
+$primary-100: #eef4fd;
+$primary-200: #ccdff8;
+$primary-300: #bbd4f5;
+$primary-400: #99bef0;
+$primary-500: #5492e6;
+$primary-600: #2171df;
+$primary-700: #1b60bd;
+$primary-800: #14468a;
+$primary-900: #0f3467;
 
 // Secondary
 $secondary-100: #F1F7ED;
