@@ -1,6 +1,6 @@
 using App.Models;
-using Dominio.Entity;
-using Dominio.Service;
+using Domain.Entity;
+using Domain.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
