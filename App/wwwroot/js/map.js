@@ -237,15 +237,15 @@ function setInfo(marker) {
 			  '</div>'+
 		  '<ul class="d-flex details">'+
 		  '<li>'+
-			  '<img src="assets/img/icons/bed-icon.svg" alt="bed-icon">'+
+			  '<img src="~/img/icons/bed-icon.svg" alt="bed-icon">'+
 				  '<span>' + marker.rent_bed + ' Beds </span>'+
 				  '</li>'+
 			  '<li>'+
-					'<img src="assets/img/icons/bath-icon.svg" alt="bath-icon">'+
+					'<img src="~/img/icons/bath-icon.svg" alt="bath-icon">'+
 			  		'<span>' + marker.rent_baths + ' Baths </span>'+
 				  '</li>'+
 			  '<li>'+
-					'<img src="assets/img/icons/building-icon.svg" alt="building-icon">'+
+					'<img src="~/img/icons/building-icon.svg" alt="building-icon">'+
 			 		 '<span>' + marker.rent_sqft + ' Sqft </span>'+
 				  '</li>'+
 			  '</ul>'+

@@ -23,10 +23,10 @@
 		<div class="hero-content">
 			<div class="row align-items-center">
 				<div class="col-md-12 mx-auto wow fadeInUp" data-wow-delay="0.3s">
-					<div class="banner-content mx-auto">
+@* 					<div class="banner-content mx-auto">
 						<h1 class="text-white display-5 mb-2">Get Closer to the Dream: <span>Your Tour</span> Essentials Await</h1>
 						<h6 class="text-light mx-auto">Your ultimate destination for all things help you celebrate & remember tour experience.</h6>
-					</div>
+					</div> *@
 					<div class="banner-form card mb-0">
 						<div class="card-header">
 							<ul class="nav">
@@ -51,7 +51,7 @@
 							<div>
 								<div class="tab-content">
 									<div class="tab-pane fade active show" id="flight">
-										<form action="flight-grid.html">
+										<form method="post" asp-controller="Flight" asp-action="Search">
 											<div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
 												<div class="d-flex align-items-center flex-wrap">
 													<div class="form-check d-flex align-items-center me-3 mb-2">
@@ -409,7 +409,7 @@
 										</form>
 									</div>
 									<div class="tab-pane fade" id="Hotels">
-										<form action="hotel-grid.html">
+										<form method="post" asp-controller="Hotel" asp-action="Search">
 											<div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
 												<h6 class="fw-medium fs-16 mb-2">Book Hotel - Villas, Apartments & more.</h6>
 											</div>
@@ -675,7 +675,7 @@
 										</form>
 									</div>
 									<div class="tab-pane fade" id="Cars">
-										<form action="car-grid.html">
+										<form method="post" asp-controller="Car" asp-action="Search">
 											<div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
 												<div class="d-flex align-items-center flex-wrap">
 													<div class="form-check d-flex align-items-center me-3 mb-2">
