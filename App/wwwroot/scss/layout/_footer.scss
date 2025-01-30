@@ -3,14 +3,18 @@
 ============================*/
 
 footer {
-    background: $light-500;
+    background: $cyan-200;
+
     .footer-top {
         padding: 40px 0 0;
+
         .footer-widget {
             margin-bottom: 20px;
+
             h5 {
                 margin-bottom: 22px;
                 position: relative;
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -22,16 +26,20 @@ footer {
                     @include rounded(30px);
                 }
             }
+
             .footer-menu {
                 li {
                     margin-bottom: 8px;
+
                     a {
                         position: relative;
                         color: $text-color;
+
                         &:hover {
                             color: $primary;
                         }
                     }
+
                     &:last-child {
                         margin-bottom: 0;
                     }
@@ -39,18 +47,22 @@ footer {
             }
         }
     }
+
     .footer-wrap {
         @include rounded(10px);
         box-shadow: $box-shadow;
         padding: 20px 20px 4px;
         margin: 20px 0 24px;
     }
+
     .footer-bottom {
-        background: $light;
+        background: $cyan-200;
         padding-top: 10px;
+
         p {
             margin-bottom: 10px;
         }
+
         .card-links {
             -webkit-box-align: center;
             -ms-flex-align: center;
@@ -60,12 +72,14 @@ footer {
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 10px;
+
             li {
                 a {
                     position: relative;
                     margin-right: 8px;
                     color: $gray-700;
                 }
+
                 &:last-child {
                     a {
                         margin-right: 0;
