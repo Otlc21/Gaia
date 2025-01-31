@@ -16,7 +16,7 @@ var locations =[{
 	"grid_address":"Ciutat Vella, Barcelona",
 	"grid_rate":"$500",
   "grid_day":"/Day",
-	"image":'assets/img/cars/car-06.jpg',
+	"image":'~/img/cars/car-06.jpg',
 	"grid_star":"5.0"
 	}, 
 	{
@@ -27,7 +27,7 @@ var locations =[{
 	"grid_address":"Princes Street, Edinburgh",
   "grid_rate":"$600",
   "grid_day":"/Day",
-	"image":'assets/img/cars/car-07.jpg',
+	"image":'~/img/cars/car-07.jpg',
 	"grid_star":"4.9"
 	},
 	{
@@ -38,7 +38,7 @@ var locations =[{
 	"grid_address":"Deansgate, Manchester",
 	"grid_rate":"$300",
   "grid_day":"/Day",
-	"image":'assets/img/cars/car-08.jpg',
+	"image":'~/img/cars/car-08.jpg',
 	"grid_star":"4.9"
 	},
 	];

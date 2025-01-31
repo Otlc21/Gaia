@@ -1745,12 +1745,6 @@ Template Name: DreamsTour - Bootstrap Template
 		return false;
   });
 
-  // Loader	
-  $('#loader-wrapper').show();
-  setTimeout(function () {
-      $("#loader-wrapper").hide();
-  }, 300);
-
   // Initially hide the chat window on screens smaller than 991px
   if ($(window).width() <= 991) {
     $('.chat-window-long').hide();
@@ -1784,14 +1778,14 @@ Template Name: DreamsTour - Bootstrap Template
   if ($('#phone').length > 0) {
     var input = document.querySelector("#phone");
     window.intlTelInput(input, {
-      utilsScript: "assets/plugins/intltelinput/js/utils.js",
+      utilsScript: "~/plugins/intltelinput/js/utils.js",
     });
   }
 
   if ($('#phone1').length > 0) {
     var input = document.querySelector("#phone1");
     window.intlTelInput(input, {
-      utilsScript: "assets/plugins/intltelinput/js/utils.js",
+      utilsScript: "~/plugins/intltelinput/js/utils.js",
     });
   }  
 

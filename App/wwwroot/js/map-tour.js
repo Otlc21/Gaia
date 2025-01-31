@@ -16,7 +16,7 @@ var locations =[{
 	"grid_address":"Ciutat Vella, Barcelona",
 	"grid_day":"4 Day, 3 Night",
 	"grid_rate":"$500",
-	"image":'assets/img/tours/tours-07.jpg',
+	"image":'~/img/tours/tours-07.jpg',
 	"grid_star":"5.0"
 	}, 
 	{
@@ -27,7 +27,7 @@ var locations =[{
 	"grid_address":"Princes Street, Edinburgh",
 	"grid_day":"3 Day, 2 Night",
 	"grid_rate":"$600",
-	"image":'assets/img/tours/tours-08.jpg',
+	"image":'~/img/tours/tours-08.jpg',
 	"grid_star":"4.5"
 	},
 	{
@@ -38,7 +38,7 @@ var locations =[{
 	"grid_address":"Deansgate, Manchester",
 	"grid_day":"5 Day, 4 Night",
 	"grid_rate":"$300",
-	"image":'assets/img/tours/tours-09.jpg',
+	"image":'~/img/tours/tours-09.jpg',
 	"grid_star":"4.9"
 	},
 	];

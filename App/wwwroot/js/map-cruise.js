@@ -16,7 +16,7 @@ var locations =[{
 	"grid_address":"Ciutat Vella, Barcelona",
 	"grid_rate":"$500",
   "grid_day":"/Day",
-	"image":'assets/img/cruise/cruise-05.jpg',
+	"image":'~/img/cruise/cruise-05.jpg',
 	"grid_star":"4.9"
 	}, 
 	{
@@ -27,7 +27,7 @@ var locations =[{
 	"grid_address":"Princes Street, Edinburgh",
   "grid_rate":"$300",
   "grid_day":"/Day",
-	"image":'assets/img/cruise/cruise-06.jpg',
+	"image":'~/img/cruise/cruise-06.jpg',
 	"grid_star":"4.9"
 	},
 	{
@@ -38,7 +38,7 @@ var locations =[{
 	"grid_address":"Deansgate, Manchester",
 	"grid_rate":"$400",
   "grid_day":"/Day",
-"image":'assets/img/cruise/cruise-07.jpg',
+"image":'~/img/cruise/cruise-07.jpg',
 	"grid_star":"4.9"
 	},
 	];

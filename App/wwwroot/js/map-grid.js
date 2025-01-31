@@ -16,7 +16,7 @@ var locations =[{
 	"grid_address":"Ciutat Vella, Barcelona",
 	"grid_day":"4 Day, 3 Night",
 	"grid_rate":"$500",
-	"image":'assets/img/hotels/hotel-01.jpg',
+	"image":'~/img/hotels/hotel-01.jpg',
 	"grid_star":"5.0"
 	}, 
 	{
@@ -27,7 +27,7 @@ var locations =[{
 	"grid_address":"Oxford Street, London",
 	"grid_day":"4 Day, 3 Night",
 	"grid_rate":"$600",
-	"image":'assets/img/hotels/hotel-02.jpg',
+	"image":'~/img/hotels/hotel-02.jpg',
 	"grid_star":"5.0"
 	},
 	{
@@ -38,7 +38,7 @@ var locations =[{
 	"grid_address":"Princes Street, Edinburgh",
 	"grid_day":"4 Day, 3 Night",
 	"grid_rate":"$700",
-	"image":'assets/img/hotels/hotel-06.jpg',
+	"image":'~/img/hotels/hotel-06.jpg',
 	"grid_star":"5.0"
 	},
 	];

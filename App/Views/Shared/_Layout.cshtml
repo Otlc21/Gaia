@@ -32,9 +32,18 @@
     <!-- Tabler Icon CSS -->
     <link rel="stylesheet" href="~/plugins/tabler-icons/tabler-icons.css">
 
+    <!-- Notyf -->
+    <link href="~/plugins/notyf/notyf.min.css" rel="stylesheet">
+
     <!-- Fontawesome Icon CSS -->
     <link rel="stylesheet" href="~/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="~/plugins/fontawesome/css/all.min.css">
+
+    <!-- Summernote JS -->
+    <link rel="stylesheet" href="~/plugins/summernote/summernote-lite.min.css">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="~/plugins/select2/css/select2.min.css">
 
     <!-- Fancybox CSS -->
     <link rel="stylesheet" href="~/plugins/fancybox/jquery.fancybox.min.css">
@@ -55,14 +64,16 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="~/css/style.css">
 
+    <link rel="stylesheet" href="~/css/site.css">
+
 </head>
 
 <body>
 
     <!-- Loader -->
-    <div id="loader-wrapper">
-        <div id="loader">
-            <span class="loader-line"></span>
+    <div id="loading" class="loading-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden"></span>
         </div>
     </div>
     <!-- /Loader -->
@@ -230,6 +241,27 @@
                                                         <ul>
                                                             <li><a href="@Url.Action("Index", "Car")">Car List</a></li>
                                                             <li><a href="@Url.Action("Create", "Car")">Add Car</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu mega-innermenu">
+                                    <a href="@Url.Action("Index", "Markup")">Markup</a>
+                                </li>
+                                <li class="has-submenu mega-innermenu">
+                                    <a href="javascript:void(0);">User<i class="fa-solid fa-plus"></i></a>
+                                    <ul class="submenu mega-submenu">
+                                        <li>
+                                            <div class="megamenu-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h6>Admin Users</h6>
+                                                        <ul>
+                                                            <li><a href="@Url.Action("Index", "User")">User List</a></li>
+                                                            <li><a href="@Url.Action("Create", "User")">Add User</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -466,6 +498,9 @@
     <!-- Fancybox JS -->
     <script src="~/plugins/fancybox/jquery.fancybox.min.js"></script>
 
+    <!-- Notyf -->
+    <script src="~/plugins/notyf/notyf.min.js"></script>
+
     <!-- Counter JS -->
     <script src="~/js/jquery.counterup.min.js"></script>
     <script src="~/js/jquery.waypoints.min.js"></script>
@@ -474,11 +509,50 @@
     <script src="~/plugins/moment/moment.js"></script>
     <script src="~/js/bootstrap-datetimepicker.min.js"></script>
 
+    <!-- Summernote JS -->
+    <script src="~/plugins/summernote/summernote-lite.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="~/plugins/select2/js/select2.min.js"></script>
+
     <!-- cursor JS -->
     <script src="~/js/cursor.js"></script>
 
     <!-- Script JS -->
     <script src="~/js/script.js"></script>
+
+    <script src="~/js/site.js"></script>
+
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const notyf = new Notyf({
+            duration: 0,
+            dismissible: true,
+            position: {
+              x: 'right',
+              y: 'top',
+            }
+        });
+
+        var erroMessage = '@TempData["ErroMessage"]?.ToString()';
+        var sucessMessage = '@TempData["SucessMessage"]?.ToString()';
+
+        if (erroMessage)
+        {
+            notyf.error(erroMessage);
+        }
+
+        if (sucessMessage)
+        {
+            notyf.success(sucessMessage);
+        }
+
+    });
+
+</script>

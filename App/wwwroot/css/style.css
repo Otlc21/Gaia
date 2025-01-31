@@ -10438,7 +10438,7 @@ footer.footer-three .footer-bottom .policy-links li a:hover {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(95.36deg, rgba(0, 0, 0, 0.8) 13.15%, rgba(0, 0, 0, 0.5) 78.27%);
+  background: radial-gradient(47.9% 121.75% at 50% 0%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 32.98%, rgba(0, 0, 0, 0.5) 100%);
   z-index: -1;
 }
 @media (max-width: 767.98px) {
@@ -10484,7 +10484,7 @@ footer.footer-three .footer-bottom .policy-links li a:hover {
 }
 
 .breadcrumb-bg-04 {
-  background-color: #111827;
+  background-color: #B3DFEF;
 }
 
 .breadcrumb-bg-05 {
@@ -18652,52 +18652,48 @@ footer.footer-three .footer-bottom .policy-links li a:hover {
 /*============================
   59.loader
 ============================*/
-#loader-wrapper {
-  background-color: #FFF;
-  height: 100%;
-  width: 100%;
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+/*#loader-wrapper {
+    background-color: $white;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    #loader {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .loader-line {
+            display: inline-grid;
+            width: 40px;
+            aspect-ratio: 1;
+            margin: 30px;
+            &::before, &::after {
+                content:"";
+                grid-area: 1/1;
+                border-radius: 50%;
+                background: repeating-conic-gradient($primary 0 60deg,$gray-900 0 120deg);
+            }
+            &::before {
+                transform: rotate(0turn) translate(100%) rotate(0turn);
+                animation: l5 4s linear infinite;
+            }
+            &::after {
+                padding: 20%;
+                mask:conic-gradient(#000 0 0) content-box exclude,conic-gradient(#000 0 0);
+                scale: -1 1;
+            }
+        }
+    }
 }
-#loader-wrapper #loader {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#loader-wrapper #loader .loader-line {
-  display: inline-grid;
-  width: 40px;
-  aspect-ratio: 1;
-  margin: 30px;
-}
-#loader-wrapper #loader .loader-line::before, #loader-wrapper #loader .loader-line::after {
-  content: "";
-  grid-area: 1/1;
-  border-radius: 50%;
-  background: repeating-conic-gradient(#0c2c56 0 60deg, #111827 0 120deg);
-}
-#loader-wrapper #loader .loader-line::before {
-  transform: rotate(0turn) translate(100%) rotate(0turn);
-  animation: l5 4s linear infinite;
-}
-#loader-wrapper #loader .loader-line::after {
-  padding: 20%;
-  mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
-  scale: -1 1;
-}
-
-@keyframes l5 {
-  to {
-    transform: rotate(1turn) translate(100%) rotate(1turn);
-  }
-}
+@keyframes l5 {to{transform: rotate(1turn) translate(100%) rotate(1turn)}}
+*/
 /*============================
   64.agent-list
 ============================*/
