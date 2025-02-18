@@ -6,48 +6,48 @@
 
 <!-- Breadcrumb -->
 <div class="breadcrumb-bar breadcrumb-bg-04 text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-12">
-                <h2 class="breadcrumb-title mb-2">@Localizer["Hotel List"]</h2>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center mb-0">
-                        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")"><i class="isax isax-home5"></i></a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@Localizer["Hotel List"]</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-12">
+				<h2 class="breadcrumb-title mb-2">@Localizer["Hotel List"]</h2>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb justify-content-center mb-0">
+						<li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")"><i class="isax isax-home5"></i></a></li>
+						<li class="breadcrumb-item active" aria-current="page">@Localizer["Hotel List"]</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- /Breadcrumb -->
 <!-- Page Wrapper -->
 <div class="content">
-    <div class="container">
+	<div class="container">
 
-        <div class="row">
+		<div class="row">
 
-            <div class="col-xl-12 col-lg-12">
-                <!-- Booking Header -->
-                <div class="card booking-header border-0">
-                    <div class="card-body header-content d-flex align-items-center justify-content-between flex-wrap ">
-                        <div>
-                            <h6 class="mb-1">Hotel List</h6>
-                            <p class="fs-14 text-gray-6 fw-normal ">Total : 150</p>
-                        </div>
-                        <div class="d-flex align-items-center flex-wrap">
-                            <a href="@Url.Action("Create", "Hotel")" class="btn btn-primary btn-sm add-highlight">
-                                <i class="isax isax-add-circle me-1"></i>Add New
-                            </a>
-                        </div>
-                    </div>
-                    
-                </div>
-                <!-- /Booking Header -->
-                <!-- Hotel-Booking List -->
-                <div class="card hotel-list">
-                    <div class="card-body p-0">
-                        <div class="list-header d-flex align-items-center justify-content-between flex-wrap">
+			<div class="col-xl-12 col-lg-12">
+				<!-- Booking Header -->
+				<div class="card booking-header border-0">
+					<div class="card-body header-content d-flex align-items-center justify-content-between flex-wrap ">
+						<div>
+							<h6 class="mb-1">Hotel List</h6>
+							<p class="fs-14 text-gray-6 fw-normal ">Total : @Model.Itens.Count()</p>
+						</div>
+						<div class="d-flex align-items-center flex-wrap">
+							<a href="@Url.Action("Create", "Hotel")" class="btn btn-primary btn-sm add-highlight">
+								<i class="isax isax-add-circle me-1"></i>@Localizer["Add New"]
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<!-- /Booking Header -->
+				<!-- Hotel-Booking List -->
+				<div class="card hotel-list">
+					<div class="card-body p-0">
+						@*                         <div class="list-header d-flex align-items-center justify-content-between flex-wrap">
                             <div class="d-flex align-items-center flex-wrap">
                                 <div class="input-icon-start  me-2 position-relative">
                                     <span class="icon-addon">
@@ -115,338 +115,89 @@
 
                             </div>
                         </div>
+ *@
+						<!-- Hotel List -->
+						<div class="custom-datatable-filter table-responsive">
+							<table class="table datatable">
+								<thead class="thead-light">
+									<tr>
+										<th>@Localizer["ID"]</th>
+										<th>@Localizer["Hotel"]</th>
+										<th>@Localizer["Created By"]</th>
+										<th>@Localizer["Room & Guest"]</th>
+										<th>@Localizer["Location"]</th>
+										<th>@Localizer["Pricing"]</th>
+										<th>@Localizer["Validity"]</th>
+										<th>@Localizer["Status"]</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var item in Model.Itens)
+									{
+										<tr>
+											<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#@item.Id</a></td>
+											<td>
+												<div>
+													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">@item.Name</a></p>
+													<span class="fs-14 fw-normal text-gray-6">@item.Location</span>
+												</div>
+											</td>
+											<td>
+												<h6 class="fs-14 mb-1">@item.CreatedBy</h6>
+												<span class="fs-14 fw-normal text-gray-6">@item.CreatedOn.ToShortDateString()</span>
+											</td>
+											<td>
+												<h6 class="fs-14 mb-1">@item.Type</h6>
+												<span class="fs-14 fw-normal text-gray-6">@item.AvailableSpots @Localizer["Spots"]</span>
+											</td>
+											<td>@item.Location</td>
+											<td>$@item.Price</td>
+											<td>@item.ValidFrom - @item.ValidUntil</td>
+											<td>
+												<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>@item.Active ? @Localizer["Active"] : @Localizer["Inactive"]</span>
+											</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<a href="@Url.Action("Edit", "Hotel", new { id = @item.Id })"><i class="isax isax-edit-2"></i></a>
+												</div>
+											</td>
+										</tr>
+									}
+								</tbody>
+							</table>
+						</div>
+						<!-- /Hotel List -->
 
-                        <!-- Hotel List -->
-                        <div class="custom-datatable-filter table-responsive">
-                            <table class="table datatable">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Hotel</th>
-                                        <th>Booked By</th>
-                                        <th>Room & Guest</th>
-                                        <th>Days</th>
-                                        <th>Pricing</th>
-                                        <th>Booked on</th>
-                                        <th>Status</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#HB-1245</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Athenee</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Barcelona</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Lynwood Dickens</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Barcelona</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Suite Room</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">2 Adults, 1 Child</span>
-                                        </td>
-                                        <td>4 Days, 3 Nights</td>
-                                        <td>$11,569</td>
-                                        <td>15 May 2025</td>
-                                        <td>
-                                            <span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#HB-3215</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">The Luxe Haven</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">London</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">James Osborne</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">London</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Queen Room</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">2 Adults, 2 Child</span>
-                                        </td>
-                                        <td>3 Days, 2 Nights</td>
-                                        <td>$10,745</td>
-                                        <td>20 May 2025</td>
-                                        <td>
-                                            <span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#HB-4581</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">The Urban Retreat</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Edinburgh</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Steve Grieve</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Edinburgh</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Single Room</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">2 Adults, 1 Child</span>
-                                        </td>
-                                        <td>2 Days, 1 Night</td>
-                                        <td>$8,160</td>
-                                        <td>04 Jun 2025</td>
-                                        <td>
-                                            <span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-6545</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">The Grand Horizon</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Manchester</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">The Grand Horizon</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Manchester</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Balcony View</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">3 Adults, 2 Child</span>
-                                        </td>
-                                        <td>5 Days, 4 Nights</td>
-                                        <td>$14,840</td>
-                                        <td>17 Jun 2025</td>
-                                        <td>
-                                            <span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#cancelled">#HB-3256</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Serene Valley</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Chelsea</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Hotel Serene Valley</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Manchester</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">City View</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Chelsea</span>
-                                        </td>
-                                        <td>3 Days, 2 Nights</td>
-                                        <td>$10,450</td>
-                                        <td>25 Jun 2025</td>
-                                        <td>
-                                            <span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#cancelled">#HB-3654</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Evergreen</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Las Vegas</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Hotel Evergreen</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Las Vegas</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Suite Room</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">2 Adults, 1 Child</span>
-                                        </td>
-                                        <td>4 Days, 3 Nights</td>
-                                        <td>$12,600</td>
-                                        <td>02 Jul 2025</td>
-                                        <td>
-                                            <span class="badge badge-danger rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Cancelled</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-1458</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Stardust Hotel</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Salford</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Stardust Hotel</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Salford</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Suite Room</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">2 Adults, 2 Child</span>
-                                        </td>
-                                        <td>2 Days, 1 Night</td>
-                                        <td>$9,380</td>
-                                        <td>12 Jul 2025</td>
-                                        <td>
-                                            <span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-6589</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Plaza</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Newyork</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Hotel Plaza</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Newyork</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Single Room</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">1 Adult, 1 Child</span>
-                                        </td>
-                                        <td>3 Days, 2 Nights</td>
-                                        <td>$10,400</td>
-                                        <td>26 Jul 2025</td>
-                                        <td>
-                                            <span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-2315</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Skyline Vista</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Cambridge</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Hotel Skyline Vista</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Cambridge</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Queen Room</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">2 Adults, 1 Child</span>
-                                        </td>
-                                        <td>4 Days, 3 Nights</td>
-                                        <td>$12,810</td>
-                                        <td>10 Aug 2025</td>
-                                        <td>
-                                            <span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-5414</a></td>
-                                        <td>
-                                            <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Aurora Bliss</a></p>
-                                                <span class="fs-14 fw-normal text-gray-6">Bristol</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Hotel Aurora Bliss</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">Bristol</span>
-                                        </td>
-                                        <td>
-                                            <h6 class="fs-14 mb-1">Suite Room</h6>
-                                            <span class="fs-14 fw-normal text-gray-6">2 Adults, 1 Child</span>
-                                        </td>
-                                        <td>5 Days, 4 Nights</td>
-                                        <td>$15,450</td>
-                                        <td>22 Aug 2025</td>
-                                        <td>
-                                            <span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /Hotel List -->
-
-                    </div>
-                </div>
-                <!-- /Hotel-Booking List -->
-                <!-- Pagination -->
-                <div class="table-paginate d-flex justify-content-between align-items-center flex-wrap row-gap-3">
-                    <div class="value d-flex align-items-center">
-                        <span>Show</span>
-                        <select>
-                            <option>5</option>
-                            <option>10</option>
-                            <option>20</option>
-                        </select>
-                        <span>entries</span>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center">
-                        <a href="javascript:void(0);"><span class="me-3"><i class="isax isax-arrow-left-2"></i></span></a>
-                        <nav aria-label="Page navigation">
-                            <ul class="paginations d-flex justify-content-center align-items-center">
-                                <li class="page-item me-2"><a class="page-link-1 active d-flex justify-content-center align-items-center " href="javascript:void(0);">1</a></li>
-                                <li class="page-item me-2"><a class="page-link-1 d-flex justify-content-center align-items-center" href="javascript:void(0);">2</a></li>
-                                <li class="page-item "><a class="page-link-1 d-flex justify-content-center align-items-center" href="javascript:void(0);">3</a></li>
-                            </ul>
-                        </nav>
-                        <a href="javascript:void(0);"><span class="ms-3"><i class="isax isax-arrow-right-3"></i></span></a>
-                    </div>
-                </div>
-                <!-- /Pagination -->
-            </div>
-        </div>
-    </div>
+					</div>
+				</div>
+				<!-- /Hotel-Booking List -->
+				<!-- Pagination -->
+				<div class="table-paginate d-flex justify-content-between align-items-center flex-wrap row-gap-3">
+@* 					<div class="value d-flex align-items-center">
+						<span>Show</span>
+						<select>
+							<option>5</option>
+							<option>10</option>
+							<option>20</option>
+						</select>
+						<span>entries</span>
+					</div> *@
+					<div class="d-flex align-items-center justify-content-center">
+						<a href="javascript:void(0);"><span class="me-3"><i class="isax isax-arrow-left-2"></i></span></a>
+						<nav aria-label="Page navigation">
+							<ul class="paginations d-flex justify-content-center align-items-center">
+								<li class="page-item me-2"><a class="page-link-1 active d-flex justify-content-center align-items-center " href="javascript:void(0);">1</a></li>
+								<li class="page-item me-2"><a class="page-link-1 d-flex justify-content-center align-items-center" href="javascript:void(0);">2</a></li>
+								<li class="page-item "><a class="page-link-1 d-flex justify-content-center align-items-center" href="javascript:void(0);">3</a></li>
+							</ul>
+						</nav>
+						<a href="javascript:void(0);"><span class="ms-3"><i class="isax isax-arrow-right-3"></i></span></a>
+					</div>
+				</div>
+				<!-- /Pagination -->
+			</div>
+		</div>
+	</div>
 </div>
 <!-- /Page Wrapper -->

@@ -18,8 +18,8 @@ namespace App.Models
 
         public string Image { get; set; }
         public bool Active { get; set; }
-        public DateTime Created { get; set; }
-
+        public Guid CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }
         public List<Hotel> Itens { get; set; } = new List<Hotel>();
     }
 }

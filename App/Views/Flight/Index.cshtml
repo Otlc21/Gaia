@@ -35,11 +35,11 @@
 					<div class="card-body header-content d-flex align-items-center justify-content-between flex-wrap ">
 						<div>
 							<h6 class="mb-1">Flight List</h6>
-							<p class="fs-14 text-gray-6 fw-normal ">Total : 40</p>
+							<p class="fs-14 text-gray-6 fw-normal ">Total : @Model.Itens.Count()</p>
 						</div>
 						<div class="d-flex align-items-center flex-wrap">
 							<a href="@Url.Action("Create", "Flight")" class="btn btn-primary btn-sm add-highlight">
-								<i class="isax isax-add-circle me-1"></i>Add New
+								<i class="isax isax-add-circle me-1"></i> @Localizer["Add New"]
 							</a>
 						</div>
 					</div>
@@ -49,7 +49,7 @@
 				<!-- Flight Booking List -->
 				<div class="card hotel-list">
 					<div class="card-body p-0">
-						<div class="list-header d-flex align-items-center justify-content-between flex-wrap">
+						@* <div class="list-header d-flex align-items-center justify-content-between flex-wrap">
 							<div class="d-flex align-items-center flex-wrap">
 								<div class="input-icon-start  me-2 position-relative">
 									<span class="icon-addon">
@@ -116,325 +116,58 @@
 								</div>
 
 							</div>
-						</div>
+						</div> *@
 
 						<!-- Hotel List -->
 						<div class="custom-datatable-filter table-responsive">
 							<table class="table datatable">
 								<thead class="thead-light">
 									<tr>
-										<th>ID</th>
-										<th>Flight</th>
-										<th>Created By</th>
-										<th>Ticket</th>
-										<th>From - To</th>
-										<th>Pricing</th>
-										<th>Created on</th>
-										<th>Status</th>
+										<th>@Localizer["ID"]</th>
+										<th>@Localizer["Flight"]</th>
+										<th>@Localizer["Created By"]</th>
+										<th>@Localizer["Ticket"]</th>
+										<th>@Localizer["From - To"]</th>
+										<th>@Localizer["Pricing"]</th>
+										<th>@Localizer["Number"]</th>
+										<th>@Localizer["Status"]</th>
 										<th></th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#TR-1245</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Antonov An-32</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Air India</span>
+									@foreach (var item in Model.Itens)
+									{
+										<tr>
+											<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#@item.Id</a></td>
+											<td>
+												<div class="d-flex align-items-center">
+													<div>
+														<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">@item.Name</a></p>
+														<span class="fs-14 fw-normal text-gray-6">@item.Airline</span>
+													</div>
 												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Lynwood Dickens</h6>
-											<span class="fs-14 fw-normal text-gray-6">Barcelona</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Business Class</h6>
-											<span class="fs-14 fw-normal text-gray-6">2 Adults, 1 Child</span>
-										</td>
-										<td>London - Paris</td>
-										<td>$11,569</td>
-										<td>15 May 2025</td>
-										<td>
-											<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#TR-3215</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">SkyBound 102</a></p>
-													<span class="fs-14 fw-normal text-gray-6">London</span>
+											</td>
+											<td>
+												<h6 class="fs-14 mb-1">@item.CreatedBy</h6>
+												<span class="fs-14 fw-normal text-gray-6">@item.CreatedOn.ToShortDateString()</span>
+											</td>
+											<td>
+												<h6 class="fs-14 mb-1">@item.Type</h6>
+												<span class="fs-14 fw-normal text-gray-6">@item.AvailableSpots @Localizer["Spots"]</span>
+											</td>
+											<td>@item.From - @item.To</td>
+											<td>$@item.Price</td>
+											<td>@item.Number</td>
+											<td>
+												<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>@item.Active ? @Localizer["Active"] : @Localizer["Inactive"]</span>
+											</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<a href="@Url.Action("Edit", "Flight", new { id = @item.Id })"><i class="isax isax-edit-2"></i></a>
 												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">James Osborne</h6>
-											<span class="fs-14 fw-normal text-gray-6">California</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Economy 	</h6>
-											<span class="fs-14 fw-normal text-gray-6">2 Adults, 2 Child</span>
-										</td>
-										<td>Los Angeles - Tokyo</td>
-										<td>$10,745</td>
-										<td>20 May 2025</td>
-										<td>
-											<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#FB-4581</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Nimbus 345</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Edinburgh</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Steve Grieve</h6>
-											<span class="fs-14 fw-normal text-gray-6">Newyork</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Fare Economy	</h6>
-											<span class="fs-14 fw-normal text-gray-6">3 Adults, 2 Child</span>
-										</td>
-										<td>London - Dubai</td>
-										<td>$8,160</td>
-										<td>04 Jun 2025</td>
-										<td>
-											<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#FB-6545</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">AstraFlight 215</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Manchester</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Alene Downing</h6>
-											<span class="fs-14 fw-normal text-gray-6">Florida</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Suite</h6>
-											<span class="fs-14 fw-normal text-gray-6">2 Adults, 1 Child</span>
-										</td>
-										<td>Atlanta - Barcelona</td>
-										<td>$14,840</td>
-										<td>17 Jun 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#cancelled">#FB-3256</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Cloudrider 789</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Chelsea</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Carol Gardner</h6>
-											<span class="fs-14 fw-normal text-gray-6">Georgia</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Economy</h6>
-											<span class="fs-14 fw-normal text-gray-6">1 Adult, 1 Child</span>
-										</td>
-										<td>Chicago - Frankfurt</td>
-										<td>$10,450</td>
-										<td>25 Jun 2025</td>
-										<td>
-											<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#cancelled">#FB-3654</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Aether Express 901</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Las Vegas</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Enrique Archer</h6>
-											<span class="fs-14 fw-normal text-gray-6">Las Vegas</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">First Class</h6>
-											<span class="fs-14 fw-normal text-gray-6">2 Adults, 2 Child</span>
-										</td>
-										<td>Miami - Madrid</td>
-										<td>$12,600</td>
-										<td>02 Jul 2025</td>
-										<td>
-											<span class="badge badge-danger rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Cancelled</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#FB-1458</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Voyager 658</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Salford</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Weston Carrasco</h6>
-											<span class="fs-14 fw-normal text-gray-6">Texas</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Economy</h6>
-											<span class="fs-14 fw-normal text-gray-6">2 Adults, 3 Child</span>
-										</td>
-										<td>Toronto - Rome</td>
-										<td>$9,380</td>
-										<td>12 Jul 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#FB-6589</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Delta D118</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Newyork</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Bonnie Coleman</h6>
-											<span class="fs-14 fw-normal text-gray-6">California</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Fare Economy</h6>
-											<span class="fs-14 fw-normal text-gray-6">2 Adults, 2 Child</span>
-										</td>
-										<td>Boston - Amsterdam</td>
-										<td>$10,400</td>
-										<td>26 Jul 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#FB-2315</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Silverwing 505</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Cambridge</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Aurora Conklin</h6>
-											<span class="fs-14 fw-normal text-gray-6">Georgia</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Business Class</h6>
-											<span class="fs-14 fw-normal text-gray-6">1 Adult, 1 Child</span>
-										</td>
-										<td>Dallas - London</td>
-										<td>$12,810</td>
-										<td>10 Aug 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#FB-5414</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Altair 333</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Bristol</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Robin Banks</h6>
-											<span class="fs-14 fw-normal text-gray-6">Las Vegas</span>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Business Class</h6>
-											<span class="fs-14 fw-normal text-gray-6">2 Adults, 2 Child</span>
-										</td>
-										<td>Seattle - Seoul</td>
-										<td>$15,450</td>
-										<td>22 Aug 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Flight", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
+											</td>
+										</tr>
+									}
 								</tbody>
 							</table>
 						</div>
@@ -445,15 +178,15 @@
 				<!-- /Flight Booking List -->
 
 				<div class="table-paginate d-flex justify-content-between align-items-center flex-wrap row-gap-3">
-					<div class="value d-flex align-items-center">
-						<span>Show</span>
+					@* <div class="value d-flex align-items-center">
+						<span>@Localizer["Show"]</span>
 						<select>
 							<option>5</option>
 							<option>10</option>
 							<option>20</option>
 						</select>
-						<span>entries</span>
-					</div>
+						<span>@Localizer["entries"]</span>
+					</div> *@
 					<div class="d-flex align-items-center justify-content-center">
 						<a href="javascript:void(0);"><span class="me-3"><i class="isax isax-arrow-left-2"></i></span></a>
 						<nav aria-label="Page navigation">

@@ -14,8 +14,9 @@ namespace Domain.Entity
         public string Email { get; set; }
         public string Password { get; set; }
         public string Profile { get; set; }
-        public DateTime Created { get; set; }
-
+        public bool Active { get; set; }
+        public Guid CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }
         public int? Token { get; set; }
         public DateTime? TokenExpiration { get; set; }
     }

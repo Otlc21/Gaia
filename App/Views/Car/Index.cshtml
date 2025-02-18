@@ -35,11 +35,11 @@
 					<div class="card-body header-content d-flex align-items-center justify-content-between flex-wrap ">
 						<div>
 							<h6 class="mb-1">Car List</h6>
-							<p class="fs-14 text-gray-6 fw-normal ">Total : 40</p>
+							<p class="fs-14 text-gray-6 fw-normal ">Total : @Model.Itens.Count()</p>
 						</div>
 						<div class="d-flex align-items-center flex-wrap">
 							<a href="@Url.Action("Create", "Car")" class="btn btn-primary btn-sm add-highlight">
-								<i class="isax isax-add-circle me-1"></i>Add New
+								<i class="isax isax-add-circle me-1"></i>@Localizer["Add New"]
 							</a>
 						</div>
 					</div>
@@ -49,7 +49,7 @@
 				<!-- Car-Booking List -->
 				<div class="card hotel-list">
 					<div class="card-body p-0">
-						<div class="list-header d-flex align-items-center justify-content-between flex-wrap">
+						@* 						<div class="list-header d-flex align-items-center justify-content-between flex-wrap">
 							<div class="d-flex align-items-center flex-wrap">
 								<div class="input-icon-start  me-2 position-relative">
 									<span class="icon-addon">
@@ -116,312 +116,54 @@
 								</div>
 							</div>
 						</div>
-
+ *@
 						<!-- Car List -->
 						<div class="custom-datatable-filter table-responsive">
 							<table class="table datatable">
 								<thead class="thead-light">
 									<tr>
-										<th>ID</th>
-										<th>Car & Type</th>
-										<th>Created By</th>
-										<th>Travellers</th>
-										<th>Days</th>
-										<th>Price</th>
-										<th>Created on</th>
-										<th>Status</th>
+										<th>@Localizer["ID"]</th>
+										<th>@Localizer["Car & Type"]</th>
+										<th>@Localizer["Created By"]</th>
+										<th>@Localizer["Location"]</th>
+										<th>@Localizer["Available Spots"]</th>
+										<th>@Localizer["Price"]</th>
+										<th>@Localizer["Validity"]</th>
+										<th>@Localizer["Status"]</th>
 										<th></th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#CB-1245</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Volkswagen Amarok</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Sedan</span>
+									@foreach (var item in Model.Itens)
+									{
+										<tr>
+											<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#@item.Id</a></td>
+											<td>
+												<div class="d-flex align-items-center">
+													<div>
+														<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">@item.Name</a></p>
+														<span class="fs-14 fw-normal text-gray-6">@item.Type</span>
+													</div>
 												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Lynwood Dickens</h6>
-											<span class="fs-14 fw-normal text-gray-6">Barcelona</span>
-										</td>
-										<td>2 Adults, 1 Child</td>
-										<td>4 Days</td>
-										<td>$1,569</td>
-										<td>15 May 2025</td>
-										<td>
-											<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#CB-3215</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Toyota Camry SE 400</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Hatchback</span>
+											</td>
+											<td>
+												<h6 class="fs-14 mb-1">@item.CreatedBy</h6>
+												<span class="fs-14 fw-normal text-gray-6">@item.CreatedOn.ToShortDateString()</span>
+											</td>
+											<td>@item.Location</td>
+											<td>@item.AvailableSpots @Localizer["Spots"]</td>
+											<td>$@item.Price</td>
+											<td>@item.ValidFrom - @item.ValidUntil</td>
+											<td>
+												<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>@item.Active ? @Localizer["Active"] : @Localizer["Inactive"]</span>
+											</td>
+											<td>
+												<div class="d-flex align-items-center">
+													<a href="@Url.Action("Edit", "Car", new { id = @item.Id })"><i class="isax isax-edit-2"></i></a>
 												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">James Osborne</h6>
-											<span class="fs-14 fw-normal text-gray-6">California</span>
-										</td>
-										<td>
-											2 Adults, 2 Child
-										</td>
-										<td>3 Days</td>
-										<td>$1,745</td>
-										<td>20 May 2025</td>
-										<td>
-											<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#CB-4581</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Ford Mustang 4.0 AT</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Coupe</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Steve Grieve</h6>
-											<span class="fs-14 fw-normal text-gray-6">Newyork</span>
-										</td>
-										<td>
-											2 Adults, 1 Child
-										</td>
-										<td>2 Days</td>
-										<td>$2,160</td>
-										<td>04 Jun 2025</td>
-										<td>
-											<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#CB-6545</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Ferrari 458 MM Special</a></p>
-													<span class="fs-14 fw-normal text-gray-6">SUV</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Alene Downing</h6>
-											<span class="fs-14 fw-normal text-gray-6">Florida</span>
-										</td>
-										<td>
-											1 Adult, 1 Child
-										</td>
-										<td>2 Days</td>
-										<td>$1,840</td>
-										<td>17 Jun 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#cancelled">#CB-3256</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);"> Mercedes-benz </a></p>
-													<span class="fs-14 fw-normal text-gray-6">Sports</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Carol Gardner</h6>
-											<span class="fs-14 fw-normal text-gray-6">Georgia</span>
-										</td>
-										<td>
-											2 Adults, 1 Child
-										</td>
-										<td>3 Days</td>
-										<td>$1,450</td>
-										<td>25 Jun 2025</td>
-										<td>
-											<span class="badge badge-info rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Upcoming</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#cancelled">#CB-3654</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">BMW 3.0 Gran Turismo</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Hatchback</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Enrique Archer</h6>
-											<span class="fs-14 fw-normal text-gray-6">Las Vegas</span>
-										</td>
-										<td>
-											3 Adults, 2 Child
-										</td>
-										<td>4 Days</td>
-										<td>$1,600</td>
-										<td>02 Jul 2025</td>
-										<td>
-											<span class="badge badge-danger rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Cancelled</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#CB-1458</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Infiniti QX60 </a></p>
-													<span class="fs-14 fw-normal text-gray-6">Hatchback</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Weston Carrasco</h6>
-											<span class="fs-14 fw-normal text-gray-6">Texas</span>
-										</td>
-										<td>
-											2 Adults, 2 Child
-										</td>
-										<td>5 Days</td>
-										<td>$2,380</td>
-										<td>12 Jul 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#CB-6589</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Toyota 86 Coupe</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Sedan</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Bonnie Coleman</h6>
-											<span class="fs-14 fw-normal text-gray-6">California</span>
-										</td>
-										<td>
-											2 Adults, 1 Child
-										</td>
-										<td>3 Days</td>
-										<td>$1,400</td>
-										<td>26 Jul 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#CB-2315</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Jeep Wrangler</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Coupe</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Aurora Conklin</h6>
-											<span class="fs-14 fw-normal text-gray-6">Georgia</span>
-										</td>
-										<td>
-											2 Adults, 2 Child
-										</td>
-										<td>2 Days</td>
-										<td>$1,810</td>
-										<td>10 Aug 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#CB-5414</a></td>
-										<td>
-											<div class="d-flex align-items-center">
-												<div>
-													<p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Jaguar XK</a></p>
-													<span class="fs-14 fw-normal text-gray-6">Sedan</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<h6 class="fs-14 mb-1">Robin Banks</h6>
-											<span class="fs-14 fw-normal text-gray-6">Las Vegas</span>
-										</td>
-										<td>
-											3 Adults, 1 Child
-										</td>
-										<td>2 Days</td>
-										<td>$1,450</td>
-										<td>22 Aug 2025</td>
-										<td>
-											<span class="badge badge-success rounded-pill d-inline-flex align-items-center fs-10"><i class="fa-solid fa-circle fs-5 me-1"></i>Completed</span>
-										</td>
-										<td>
-											<div class="d-flex align-items-center">
-												<a href="@Url.Action("Edit", "Car", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
-											</div>
-										</td>
-									</tr>
+											</td>
+										</tr>
+									}
 								</tbody>
 							</table>
 						</div>
@@ -431,7 +173,7 @@
 				<!-- /Car-Booking List -->
 
 				<div class="table-paginate d-flex justify-content-between align-items-center flex-wrap row-gap-3">
-					<div class="value d-flex align-items-center">
+					@* 					<div class="value d-flex align-items-center">
 						<span>Show</span>
 						<select>
 							<option>5</option>
@@ -439,7 +181,7 @@
 							<option>20</option>
 						</select>
 						<span>entries</span>
-					</div>
+					</div> *@
 					<div class="d-flex align-items-center justify-content-center">
 						<a href="javascript:void(0);"><span class="me-3"><i class="isax isax-arrow-left-2"></i></span></a>
 						<nav aria-label="Page navigation">

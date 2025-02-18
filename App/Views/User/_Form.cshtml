@@ -3,7 +3,7 @@
 <div class="card shadow-none" id="basic_info">
     <div class="card-header">
         <div class="d-flex align-items-center justify-content-between">
-            <h6 class="fs-18">Basic Info</h6>
+            <h6 class="fs-18">@Localizer["Basic Info"]</h6>
         </div>
     </div>
     <div class="card-body pb-1">
@@ -11,30 +11,36 @@
             <div class="col-md-12">
                 <div class="mb-3">
                     <label class="form-label">
-                        Name
+                        @Localizer["Name"]
                     </label>
-                    <input asp-for="Name" type="text" class="form-control" value="5">
+                    <input asp-for="Name" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input asp-for="Email" type="text" class="form-control" value="10">
+                    <label class="form-label">@Localizer["Email"]</label>
+                    <input asp-for="Email" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input asp-for="Password" type="text" class="form-control" value="10">
+                    <label class="form-label">@Localizer["Password"]</label>
+                    <input asp-for="Password" type="password" class="form-control">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="mb-3">
-                    <label class="form-label">Profile</label>
+                    <label class="form-label">@Localizer["Profile"]</label>
                     <select asp-for="Profile" class="form-control">
                         <option value="ADM" selected>ADM</option>
-                        <option value="User">User</option>
+                        <option value="User">@Localizer["User"]</option>
                     </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="mb-3">
+                    <label class="form-label">@Localizer["Active"]</label>
+                    <input asp-for="Active" type="checkbox" class="form-control" checked>
                 </div>
             </div>
         </div>

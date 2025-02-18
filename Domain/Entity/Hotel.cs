@@ -23,6 +23,7 @@ namespace Domain.Entity
 
         public string Image { get; set; }
         public bool Active { get; set; }
-        public DateTime Created { get; set; }
+        public Guid CreatedBy { get; set; }
+        public DateTime CreatedOn { get; set; }
     }
 }
