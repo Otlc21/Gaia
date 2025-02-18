@@ -10,10 +10,10 @@ namespace Domain.Repository
     public interface IMarkupRepository
     {
         Task<int> Count(Markup item);
-        Task<Markup> Get(int id);
-        Task<List<Markup>> Get(Markup item, int skip, int take);
-        Task Insert(Markup item);
+        Task<Markup> Get(Guid id);
+        Task<List<Markup>> Get(Markup item, int skip = 0, int take = 10);
+        Task<Guid> Insert(Markup item);
         Task Update(Markup item);
-        Task Delete(int id);
+        Task Delete(Guid id);
     }
 }

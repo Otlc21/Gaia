@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="coprright-footer">
-            <p class="fs-14">Copyright &copy; @DateTime.Now.Year. All Rights Reserved, <a href="javascript:void(0);" class="text-primary fw-medium">Realize Travel</a></p>
+            <p class="fs-14">Copyright &copy; @DateTime.Now.Year. @Localizer["All Rights Reserved"], <a href="javascript:void(0);" class="text-primary fw-medium">Realize Travel</a></p>
         </div>
     </div>
     <!-- /Main Wrapper -->
@@ -100,6 +100,36 @@
 
     <!-- Script JS -->
     <script src="~/js/script.js"></script>
+
+    <script type="text/javascript">
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const notyf = new Notyf({
+                duration: 0,
+                dismissible: true,
+                position: {
+                  x: 'right',
+                  y: 'top',
+                }
+            });
+
+            var erroMessage = '@TempData["ErroMessage"]?.ToString()';
+            var sucessMessage = '@TempData["SucessMessage"]?.ToString()';
+
+            if (erroMessage)
+            {
+                notyf.error(erroMessage);
+            }
+
+            if (sucessMessage)
+            {
+                notyf.success(sucessMessage);
+            }
+
+        });
+
+    </script>
 
 </body>
 

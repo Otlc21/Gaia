@@ -563,15 +563,12 @@ Template Name: DreamsTour - Bootstrap Template
     var radioval = $(this).val();
     if (radioval === "roundtrip") {
       $(".round-drip").show();
-      $(".multi-trip").hide();
       $(".normal-trip").show();
     } else if (radioval === "multiway") {
       $(".round-drip").hide();
-      $(".multi-trip").show();
       $(".normal-trip").hide();
     } else {
       $(".round-drip").hide();
-      $(".multi-trip").hide();
       $(".normal-trip").show();
     }
   });

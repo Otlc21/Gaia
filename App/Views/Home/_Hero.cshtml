@@ -1,0 +1,610 @@
+﻿@model HomeViewModel;
+
+<div class="container">
+	<div class="hero-content">
+		<div class="row align-items-center">
+			<div class="col-md-12 mx-auto wow fadeInUp" data-wow-delay="0.3s">
+				<div class="banner-form card mb-0">
+					<div class="card-header">
+						<ul class="nav">
+							<li>
+								<a href="javascript:void(0);" class="nav-link active" data-bs-toggle="tab" data-bs-target="#flight">
+									<i class="isax isax-airplane5 me-2"></i>@Localizer["Flights"]
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab" data-bs-target="#Hotels">
+									<i class="isax isax-buildings5 me-2"></i>@Localizer["Hotels"]
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab" data-bs-target="#Cars">
+									<i class="isax isax-car5 me-2"></i>@Localizer["Cars"]
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="card-body">
+						<div>
+							<div class="tab-content">
+								<div class="tab-pane fade active show" id="flight">
+									<form method="post" asp-controller="Flight" asp-action="Search">
+										<div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
+											<div class="d-flex align-items-center flex-wrap">
+												<div class="form-check d-flex align-items-center me-3 mb-2">
+													<input class="form-check-input mt-0" type="radio" name="Radio" id="oneway" value="oneway" checked>
+													<label class="form-check-label fs-14 ms-2" for="oneway">
+														@Localizer["Oneway"]
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center me-3 mb-2">
+													<input class="form-check-input mt-0" type="radio" name="Radio" id="roundtrip" value="roundtrip">
+													<label class="form-check-label fs-14 ms-2" for="roundtrip">
+														@Localizer["Round Trip"]
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="normal-trip">
+											<div class="d-lg-flex">
+												<div class="d-flex  form-info">
+													<div class="form-item dropdown">
+														<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+															<label class="form-label fs-14 text-default mb-1">@Localizer["From"]</label>
+															<input type="text" class="form-control" value="Newyork">
+															<p class="fs-12 mb-0">Ken International Airport</p>
+														</div>
+														<div class="dropdown-menu dropdown-md p-0">
+															<div class="input-search p-3 border-bottom">
+																<div class="input-group">
+																	<input type="text" class="form-control" placeholder="@Localizer["Search Location"]">
+																	<span class="input-group-text px-2 border-start-0"><i class="isax isax-search-normal"></i></span>
+																</div>
+															</div>
+															<ul>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Newyork</h6>
+																		<p>Ken International Airport</p>
+																	</a>
+																</li>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Boston</h6>
+																		<p>Boston Logan International Airport</p>
+																	</a>
+																</li>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Northern Virginia</h6>
+																		<p>Dulles International Airport</p>
+																	</a>
+																</li>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Los Angeles</h6>
+																		<p>Los Angeles International Airport</p>
+																	</a>
+																</li>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Orlando</h6>
+																		<p>Orlando International Airport</p>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="form-item dropdown ps-2 ps-sm-3">
+														<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+															<label class="form-label fs-14 text-default mb-1">@Localizer["To"]</label>
+															<h5>Las Vegas</h5>
+															<p class="fs-12 mb-0">Martini International Airport</p>
+															<span class="way-icon badge badge-primary rounded-pill translate-middle">
+																<i class="fa-solid fa-arrow-right-arrow-left"></i>
+															</span>
+														</div>
+														<div class="dropdown-menu dropdown-md p-0">
+															<div class="input-search p-3 border-bottom">
+																<div class="input-group">
+																	<input type="text" class="form-control" placeholder="@Localizer["Search Location"]">
+																	<span class="input-group-text px-2 border-start-0"><i class="isax isax-search-normal"></i></span>
+																</div>
+															</div>
+															<ul>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Newyork</h6>
+																		<p>Ken International Airport</p>
+																	</a>
+																</li>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Boston</h6>
+																		<p>Boston Logan International Airport</p>
+																	</a>
+																</li>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Northern Virginia</h6>
+																		<p>Dulles International Airport</p>
+																	</a>
+																</li>
+																<li class="border-bottom">
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Los Angeles</h6>
+																		<p>Los Angeles International Airport</p>
+																	</a>
+																</li>
+																<li>
+																	<a class="dropdown-item" href="javascript:void(0);">
+																		<h6 class="fs-16 fw-medium">Orlando</h6>
+																		<p>Orlando International Airport</p>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="form-item">
+														<label class="form-label fs-14 text-default mb-1">@Localizer["Departure"]</label>
+														<input type="text" class="form-control datetimepicker" value="21-10-2024">
+														<p class="fs-12 mb-0">Monday</p>
+													</div>
+													<div class="form-item round-drip">
+														<label class="form-label fs-14 text-default mb-1">@Localizer["Return"]</label>
+														<input type="text" class="form-control datetimepicker" value="23-10-2024">
+														<p class="fs-12 mb-0">Wednesday</p>
+													</div>
+													<div class="form-item dropdown">
+														<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+															<label class="form-label fs-14 text-default mb-1">@Localizer["Travellers"]</label>
+															<h5>4 <span class="fw-normal fs-14">Persons</span></h5>
+															<p class="fs-12 mb-0">1 Adult, Economy</p>
+														</div>
+														<div class="dropdown-menu dropdown-menu-end dropdown-xl">
+															<h5 class="mb-3">Select Travelers &  Class</h5>
+															<div class="mb-3 border br-10 info-item pb-1">
+																<h6 class="fs-16 fw-medium mb-2">@Localizer["Travellers"]</h6>
+																<div class="row">
+																	<div class="col-md-4">
+																		<div class="mb-3">
+																			<label class="form-label text-gray-9 mb-2">
+																				@Localizer["Adults"] <span class="text - default fw - normal">( 12+ @Localizer["Yrs"] )</span>
+																			</label>
+																			<div class="custom-increment">
+																				<div class="input-group">
+																					<span class="input-group-btn float-start">
+																						<button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus" data-field="">
+																							<span><i class="isax isax-minus"></i></span>
+																						</button>
+																					</span>
+																					<input type="text" name="quantity" class=" input-number" value="01">
+																					<span class="input-group-btn float-end">
+																						<button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
+																							<span><i class="isax isax-add"></i></span>
+																						</button>
+																					</span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-md-4">
+																		<div class="mb-3">
+																			<label class="form-label text-gray-9 mb-2">@Localizer["Childrens"] <span class="text-default fw-normal">( 2-12 @Localizer["Yrs"] )</span></label>
+																			<div class="custom-increment">
+																				<div class="input-group">
+																					<span class="input-group-btn float-start">
+																						<button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus" data-field="">
+																							<span><i class="isax isax-minus"></i></span>
+																						</button>
+																					</span>
+																					<input type="text" name="quantity" class=" input-number" value="01">
+																					<span class="input-group-btn float-end">
+																						<button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
+																							<span><i class="isax isax-add"></i></span>
+																						</button>
+																					</span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="d-flex justify-content-end">
+																<a href="javascript:void(0);" class="btn btn-light btn-sm me-2">@Localizer["Cancel"]</a>
+																<button type="submit" class="btn btn-primary btn-sm">@Localizer["Apply"]</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<button type="submit" class="btn btn-primary search-btn rounded">@Localizer["Search"]</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="tab-pane fade" id="Hotels">
+									<form method="post" asp-controller="Hotel" asp-action="Search">
+										<div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
+										</div>
+										<div class="d-lg-flex">
+											<div class="d-flex  form-info">
+												<div class="form-item dropdown">
+													<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+														<label class="form-label fs-14 text-default mb-1">@Localizer["Location"]</label>
+														<input type="text" class="form-control" value="Newyork">
+														<p class="fs-12 mb-0">USA</p>
+													</div>
+													<div class="dropdown-menu dropdown-md p-0">
+														<div class="input-search p-3 border-bottom">
+															<div class="input-group">
+																<input type="text" class="form-control" placeholder="@Localizer["Search for Location"]">
+																<span class="input-group-text px-2 border-start-0"><i class="isax isax-search-normal"></i></span>
+															</div>
+														</div>
+														<ul>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">USA</h6>
+																	<p>2000 Properties</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Japan</h6>
+																	<p>3000 Properties</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Singapore</h6>
+																	<p>8000 Properties</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Russia</h6>
+																	<p>8000 Properties</p>
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Germany</h6>
+																	<p>2000 Properties</p>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-item">
+													<label class="form-label fs-14 text-default mb-1">@Localizer["Check In"]</label>
+													<input type="text" class="form-control datetimepicker" value="21-10-2025">
+													<p class="fs-12 mb-0">Monday</p>
+												</div>
+												<div class="form-item">
+													<label class="form-label fs-14 text-default mb-1">@Localizer["Check Out"]</label>
+													<input type="text" class="form-control datetimepicker" value="21-10-2025">
+													<p class="fs-12 mb-0">Monday</p>
+												</div>
+												<div class="form-item dropdown">
+													<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+														<label class="form-label fs-14 text-default mb-1">@Localizer["Guests"]</label>
+														<h5>4 <span class="fw-normal fs-14">Persons</span></h5>
+														<p class="fs-12 mb-0">4 Adult, 2 Rooms</p>
+													</div>
+													<div class="dropdown-menu dropdown-menu-end dropdown-xl">
+														<h5 class="mb-3">@Localizer["Select Travelers"]</h5>
+														<div class="mb-3 border br-10 info-item pb-1">
+															<div class="row">
+																<div class="col-md-12">
+																	<div class="mb-3 d-flex align-items-center justify-content-between">
+																		<label class="form-label text-gray-9 mb-2">@Localizer["Rooms"]</label>
+																		<div class="custom-increment">
+																			<div class="input-group">
+																				<span class="input-group-btn float-start">
+																					<button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus" data-field="">
+																						<span><i class="isax isax-minus"></i></span>
+																					</button>
+																				</span>
+																				<input type="text" name="quantity" class=" input-number" value="01">
+																				<span class="input-group-btn float-end">
+																					<button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
+																						<span><i class="isax isax-add"></i></span>
+																					</button>
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-12">
+																	<div class="mb-3 d-flex align-items-center justify-content-between">
+																		<label class="form-label text-gray-9 mb-2">@Localizer["Adults"]</label>
+																		<div class="custom-increment">
+																			<div class="input-group">
+																				<span class="input-group-btn float-start">
+																					<button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus" data-field="">
+																						<span><i class="isax isax-minus"></i></span>
+																					</button>
+																				</span>
+																				<input type="text" name="quantity" class=" input-number" value="01">
+																				<span class="input-group-btn float-end">
+																					<button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
+																						<span><i class="isax isax-add"></i></span>
+																					</button>
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-12">
+																	<div class="mb-3 d-flex align-items-center justify-content-between">
+																		<label class="form-label text-gray-9 mb-2">@Localizer["Children"] <span class="text - default fw - normal">( 2-12 @Localizer["Yrs"] )</span></label>
+																		<div class="custom-increment">
+																			<div class="input-group">
+																				<span class="input-group-btn float-start">
+																					<button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus" data-field="">
+																						<span><i class="isax isax-minus"></i></span>
+																					</button>
+																				</span>
+																				<input type="text" name="quantity" class=" input-number" value="01">
+																				<span class="input-group-btn float-end">
+																					<button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
+																						<span><i class="isax isax-add"></i></span>
+																					</button>
+																				</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="d-flex justify-content-end">
+															<a href="javascript:void(0);" class="btn btn-light btn-sm me-2">@Localizer["Cancel"]</a>
+															<button type="submit" class="btn btn-primary btn-sm">@Localizer["Apply"]</button>
+														</div>
+													</div>
+												</div>
+												<div class="form-item dropdown">
+													<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+														<label class="form-label fs-14 text-default mb-1">@Localizer["Price per Night"]</label>
+														<input type="text" class="form-control" value="$1000 - $15000">
+														<p class="fs-12 mb-0">20 Offers Available</p>
+													</div>
+													<div class="dropdown-menu dropdown-md p-0">
+														<ul>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">$500 - $2000</h6>
+																	<p>Upto 65% offers</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Upto 65% offers</h6>
+																	<p>Upto 40% offers</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">$5000 - $8000</h6>
+																	<p>Upto 35% offers</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">$9000 - $11000</h6>
+																	<p>Upto 20% offers</p>
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">$11000 - $15000</h6>
+																	<p>Upto 10% offers</p>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<button type="submit" class="btn btn-primary search-btn rounded">@Localizer["Search"]</button>
+										</div>
+									</form>
+								</div>
+								<div class="tab-pane fade" id="Cars">
+									<form method="post" asp-controller="Car" asp-action="Search">
+										<div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
+											<div class="d-flex align-items-center flex-wrap">
+												<div class="form-check d-flex align-items-center me-3 mb-2">
+													<input class="form-check-input mt-0" type="radio" name="drop" id="same-drop" value="same-drop" checked>
+													<label class="form-check-label fs-14 ms-2" for="same-drop">
+														@Localizer["Same Drop-off"]
+													</label>
+												</div>
+												<div class="form-check d-flex align-items-center me-3 mb-2">
+													<input class="form-check-input mt-0" type="radio" name="drop" id="different-drop" value="different-drop">
+													<label class="form-check-label fs-14 ms-2" for="different-drop">
+														@Localizer["Different Drop off"]
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="d-lg-flex">
+											<div class="d-flex  form-info">
+												<div class="form-item dropdown from-location">
+													<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+														<label class="form-label fs-14 text-default mb-1">@Localizer["From"]</label>
+														<input type="text" class="form-control" value="Newyork">
+														<p class="fs-12 mb-0">USA</p>
+													</div>
+													<div class="dropdown-menu dropdown-md p-0">
+														<div class="input-search p-3 border-bottom">
+															<div class="input-group">
+																<input type="text" class="form-control" placeholder="@Localizer["Search for Car"]">
+																<span class="input-group-text px-2 border-start-0"><i class="isax isax-search-normal"></i></span>
+															</div>
+														</div>
+														<ul>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">USA</h6>
+																	<p>2000 Cars</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Japan</h6>
+																	<p>3000 Cars</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Singapore</h6>
+																	<p>8000 Cars</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Russia</h6>
+																	<p>8000 Cars</p>
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Germany</h6>
+																	<p>6000 Cars</p>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-item dropdown pickup-airport">
+													<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+														<label class="form-label fs-14 text-default mb-1">@Localizer["From"]</label>
+														<input type="text" class="form-control" value="Newyork">
+														<p class="fs-12 mb-0">Ken International Airport</p>
+													</div>
+													<div class="dropdown-menu dropdown-md p-0">
+														<div class="input-search p-3 border-bottom">
+															<div class="input-group">
+																<input type="text" class="form-control" placeholder="@Localizer["Search for Airport"]">
+																<span class="input-group-text px-2 border-start-0"><i class="isax isax-search-normal"></i></span>
+															</div>
+														</div>
+														<ul>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Hartsfield-Jackson Atlanta International</h6>
+																	<p>USA</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Dallas/Fort Worth International</h6>
+																	<p>USA</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">London Heathrow</h6>
+																	<p>UK</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Seoul Incheon</h6>
+																	<p>South Korea</p>
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Singapore Changi International</h6>
+																	<p>Singapore</p>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-item dropdown to-location ps-2 ps-sm-3">
+													<div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
+														<label class="form-label fs-14 text-default mb-1">@Localizer["To"]</label>
+														<input type="text" class="form-control" value="Newyork">
+														<p class="fs-12 mb-0">USA</p>
+														<span class="way-icon badge badge-primary rounded-pill translate-middle">
+															<i class="fa-solid fa-arrow-right-arrow-left"></i>
+														</span>
+													</div>
+													<div class="dropdown-menu dropdown-md p-0">
+														<div class="input-search p-3 border-bottom">
+															<div class="input-group">
+																<input type="text" class="form-control" placeholder="@Localizer["Search for Car"]">
+																<span class="input-group-text px-2 border-start-0"><i class="isax isax-search-normal"></i></span>
+															</div>
+														</div>
+														<ul>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">USA</h6>
+																	<p>2000 Cars</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Japan</h6>
+																	<p>3000 Cars</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Singapore</h6>
+																	<p>8000 Cars</p>
+																</a>
+															</li>
+															<li class="border-bottom">
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Russia</h6>
+																	<p>8000 Cars</p>
+																</a>
+															</li>
+															<li>
+																<a class="dropdown-item" href="javascript:void(0);">
+																	<h6 class="fs-16 fw-medium">Germany</h6>
+																	<p>6000 Cars</p>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-item">
+													<label class="form-label fs-14 text-default mb-1">@Localizer["Departure"]</label>
+													<input type="text" class="form-control datetimepicker" value="21-10-2024">
+													<p class="fs-12 mb-0">Monday</p>
+												</div>
+												<div class="form-item return-drop">
+													<label class="form-label fs-14 text-default mb-1">@Localizer["Return"]</label>
+													<input type="text" class="form-control datetimepicker" value="23-10-2024">
+													<p class="fs-12 mb-0">Wednesday</p>
+												</div>
+												<div class="form-item">
+													<label class="form-label fs-14 text-default mb-1">@Localizer["Pickup Time"]</label>
+													<input type="text" class="form-control timepicker" value="11:45 PM">
+												</div>
+												<div class="form-item dropoff-time">
+													<label class="form-label fs-14 text-default mb-1">@Localizer["Dropoff Time"]</label>
+													<input type="text" class="form-control timepicker" value="11:45 PM">
+												</div>
+												<div class="form-item hourly-time">
+													<label class="form-label fs-14 text-default mb-1">@Localizer["Hours"]</label>
+													<h5>02 Hrs 10 Kms</h5>
+												</div>
+											</div>
+											<button type="submit" class="btn btn-primary search-btn rounded">@Localizer["Search"]</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

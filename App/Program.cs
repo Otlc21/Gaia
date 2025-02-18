@@ -3,7 +3,9 @@ using Serilog;
 using DI;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
-
+using Domain.DTO;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using App.Models.Utils;
 
 namespace App
 {
@@ -24,9 +26,28 @@ namespace App
                 builder.Services.AddControllersWithViews()
                     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                     .AddDataAnnotationsLocalization();
-                
-                //builder.Services.AddDomainServices()
-                //    .AddInfrastructure(builder.Configuration);
+
+                builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+
+                builder.Services.Configure<AppSettings>(builder.Configuration);
+
+                builder.Services.AddDomainService()
+                    .AddClient()
+                    .AddInfrastructure(builder.Configuration);
+
+                builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                    .AddCookie(options =>
+                    {
+                        options.LoginPath = "/Account/Login";
+                        options.LogoutPath = "/Account/Logout";
+                        options.AccessDeniedPath = "/Account/AccessDenied";
+
+                        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                        options.SlidingExpiration = true;
+                        options.Cookie.HttpOnly = true;
+                        options.Cookie.IsEssential = true;
+                    });
+
 
                 var app = builder.Build();
 
@@ -64,6 +85,7 @@ namespace App
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+                
                 app.Run();
             }
             catch (Exception ex)

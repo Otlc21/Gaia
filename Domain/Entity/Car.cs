@@ -10,41 +10,23 @@ namespace Domain.Entity
 {
     public class Car
     {
-        [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Type { get; set; }
+        public decimal Price { get; set; }
+        public string Fuel { get; set; }
+        public string Transmission { get; set; }
+        public string Mileage { get; set; }
+        public string Year { get; set; }
+        public string Location { get; set; }
+        public byte Rating { get; set; }
+        public DateTime ValidFrom { get; set; }
+        public DateTime ValidUntil { get; set; }
+        public int AvailableSpots { get; set; }
 
-        [Required]
-        public string Model {  get; set; }
-
-        [Required]
-        public string Brand {  get; set; }
-
-        [Required]
-        public short Year { get; set; }
-
-        [Required]
-        public string Category { get; set; }
-
-        [Required]
-        public int LocationId { get; set; }
-
-        [ForeignKey("LocationId")]
-        public Location Location { get; set; }
-
-        [Required]
-        public float Price { get; set; }
-
-        [Required]
-        public int Amount { get; set; }
-
-        [Required]
-        public int Path { get; set; }
-
-        [Required]
-        public DateTime Creation { get; set; }
-
-        [Required]
+        public string Image { get; set; }
         public bool Active { get; set; }
-
+        public DateTime Created { get; set; }
     }
 }

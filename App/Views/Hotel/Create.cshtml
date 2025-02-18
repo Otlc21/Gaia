@@ -1,16 +1,19 @@
 ﻿@{
 	ViewData["Title"] = "Create Hotel";
 }
+
+@model HotelViewModel;
+
 <!-- Breadcrumb -->
 <div class="breadcrumb-bar breadcrumb-bg-04 text-center">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-12">
-				<h2 class="breadcrumb-title mb-2">Add Hotel</h2>
+				<h2 class="breadcrumb-title mb-2">@Localizer["Add Hotel"]</h2>
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb justify-content-center mb-0">
-						<li class="breadcrumb-item"><a href="index.html"><i class="isax isax-home5"></i></a></li>
-						<li class="breadcrumb-item active" aria-current="page">Add Hotel</li>
+						<li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")"><i class="isax isax-home5"></i></a></li>
+						<li class="breadcrumb-item active" aria-current="page">@Localizer["Add Hotel"]</li>
 					</ol>
 				</nav>
 			</div>
@@ -28,11 +31,11 @@
 						Add New Hotel
 					</a>
 				</li>
-				<li>
+				@* <li>
 					<a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab" data-bs-target="#add_room" aria-selected="false" role="tab" tabindex="-1">
 						Add New Room
 					</a>
-				</li>
+				</li> *@
 			</ul>
 		</div>
 		<div class="tab-content">

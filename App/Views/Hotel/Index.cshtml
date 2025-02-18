@@ -2,16 +2,18 @@
 	ViewData["Title"] = "Hotel";
 }
 
+@model HotelViewModel;
+
 <!-- Breadcrumb -->
 <div class="breadcrumb-bar breadcrumb-bg-04 text-center">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-12">
-                <h2 class="breadcrumb-title mb-2">Hotel Bookings</h2>
+                <h2 class="breadcrumb-title mb-2">@Localizer["Hotel List"]</h2>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center mb-0">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="isax isax-home5"></i></a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Hotel Bookings</li>
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")"><i class="isax isax-home5"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@Localizer["Hotel List"]</li>
                     </ol>
                 </nav>
             </div>
@@ -25,115 +27,27 @@
 
         <div class="row">
 
-            <!-- Sidebar -->
-            <div class="col-xl-3 col-lg-4 theiaStickySidebar">
-                <div class="card user-sidebar agent-sidebar mb-4 mb-lg-0">
-                    <div class="card-header user-sidebar-header text-center bg-gray-transparent">
-                        <div class="agent-profile d-inline-flex">
-                            <img src="~/img/users/user-43.jpg" alt="image" class="img-fluid rounded-circle">
-                            <a href="agent-settings.html" class="avatar avatar-sm rounded-circle btn btn-primary d-flex align-items-center justify-content-center p-0"><i class="isax isax-edit-2 fs-14"></i></a>
-                        </div>
-                        <h6 class="fs-16">Chris Foxy</h6>
-                        <p class="fs-14 mb-2">Member Since 10 May 2025</p>
-                        <div class="d-flex align-items-center justify-content-center notify-item">
-                            <a href="agent-notifications.html" class="rounded-circle btn btn-white d-flex align-items-center justify-content-center p-0 me-2 position-relative">
-                                <i class="isax isax-notification-bing5 fs-20"></i>
-                                <span class="position-absolute p-1 bg-secondary rounded-circle"></span>
-                            </a>
-                            <a href="agent-chat.html" class="rounded-circle btn btn-white d-flex align-items-center justify-content-center p-0 position-relative">
-                                <i class="isax isax-message-square5 fs-20"></i>
-                                <span class="position-absolute p-1 bg-danger rounded-circle"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-body user-sidebar-body">
-                        <ul>
-                            <li>
-                                <a href="agent-dashboard.html" class="d-flex align-items-center">
-                                    <i class="isax isax-grid-55 me-2"></i>Dashboard
-                                </a>
-                            </li>
-                            <li>
-                                <a href="agent-listings.html" class="d-flex align-items-center">
-                                    <i class="isax isax-menu-14 me-2"></i>Listings
-                                </a>
-                            </li>
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="d-block active subdrop"><i class="isax isax-calendar-tick5 me-2"></i><span>Bookings</span><span class="menu-arrow"></span></a>
-                                <ul>
-                                    <li>
-                                        <a href="agent-hotel-booking.html" class="fs-14 d-inline-flex align-items-center active">Hotels</a>
-                                    </li>
-                                    <li>
-                                        <a href="agent-car-booking.html" class="fs-14 d-inline-flex align-items-center">Cars</a>
-                                    </li>
-                                    <li>
-                                        <a href="agent-cruise-booking.html" class="fs-14 d-inline-flex align-items-center">Cruise</a>
-                                    </li>
-                                    <li>
-                                        <a href="agent-tour-booking.html" class="fs-14 d-inline-flex align-items-center">Tour</a>
-                                    </li>
-                                    <li>
-                                        <a href="agent-flight-booking.html" class="fs-14 d-inline-flex align-items-center">Flights</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="agent-enquirers.html" class="d-flex align-items-center">
-                                    <i class="isax isax-magic-star5 me-2"></i>Enquiries
-                                </a>
-                            </li>
-                            <li>
-                                <a href="agent-earnings.html" class="d-flex align-items-center">
-                                    <i class="isax isax-wallet-add-15 me-2"></i>Earnings
-                                </a>
-                            </li>
-                            <li>
-                                <a href="agent-review.html" class="d-flex align-items-center">
-                                    <i class="isax isax-magic-star5 me-2"></i>Reviews
-                                </a>
-                            </li>
-                            <li>
-                                <a href="agent-settings.html" class="d-flex align-items-center">
-                                    <i class="isax isax-setting-25"></i> Settings
-                                </a>
-                            </li>
-                            <li class="logout-link">
-                                <a href="index.html" class="d-flex align-items-center pb-0">
-                                    <i class="isax isax-logout-15"></i> Logout
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- /Sidebar -->
-
-            <div class="col-xl-9 col-lg-8">
+            <div class="col-xl-12 col-lg-12">
                 <!-- Booking Header -->
                 <div class="card booking-header border-0">
                     <div class="card-body header-content d-flex align-items-center justify-content-between flex-wrap ">
                         <div>
-                            <h6 class="mb-1">Hotel Bookings</h6>
-                            <p class="fs-14 text-gray-6 fw-normal ">No of Booking : 150</p>
+                            <h6 class="mb-1">Hotel List</h6>
+                            <p class="fs-14 text-gray-6 fw-normal ">Total : 150</p>
                         </div>
-
                         <div class="d-flex align-items-center flex-wrap">
-                            <div class="input-icon-start position-relative">
-                                <span class="icon-addon">
-                                    <i class="isax isax-calendar-edit fs-14"></i>
-                                </span>
-                                <input type="text" class="form-control date-range bookingrange" placeholder="Select" value="Academic Year : 2024 / 2025">
-                            </div>
+                            <a href="@Url.Action("Create", "Hotel")" class="btn btn-primary btn-sm add-highlight">
+                                <i class="isax isax-add-circle me-1"></i>Add New
+                            </a>
                         </div>
                     </div>
+                    
                 </div>
                 <!-- /Booking Header -->
                 <!-- Hotel-Booking List -->
                 <div class="card hotel-list">
                     <div class="card-body p-0">
                         <div class="list-header d-flex align-items-center justify-content-between flex-wrap">
-                            <h6 class="">Booking List</h6>
                             <div class="d-flex align-items-center flex-wrap">
                                 <div class="input-icon-start  me-2 position-relative">
                                     <span class="icon-addon">
@@ -223,7 +137,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#HB-1245</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">Hotel Athenee</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Athenee</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Barcelona</span>
                                             </div>
                                         </td>
@@ -243,7 +157,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#upcoming"><i class="isax isax-eye"></i></a>
+												<a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -251,7 +165,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#HB-3215</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">The Luxe Haven</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">The Luxe Haven</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">London</span>
                                             </div>
                                         </td>
@@ -271,7 +185,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#upcoming"><i class="isax isax-eye"></i></a>
+                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -279,7 +193,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#upcoming">#HB-4581</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">The Urban Retreat</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">The Urban Retreat</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Edinburgh</span>
                                             </div>
                                         </td>
@@ -299,7 +213,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#upcoming"><i class="isax isax-eye"></i></a>
+                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -307,7 +221,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-6545</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">The Grand Horizon</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">The Grand Horizon</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Manchester</span>
                                             </div>
                                         </td>
@@ -327,7 +241,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#completed"><i class="isax isax-eye"></i></a>
+                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -335,7 +249,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#cancelled">#HB-3256</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">Hotel Serene Valley</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Serene Valley</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Chelsea</span>
                                             </div>
                                         </td>
@@ -355,7 +269,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#upcoming"><i class="isax isax-eye"></i></a>
+												<a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -363,7 +277,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#cancelled">#HB-3654</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">Hotel Evergreen</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Evergreen</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Las Vegas</span>
                                             </div>
                                         </td>
@@ -383,7 +297,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#cancelled"><i class="isax isax-eye"></i></a>
+												<a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -391,7 +305,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-1458</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">Stardust Hotel</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Stardust Hotel</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Salford</span>
                                             </div>
                                         </td>
@@ -411,7 +325,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#completed"><i class="isax isax-eye"></i></a>
+                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -419,7 +333,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-6589</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">Hotel Plaza</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Plaza</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Newyork</span>
                                             </div>
                                         </td>
@@ -439,7 +353,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#completed"><i class="isax isax-eye"></i></a>
+                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -447,7 +361,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-2315</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">Hotel Skyline Vista</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Skyline Vista</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Cambridge</span>
                                             </div>
                                         </td>
@@ -467,7 +381,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#completed"><i class="isax isax-eye"></i></a>
+												<a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -475,7 +389,7 @@
                                         <td><a href="javascript:void(0);" class="link-primary fw-medium" data-bs-toggle="modal" data-bs-target="#completed">#HB-5414</a></td>
                                         <td>
                                             <div>
-                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="hotel-details.html">Hotel Aurora Bliss</a></p>
+                                                <p class="text-dark mb-0 fw-medium fs-14"><a href="javascript:void(0);">Hotel Aurora Bliss</a></p>
                                                 <span class="fs-14 fw-normal text-gray-6">Bristol</span>
                                             </div>
                                         </td>
@@ -495,7 +409,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#completed"><i class="isax isax-eye"></i></a>
+                                                <a href="@Url.Action("Edit", "Hotel", new { id = "eba213e3-802e-4092-9370-8b26c3c175ef" })"><i class="isax isax-edit-2"></i></a>
                                             </div>
                                         </td>
                                     </tr>

@@ -10,10 +10,11 @@ namespace Domain.Service
     public interface IHotelService
     {
         Task<int> Count(Hotel item);
-        Task<Hotel> Get(int id);
-        Task<List<Hotel>> Get(Hotel item, int skip, int take);
-        Task Insert(Hotel item);
+        Task<Hotel> Get(Guid id);
+        Task<List<Hotel>> GetTrending();
+        Task<List<Hotel>> Get(Hotel item, int skip = 0, int take = 10);
+        Task<Guid> Insert(Hotel item);
         Task Update(Hotel item);
-        Task Delete(int id);
+        Task Delete(Guid id);
     }
 }

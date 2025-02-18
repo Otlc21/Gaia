@@ -1,18 +1,20 @@
 ﻿@{
-	ViewData["Title"] = "Search Hotel";
+    ViewData["Title"] = "Search Hotel";
 }
+
+@model HotelSearchViewModel;
 
 <!-- Breadcrumb -->
 <div class="breadcrumb-bar breadcrumb-bg-04 text-center">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-12">
-                <h2 class="breadcrumb-title mb-2">Hotels</h2>
+                <h2 class="breadcrumb-title mb-2">@Localizer["Hotels"]</h2>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center mb-0">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="isax isax-home5"></i></a></li>
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")"><i class="isax isax-home5"></i></a></li>
                         <li class="breadcrumb-item">Hotels</li>
-                        <li class="breadcrumb-item active" aria-current="page">Hotel Lists</li>
+                        <li class="breadcrumb-item active" aria-current="page">@Localizer["Hotel Search"]</li>
                     </ol>
                 </nav>
             </div>
@@ -28,7 +30,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="banner-form">
-                    <form class="d-lg-flex">
+                    <form asp-controller="Hotel" asp-action="Search" class="d-lg-flex">
                         <div class="d-flex  form-info">
                             <div class="form-item dropdown">
                                 <div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
@@ -157,84 +159,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="mb-3 d-flex align-items-center justify-content-between">
-                                                    <label class="form-label text-gray-9 mb-2">Infants <span class="text-default fw-normal">( 0-12 Yrs )</span></label>
-                                                    <div class="custom-increment">
-                                                        <div class="input-group">
-                                                            <span class="input-group-btn float-start">
-                                                                <button type="button" class="quantity-left-minus btn btn-light btn-number" data-type="minus" data-field="">
-                                                                    <span><i class="isax isax-minus"></i></span>
-                                                                </button>
-                                                            </span>
-                                                            <input type="text" name="quantity" class=" input-number" value="01">
-                                                            <span class="input-group-btn float-end">
-                                                                <button type="button" class="quantity-right-plus btn btn-light btn-number" data-type="plus" data-field="">
-                                                                    <span><i class="isax isax-add"></i></span>
-                                                                </button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 border br-10 info-item pb-1">
-                                        <h6 class="fs-16 fw-medium mb-2">Travellers</h6>
-                                        <div class="d-flex align-items-center flex-wrap">
-                                            <div class="form-check me-3 mb-3">
-                                                <input class="form-check-input" type="radio" name="room" id="room1" checked>
-                                                <label class="form-check-label" for="room1">
-                                                    Single
-                                                </label>
-                                            </div>
-                                            <div class="form-check me-3 mb-3">
-                                                <input class="form-check-input" type="radio" name="room" id="room2">
-                                                <label class="form-check-label" for="room2">
-                                                    Double
-                                                </label>
-                                            </div>
-                                            <div class="form-check me-3 mb-3">
-                                                <input class="form-check-input" type="radio" name="room" id="room3">
-                                                <label class="form-check-label" for="room3">
-                                                    Delux
-                                                </label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="radio" name="room" id="room4">
-                                                <label class="form-check-label" for="room4">
-                                                    Suite
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 border br-10 info-item pb-1">
-                                        <h6 class="fs-16 fw-medium mb-2">Property Type</h6>
-                                        <div class="d-flex align-items-center flex-wrap">
-                                            <div class="form-check me-3 mb-3">
-                                                <input class="form-check-input" type="radio" name="property" id="property1" checked>
-                                                <label class="form-check-label" for="property1">
-                                                    Villa
-                                                </label>
-                                            </div>
-                                            <div class="form-check me-3 mb-3">
-                                                <input class="form-check-input" type="radio" name="property" id="property2">
-                                                <label class="form-check-label" for="property2">
-                                                    Condo
-                                                </label>
-                                            </div>
-                                            <div class="form-check me-3 mb-3">
-                                                <input class="form-check-input" type="radio" name="property" id="property3">
-                                                <label class="form-check-label" for="property3">
-                                                    Cabin
-                                                </label>
-                                            </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" type="radio" name="property" id="property4">
-                                                <label class="form-check-label" for="property4">
-                                                    Apartments
-                                                </label>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-end">
@@ -291,81 +215,6 @@
             </div>
         </div>
         <!-- /Hotel Search -->
-        <!-- Hotel Types -->
-        <div class="mb-2">
-            <div class="mb-3">
-                <h5 class="mb-2">Choose type of Hotels you are interested</h5>
-            </div>
-            <div class="row">
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="hotel-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/hotels/hotel-model-01.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="hotel-grid.html">Condos</a></h6>
-                            <p class="fs-14">216 Hotels</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="hotel-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/hotels/hotel-model-02.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="hotel-grid.html">Apartments</a></h6>
-                            <p class="fs-14">569 Hotels</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="hotel-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/hotels/hotel-model-03.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="hotel-grid.html">Villas</a></h6>
-                            <p class="fs-14">129 Hotels</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="hotel-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/hotels/hotel-model-04.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="hotel-grid.html">5 Star Hotels</a></h6>
-                            <p class="fs-14">600 Hotels</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="hotel-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/hotels/hotel-model-01.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="hotel-grid.html">3 Start Hotels</a></h6>
-                            <p class="fs-14">200 Hotels</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="hotel-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/hotels/hotel-model-06.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="hotel-grid.html">2 Start Hotels</a></h6>
-                            <p class="fs-14">180 Hotels</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /Hotel Types -->
 
         <div class="row">
 
@@ -377,7 +226,7 @@
                         <a href="javascript:void(0);" class="fs-14 link-primary">Reset</a>
                     </div>
                     <div class="card-body p-0">
-                        <form action="search.html">
+                        <form asp-controller="Hotel" asp-action="Search">
                             <div class="p-3 border-bottom">
                                 <label class="form-label fs-16">Search by Hotel Name</label>
                                 <input type="text" class="form-control" placeholder="Search by Hotel Name">
@@ -839,16 +688,13 @@
                     <h6 class="mb-3">1920 Hotels Found on Your Search</h6>
                     <div class="d-flex align-items-center flex-wrap">
                         <div class="list-item d-flex align-items-center mb-3">
-                            <a href="hotel-grid.html" class="list-icon me-2"><i class="isax isax-grid-1"></i></a>
-                            <a href="hotel-list.html" class="list-icon active me-2"><i class="isax isax-firstline"></i></a>
-                            <a href="hotel-map.html" class="list-icon me-2"><i class="isax isax-map-1"></i></a>
                         </div>
                         <div class="dropdown mb-3">
                             <a href="javascript:void(0);" class="dropdown-toggle py-2" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="fw-medium text-gray-9">Sort By : </span>Recommended
                             </a>
                             <div class="dropdown-menu dropdown-sm">
-                                <form action="hotel-list.html">
+                                <form asp-controller="Hotel" asp-action="Search">
                                     <h6 class="fw-medium fs-16 mb-3">Sort By</h6>
                                     <div class="form-check d-flex align-items-center ps-0 mb-2">
                                         <input class="form-check-input ms-0 mt-0" name="recommend" type="checkbox" id="recommend1" checked>
@@ -883,12 +729,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-info br-10 p-3 pb-2 mb-4">
-                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                        <p class="fs-14 fw-medium mb-2 d-inline-flex align-items-center"><i class="isax isax-info-circle me-2"></i>Save an average of 15% on thousands of hotels when you're signed in</p>
-                        <a href="login.html" class="btn btn-white btn-sm mb-2">Sign In</a>
+                @if (!User.Identity?.IsAuthenticated ?? true)
+                {
+                    <div class="bg-info br-10 p-3 pb-2 mb-4">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                            <p class="fs-14 fw-medium mb-2 d-inline-flex align-items-center"><i class="isax isax-info-circle me-2"></i>Save an average of 15% on thousands of hotels when you're signed in</p>
+                            <a href="@Url.Action("Login", "Account")" class="btn btn-white btn-sm mb-2">Sign In</a>
+                        </div>
                     </div>
-                </div>
+                }
                 <div class="hotel-list">
                     <div class="row justify-content-center">
 
@@ -899,17 +748,17 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-01.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -924,7 +773,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div>
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">Hotel Plaza Athenee</a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Hotel Plaza Athenee</a></h5>
                                             <p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Ciutat Vella, Barcelona</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
@@ -951,7 +800,7 @@
                             <!-- Hotel Grid -->
                             <div class="place-item mb-4">
                                 <div class="place-img">
-                                    <a href="hotel-details.html">
+                                    <a href="javascript:void(0);">
                                         <img src="~/img/hotels/hotel-05.jpg" class="img-fluid" alt="img">
                                     </a>
                                     <div class="fav-item">
@@ -964,7 +813,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div>
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">The Luxe Haven</a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">The Luxe Haven</a></h5>
                                             <p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Oxford Street, London</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
@@ -991,7 +840,7 @@
                             <!-- Hotel Grid -->
                             <div class="place-item mb-4">
                                 <div class="place-img">
-                                    <a href="hotel-details.html">
+                                    <a href="javascript:void(0);">
                                         <img src="~/img/hotels/hotel-06.jpg" class="img-fluid" alt="img">
                                     </a>
                                     <div class="fav-item">
@@ -1004,7 +853,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">The Urban Retreat</a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">The Urban Retreat</a></h5>
                                             <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Princes Street, Edinburgh</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
@@ -1033,17 +882,17 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-07.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1058,7 +907,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">The Grand Horizon</a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">The Grand Horizon</a></h5>
                                             <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Deansgate, Manchester</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
@@ -1087,17 +936,17 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-08.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1112,7 +961,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">Hotel Evergreen </a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Hotel Evergreen </a></h5>
                                             <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>King’s Road, Chelsea</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
@@ -1141,17 +990,17 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-10.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-04.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-06.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1166,7 +1015,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">Stardust Hotel</a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Stardust Hotel</a></h5>
                                             <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Bold Street, Liverpool</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
@@ -1195,17 +1044,17 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-11.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-05.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1220,7 +1069,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">Hotel Serene Valley</a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Hotel Serene Valley</a></h5>
                                             <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Broad Street, Bristol</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
@@ -1249,17 +1098,17 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-12.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-08.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="hotel-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/hotels/hotel-10.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1274,7 +1123,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">Hotel Aurora Bliss</a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Hotel Aurora Bliss</a></h5>
                                             <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Castle Street, Cambridge</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">
@@ -1301,7 +1150,7 @@
                             <!-- Hotel Grid -->
                             <div class="place-item mb-4">
                                 <div class="place-img">
-                                    <a href="hotel-details.html">
+                                    <a href="javascript:void(0);">
                                         <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
                                     </a>
                                     <div class="fav-item">
@@ -1314,7 +1163,7 @@
                                 <div class="place-content pb-1">
                                     <div class="d-flex align-items-center justify-content-between flex-wrap">
                                         <div>
-                                            <h5 class="mb-1 text-truncate"><a href="hotel-details.html">The Skyline</a></h5>
+                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">The Skyline</a></h5>
                                             <p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Chapel Street, London</p>
                                         </div>
                                         <div class="d-flex align-items-center mb-2">

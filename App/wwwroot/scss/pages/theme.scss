@@ -125,6 +125,24 @@
             }
         }
 
+        .place-nav {
+            .form-info {
+                border-color: $darkmode-light;
+
+                .form-item {
+                    border-color: $darkmode-light;
+                }
+            }
+
+            .nav {
+                li {
+                    .nav-link {
+                        color: $darkmode-text;
+                    }
+                }
+            }
+        }
+
         .select2-container--default {
             .select2-results > .select2-results__options {
                 background: $darkmode-white;
@@ -234,7 +252,11 @@
     }
 
     .hero-section {
-        background: $darkmode-light-400;
+        background: $darkmode-light-500;
+    }
+
+    .breadcrumb-bar {
+        background: $darkmode-light-500;
     }
 
     .update-section {

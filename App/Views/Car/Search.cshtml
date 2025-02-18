@@ -1,18 +1,20 @@
 ﻿@{
-	ViewData["Title"] = "Search Car";
+    ViewData["Title"] = "Search Car";
 }
+
+@model CarSearchViewModel;
 
 <!-- Breadcrumb -->
 <div class="breadcrumb-bar breadcrumb-bg-04 text-center">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-12">
-                <h2 class="breadcrumb-title mb-2">Cars</h2>
+                <h2 class="breadcrumb-title mb-2">@Localizer["Cars"]</h2>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center mb-0">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="isax isax-home5"></i></a></li>
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")"><i class="isax isax-home5"></i></a></li>
                         <li class="breadcrumb-item">Cars</li>
-                        <li class="breadcrumb-item active" aria-current="page">Cars Grid</li>
+                        <li class="breadcrumb-item active" aria-current="page">@Localizer["Cars Search"]</li>
                     </ol>
                 </nav>
             </div>
@@ -27,7 +29,7 @@
         <!-- Car Search -->
         <div class="banner-form card">
             <div class="card-body">
-                <form action="#">
+                <form asp-controller="Car" asp-action="Search">
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="Cars">
                             <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
@@ -44,20 +46,7 @@
                                             Different Drop off
                                         </label>
                                     </div>
-                                    <div class="form-check d-flex align-items-center me-3 mb-2">
-                                        <input class="form-check-input mt-0" type="radio" name="drop" id="airport" value="airport">
-                                        <label class="form-check-label fs-14 ms-2" for="airport">
-                                            Airport
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex align-items-center me-3 mb-2">
-                                        <input class="form-check-input mt-0" type="radio" name="drop" id="hourly-drop" value="hourly-drop">
-                                        <label class="form-check-label fs-14 ms-2" for="hourly-drop">
-                                            Hourly Package
-                                        </label>
-                                    </div>
                                 </div>
-                                <h6 class="fw-medium fs-16 mb-2">Book Car for rental</h6>
                             </div>
                             <div class="d-lg-flex">
                                 <div class="d-flex  form-info">
@@ -236,81 +225,6 @@
             </div>
         </div>
         <!-- /Car Search -->
-        <!-- Tour Types -->
-        <div class="mb-2">
-            <div class="mb-3">
-                <h5 class="mb-2">Choose type of Cars you are interested</h5>
-            </div>
-            <div class="row">
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="car-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/cars/car-01.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="car-grid.html">Sedan</a></h6>
-                            <p class="fs-14">216 Cars</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="car-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/cars/car-02.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="car-grid.html">Sports</a></h6>
-                            <p class="fs-14">569 Cars</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="car-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/cars/car-03.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="car-grid.html">SUV</a></h6>
-                            <p class="fs-14">129 Cars</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="car-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/cars/car-04.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="car-grid.html">Convertible</a></h6>
-                            <p class="fs-14">600 Cars</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="car-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/cars/car-05.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="car-grid.html">Crossover</a></h6>
-                            <p class="fs-14">200 Cars</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xxl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex align-items-center hotel-type-item mb-3">
-                        <a href="car-grid.html" class="avatar avatar-lg">
-                            <img src="~/img/cars/car-17.jpg" class="rounded-circle" alt="img">
-                        </a>
-                        <div class="ms-2">
-                            <h6 class="fs-16 fw-medium"><a href="car-grid.html">EV</a></h6>
-                            <p class="fs-14">180 Cars</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /Tour Types -->
 
         <div class="row">
 
@@ -322,7 +236,7 @@
                         <a href="javascript:void(0);" class="fs-14 link-primary">Reset</a>
                     </div>
                     <div class="card-body p-0">
-                        <form action="search.html">
+                        <form asp-controller="Car" asp-action="Search">
                             <div class="p-3 border-bottom">
                                 <label class="form-label fs-16">Search by Car Name</label>
                                 <div class="input-icon">
@@ -673,16 +587,13 @@
                     <h6 class="mb-3">1920 Cars Found on Your Search</h6>
                     <div class="d-flex align-items-center flex-wrap">
                         <div class="list-item d-flex align-items-center mb-3">
-                            <a href="car-grid.html" class="list-icon me-2"><i class="isax isax-grid-1"></i></a>
-                            <a href="car-list.html" class="list-icon active me-2"><i class="isax isax-firstline"></i></a>
-                            <a href="car-map.html" class="list-icon me-2"><i class="isax isax-map-1"></i></a>
                         </div>
                         <div class="dropdown mb-3">
                             <a href="javascript:void(0);" class="dropdown-toggle py-2" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="fw-medium text-gray-9">Sort By : </span>Recommended
                             </a>
                             <div class="dropdown-menu dropdown-sm">
-                                <form action="car-list.html">
+                                <form asp-controller="Car" asp-action="Search">
                                     <h6 class="fw-medium fs-16 mb-3">Sort By</h6>
                                     <div class="form-check d-flex align-items-center ps-0 mb-2">
                                         <input class="form-check-input ms-0 mt-0" name="recommend" type="checkbox" id="recommend1" checked>
@@ -717,12 +628,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-info br-10 p-3 pb-2 mb-4">
-                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                        <p class="fs-14 fw-medium mb-2 d-inline-flex align-items-center"><i class="isax isax-info-circle me-2"></i>Save an average of 15% on thousands of hotels when you're signed in</p>
-                        <a href="login.html" class="btn btn-white btn-sm mb-2">Sign In</a>
+                @if (!User.Identity?.IsAuthenticated ?? true)
+                {
+                    <div class="bg-info br-10 p-3 pb-2 mb-4">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                            <p class="fs-14 fw-medium mb-2 d-inline-flex align-items-center"><i class="isax isax-info-circle me-2"></i>Save an average of 15% on thousands of hotels when you're signed in</p>
+                            <a href="@Url.Action("Login", "Account")" class="btn btn-white btn-sm mb-2">Sign In</a>
+                        </div>
                     </div>
-                </div>
+                }
                 <div class="hotel-list">
                     <div class="row justify-content-center">
                         <div class="col-md-12">
@@ -732,22 +646,22 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-06.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-07.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-08.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-11.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -764,7 +678,7 @@
                                     <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
                                         <div class="">
                                             <div class="d-flex align-items-center mb-1">
-                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="car-details.html">Toyota Camry SE 400</a></h5>
+                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="javascript:void(0);">Toyota Camry SE 400</a></h5>
                                                 <span class="badge badge-secondary badge-sm d-flex align-items-center">Sedan</span>
                                             </div>
                                             <p class="d-flex align-items-center"><i class="isax isax-location5 me-2"></i>Ciutat Vella, Barcelona</p>
@@ -814,22 +728,22 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-07.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-09.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-08.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-11.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -846,7 +760,7 @@
                                     <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
                                         <div class="">
                                             <div class="d-flex align-items-center mb-1">
-                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="car-details.html">Ford Mustang 4.0 AT</a></h5>
+                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="javascript:void(0);">Ford Mustang 4.0 AT</a></h5>
                                                 <span class="badge badge-secondary badge-sm d-flex align-items-center">Sedan</span>
                                             </div>
                                             <p class="d-flex align-items-center"><i class="isax isax-location5 me-2"></i>Oxford Street, London</p>
@@ -896,22 +810,22 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-08.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-06.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-09.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-12.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -927,7 +841,7 @@
                                     <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
                                         <div class="">
                                             <div class="d-flex align-items-center mb-1">
-                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="car-details.html">Ferrari 458 MM Special</a></h5>
+                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="javascript:void(0);">Ferrari 458 MM Special</a></h5>
                                                 <span class="badge badge-secondary badge-sm d-flex align-items-center">Sedan</span>
                                             </div>
                                             <p class="d-flex align-items-center"><i class="isax isax-location5 me-2"></i>Princes Street, Edinburgh</p>
@@ -977,22 +891,22 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-09.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-06.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-12.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-07.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1008,7 +922,7 @@
                                     <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
                                         <div class="">
                                             <div class="d-flex align-items-center mb-1">
-                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="car-details.html">Mercedes-benz Convertible</a></h5>
+                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="javascript:void(0);">Mercedes-benz Convertible</a></h5>
                                                 <span class="badge badge-secondary badge-sm d-flex align-items-center">Sedan</span>
                                             </div>
                                             <p class="d-flex align-items-center"><i class="isax isax-location5 me-2"></i>Princes Street, Edinburgh</p>
@@ -1058,22 +972,22 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-10.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-12.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-13.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-14.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1089,7 +1003,7 @@
                                     <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
                                         <div class="">
                                             <div class="d-flex align-items-center mb-1">
-                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="car-details.html">BMW 3.0 Gran Turismo</a></h5>
+                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="javascript:void(0);">BMW 3.0 Gran Turismo</a></h5>
                                                 <span class="badge badge-secondary badge-sm d-flex align-items-center">Sedan</span>
                                             </div>
                                             <p class="d-flex align-items-center"><i class="isax isax-location5 me-2"></i>King’s Road, Chelsea</p>
@@ -1139,22 +1053,22 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-11.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-07.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-08.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-06.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1170,7 +1084,7 @@
                                     <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
                                         <div class="">
                                             <div class="d-flex align-items-center mb-1">
-                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="car-details.html">Infiniti QX60 </a></h5>
+                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="javascript:void(0);">Infiniti QX60 </a></h5>
                                                 <span class="badge badge-secondary badge-sm d-flex align-items-center">Sedan</span>
                                             </div>
                                             <p class="d-flex align-items-center"><i class="isax isax-location5 me-2"></i>Bold Street, Liverpool</p>
@@ -1220,22 +1134,22 @@
                                 <div class="place-img">
                                     <div class="img-slider image-slide owl-carousel nav-center">
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-12.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-13.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-14.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
                                         <div class="slide-images">
-                                            <a href="car-details.html">
+                                            <a href="javascript:void(0);">
                                                 <img src="~/img/cars/car-06.jpg" class="img-fluid" alt="img">
                                             </a>
                                         </div>
@@ -1251,7 +1165,7 @@
                                     <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
                                         <div class="">
                                             <div class="d-flex align-items-center mb-1">
-                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="car-details.html">Toyota 86 Sports</a></h5>
+                                                <h5 class="text-truncate border-end pe-2 me-2"><a href="javascript:void(0);">Toyota 86 Sports</a></h5>
                                                 <span class="badge badge-secondary badge-sm d-flex align-items-center">Sedan</span>
                                             </div>
                                             <p class="d-flex align-items-center"><i class="isax isax-location5 me-2"></i>Bold Street, Liverpool</p>

@@ -1,62 +1,49 @@
-﻿using Domain.Repository;
+﻿using BL.Service;
+using Domain.Client;
+using Domain.Repository;
 using Domain.Service;
-using Infrastructure.Repositorio;
+using Infrastructure.Client;
+using Infrastructure.Repository;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using BL.Servico;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DI
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddDomainServices(this IServiceCollection services)
+        public static IServiceCollection AddDomainService(this IServiceCollection services)
         {
+            services.AddScoped<ICarService, CarService>();
 
-            services.AddScoped<IFlightService, FlightServico>();
-            services.AddScoped<IAirportService, AirportServico>();
+            services.AddScoped<IFlightService, FlightService>();
 
-            services.AddScoped<ICarService, CarServico>();
-            services.AddScoped<IAirlineService, AirlineServico>();
+            services.AddScoped<IHotelService, HotelService>();
 
-            services.AddScoped<IHotelService, HotelServico>();
-            services.AddScoped<ILocationService, LocationServico>();
+            services.AddScoped<IMarkupService, MarkupService>();
 
-
-            services.AddScoped<IMarkupService, MarkupServico>();
-            services.AddScoped<IPacoteService, PacoteServico>();
-
-            services.AddScoped<IRoomService, RoomServico>();
-            services.AddScoped<IUsuarioService, UsuarioServico>();
-
-
+            services.AddScoped<IUserService, UserService>();
 
             return services;
         }
+        
+        public static IServiceCollection AddClient(this IServiceCollection services)
+        {
+            services.AddScoped<IEmailClient, EmailClient>();
+
+            return services;
+        }
+
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IFlightRepository, FlightRepositorio>();
-            services.AddScoped<IAirportRepository, AirportRepositorio>();
+            services.AddScoped<ICarRepository, CarRepository>();
 
-            services.AddScoped<ICarRepository, CarRepositorio>();
-            services.AddScoped<IAirlineRepository, AirlineRepositorio>();
+            services.AddScoped<IFlightRepository, FlightRepository>();
 
-            services.AddScoped<IHotelRepository, HotelRepositorio>();
-            services.AddScoped<ILocationRepository, LocationRepositorio>();
+            services.AddScoped<IHotelRepository, HotelRepository>();
 
-            services.AddScoped<IMarkupRepository, MarkupRepositorio>();
+            services.AddScoped<IMarkupRepository, MarkupRepository>();
 
-            services.AddScoped<IPacoteRepository, PacoteRepositorio>();
-
-            services.AddScoped<IRoomRepository, RoomRepositorio>();
-
-            services.AddScoped<IUsuarioRepository, UsuarioRepositorio>();
-
-
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }

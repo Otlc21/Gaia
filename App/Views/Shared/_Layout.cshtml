@@ -3,525 +3,530 @@
 
 <head>
 
-    <!-- Meta Tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewData["Title"]</title>
 
-    @* <meta name="description" content="DreamsTour - A premium Bootstrap 5 template crafted for travel and tour booking. Tailored for travel agencies and booking platforms, it features flight, hotel, and tour reservations, and holiday packages.">
+	@* <meta name="description" content="DreamsTour - A premium Bootstrap 5 template crafted for travel and tour booking. Tailored for travel agencies and booking platforms, it features flight, hotel, and tour reservations, and holiday packages.">
     <meta name="keywords" content="travel booking template, tour booking, Bootstrap 5 travel template, DreamsTour, hotel booking, flights booking, holiday packages, tour agency website, travel agency template, travel HTML template, booking system, responsive travel template, Bootstrap travel website">
     <meta name="author" content="Dreams Technologies">
     <meta name="robots" content="index, follow"> *@
 
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="~/img/apple-touch-icon.png">
+	<!-- Apple Touch Icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="~/img/apple-touch-icon.png">
 
-    <!-- Favicon -->
-    <link rel="icon" href="~/img/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="~/img/favicon.png" type="image/x-icon">
+	<!-- Favicon -->
+	<link rel="icon" href="~/img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="~/img/favicon.png" type="image/x-icon">
 
-    <!-- Theme Settings Js -->
-    <script src="~/js/theme-script.js"></script>
+	<!-- Theme Settings Js -->
+	<script src="~/js/theme-script.js"></script>
 
-    <link rel="stylesheet" href="~/css/animate.css">
-    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/css/animate.css">
+	<link rel="stylesheet" href="~/css/bootstrap.min.css">
 
-    <!-- Main.css -->
-    <link rel="stylesheet" href="~/css/meanmenu.css">
+	<!-- Main.css -->
+	<link rel="stylesheet" href="~/css/meanmenu.css">
 
-    <!-- Tabler Icon CSS -->
-    <link rel="stylesheet" href="~/plugins/tabler-icons/tabler-icons.css">
+	<!-- Tabler Icon CSS -->
+	<link rel="stylesheet" href="~/plugins/tabler-icons/tabler-icons.css">
 
-    <!-- Notyf -->
-    <link href="~/plugins/notyf/notyf.min.css" rel="stylesheet">
+	<!-- Fontawesome Icon CSS -->
+	<link rel="stylesheet" href="~/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="~/plugins/fontawesome/css/all.min.css">
 
-    <!-- Fontawesome Icon CSS -->
-    <link rel="stylesheet" href="~/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="~/plugins/fontawesome/css/all.min.css">
+	<!-- Summernote JS -->
+	<link rel="stylesheet" href="~/plugins/summernote/summernote-lite.min.css">
 
-    <!-- Summernote JS -->
-    <link rel="stylesheet" href="~/plugins/summernote/summernote-lite.min.css">
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="~/plugins/select2/css/select2.min.css">
 
-    <!-- Select2 CSS -->
-    <link rel="stylesheet" href="~/plugins/select2/css/select2.min.css">
+	<!-- Fancybox CSS -->
+	<link rel="stylesheet" href="~/plugins/fancybox/jquery.fancybox.min.css">
 
-    <!-- Fancybox CSS -->
-    <link rel="stylesheet" href="~/plugins/fancybox/jquery.fancybox.min.css">
+	<!-- Owlcarousel CSS -->
+	<link rel="stylesheet" href="~/plugins/owlcarousel/owl.carousel.min.css">
 
-    <!-- Owlcarousel CSS -->
-    <link rel="stylesheet" href="~/plugins/owlcarousel/owl.carousel.min.css">
+	<!-- Rangeslider CSS -->
+	<link rel="stylesheet" href="~/plugins/ion-rangeslider/css/ion.rangeSlider.css">
+	<link rel="stylesheet" href="~/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
 
-    <!-- Rangeslider CSS -->
-    <link rel="stylesheet" href="~/plugins/ion-rangeslider/css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="~/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+	<!-- Iconsax CSS -->
+	<link rel="stylesheet" href="~/css/iconsax.css">
 
-    <!-- Iconsax CSS -->
-    <link rel="stylesheet" href="~/css/iconsax.css">
+	<!-- Datepicker CSS -->
+	<link rel="stylesheet" href="~/css/bootstrap-datetimepicker.min.css">
 
-    <!-- Datepicker CSS -->
-    <link rel="stylesheet" href="~/css/bootstrap-datetimepicker.min.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="~/css/style.css">
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="~/css/style.css">
+	<!-- Notyf -->
+	<link href="~/plugins/notyf/notyf.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="~/css/site.css">
+	<link rel="stylesheet" href="~/css/site.css">
 
 </head>
 
 <body>
 
-    <!-- Loader -->
-    <div id="loading" class="loading-overlay">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden"></span>
-        </div>
-    </div>
-    <!-- /Loader -->
+	<!-- Loader -->
+	<div id="loading" class="loading-overlay">
+		<div class="spinner-border text-primary" role="status">
+			<span class="visually-hidden"></span>
+		</div>
+	</div>
+	<!-- /Loader -->
 
-    <div class="main-header">
-        <!-- Header Topbar-->
-        <div class="header-topbar text-center bg-transparent">
-            <div class="container">
-                <div class="d-flex align-items-center justify-content-between flex-wrap">
-                    <p class="d-flex align-items-center fw-medium fs-14 mb-2"><i class="isax isax-call5 me-2"></i> +1 56565 56594</p>
-                    <div class="d-flex align-items-center">
-                        <p class="mb-2 me-3 d-flex align-items-center fw-medium fs-14"><i class="isax isax-message-text-15 me-2"></i>Email : info@example.com</p>
-                        <div class="dropdown flag-dropdown mb-2 me-3">
-                            @if ("pt-BR".Equals(CultureInfo.CurrentUICulture.Name))
-                            {
-                                <a href="javascript:void(0);" class="dropdown-toggle d-inline-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="~/img/flags/brazil.svg" class="me-2" alt="flag">BRA
-                                </a>
+	<div class="main-header">
+		<!-- Header Topbar-->
+		<div class="header-topbar text-center bg-transparent">
+			<div class="container">
+				<div class="d-flex align-items-center justify-content-between flex-wrap">
+					<p class="d-flex align-items-center fw-medium fs-14 mb-2"><i class="isax isax-call5 me-2"></i> +1 11111 11111</p>
+					<div class="d-flex align-items-center">
+						<p class="mb-2 me-3 d-flex align-items-center fw-medium fs-14"><i class="isax isax-message-text-15 me-2"></i>Email : info@example.com</p>
+						<div class="dropdown flag-dropdown mb-2 me-3">
+							@if ("pt-BR".Equals(CultureInfo.CurrentUICulture.Name))
+							{
+								<a href="javascript:void(0);" class="dropdown-toggle d-inline-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="~/img/flags/brazil.svg" class="me-2" alt="flag">BRA
+								</a>
+							}
+							else
+							{
+								<a href="javascript:void(0);" class="dropdown-toggle d-inline-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="~/img/flags/us-flag.svg" class="me-2" alt="flag">ENG
+								</a>
+							}
+							<ul class="dropdown-menu p-2 mt-2">
+								<li>
+									<a class="dropdown-item rounded d-flex align-items-center" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl="@Context.Request.Path">
+										<img src="~/img/flags/us-flag.svg" class="me-2" alt="flag">ENG
+									</a>
+								</li>
+								<li>
+									<a class="dropdown-item rounded d-flex align-items-center" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="pt-BR" asp-route-returnUrl="@Context.Request.Path">
+										<img src="~/img/flags/brazil.svg" class="me-2" alt="flag">BRA
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Header Topbar-->
+		<!-- Header -->
+		<header>
+			<div class="container">
+				<div class="offcanvas-info">
+					<div class="offcanvas-wrap">
+						<div class="offcanvas-detail">
+							<div class="offcanvas-head">
+								<div class="d-flex justify-content-between align-items-center mb-3">
+									<a href="@Url.Action("Index", "Home")" class="black-logo-responsive">
+										<img src="~/img/logo-dark.png" alt="logo-img">
+									</a>
+									<a href="@Url.Action("Index", "Home")" class="white-logo-responsive">
+										<img src="~/img/logo.png" alt="logo-img">
+									</a>
+									<div class="offcanvas-close">
+										<i class="ti ti-x"></i>
+									</div>
+								</div>
+							</div>
+							<div class="mobile-menu fix mb-3"></div>
+							<div class="offcanvas__contact">
+								<div class="mt-4">
+									<div class="header-dropdown d-flex flex-fill">
+										<div class="w-100">
+											<div class="dropdown flag-dropdown mb-2">
 
-                            } else
-                            {
-                                <a href="javascript:void(0);" class="dropdown-toggle d-inline-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="~/img/flags/us-flag.svg" class="me-2" alt="flag">ENG
-                                </a>
-                            } 
-                            <ul class="dropdown-menu p-2 mt-2">
-                                <li>
-                                    <a class="dropdown-item rounded d-flex align-items-center" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl="@Context.Request.Path">
-                                        <img src="~/img/flags/us-flag.svg" class="me-2" alt="flag">ENG
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item rounded d-flex align-items-center" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="pt-BR" asp-route-returnUrl="@Context.Request.Path">
-                                        <img src="~/img/flags/brazil.svg" class="me-2" alt="flag">BRA
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /Header Topbar-->
-        <!-- Header -->
-        <header>
-            <div class="container">
-                <div class="offcanvas-info">
-                    <div class="offcanvas-wrap">
-                        <div class="offcanvas-detail">
-                            <div class="offcanvas-head">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <a href="@Url.Action("Index", "Home")" class="black-logo-responsive">
-                                        <img src="~/img/logo-dark.png" alt="logo-img">
-                                    </a>
-                                    <a href="@Url.Action("Index", "Home")" class="white-logo-responsive">
-                                        <img src="~/img/logo.png" alt="logo-img">
-                                    </a>
-                                    <div class="offcanvas-close">
-                                        <i class="ti ti-x"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mobile-menu fix mb-3"></div>
-                            <div class="offcanvas__contact">
-                                <div class="mt-4">
-                                    <div class="header-dropdown d-flex flex-fill">
-                                        <div class="w-100">
-                                            <div class="dropdown flag-dropdown mb-2">
+												@if ("pt-BR".Equals(CultureInfo.CurrentUICulture.Name))
+												{
+													<a href="javascript:void(0);" class="dropdown-toggle bg-white border d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+														<img src="~/img/flags/brazil.svg" class="me-2" alt="flag">BRA
+													</a>
+												}
+												else
+												{
+													<a href="javascript:void(0);" class="dropdown-toggle bg-white border d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+														<img src="~/img/flags/us-flag.svg" class="me-2" alt="flag">ENG
+													</a>
+												}
+												<ul class="dropdown-menu p-2">
+													<li>
+														<a class="dropdown-item rounded d-flex align-items-center" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl="@Context.Request.Path">
+															<img src="~/img/flags/us-flag.svg" class="me-2" alt="flag">ENG
+														</a>
+													</li>
+													<li>
+														<a class="dropdown-item rounded d-flex align-items-center" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="pt-BR" asp-route-returnUrl="@Context.Request.Path">
+															<img src="~/img/flags/brazil.svg" class="me-2" alt="flag">BRA
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									@if (!User.Identity?.IsAuthenticated ?? false)
+									{
+										<div><a href="@Url.Action("Login", "Account")" class="text-white btn btn-dark w-100 mb-3">@Localizer["Sign In"]</a></div>
+									}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="offcanvas-overlay"></div>
+				<div class="header-nav">
+					<div class="main-menu-wrapper">
+						<div class="navbar-logo">
+							<a class="logo-white header-logo" href="@Url.Action("Index", "Home")">
+								<img src="~/img/logo.png" class="logo" alt="Logo">
+							</a>
+							<a class="logo-dark header-logo" href="@Url.Action("Index", "Home")">
+								<img src="~/img/logo-dark.png" class="logo" alt="Logo">
+							</a>
+						</div>
+						<nav id="mobile-menu">
+							@if (!User.Identity?.IsAuthenticated ?? false && User.IsInRole("ADM"))
+							{
+								<ul class="main-nav">
+									<li class="has-submenu megamenu active">
+										<a href="@Url.Action("Index", "Home")">@Localizer["Home"]</a>
+									</li>
+									<li class="has-submenu mega-innermenu">
+										<a href="javascript:void(0);">@Localizer["Flight"]<i class="fa-solid fa-plus"></i></a>
+										<ul class="submenu mega-submenu">
+											<li>
+												<div class="megamenu-wrapper">
+													<div class="row">
+														<div class="col-lg-6">
+															<h6>@Localizer["Flight Bookings"]</h6>
+															<ul>
+																<li><a href="@Url.Action("Index", "Flight")">@Localizer["Flight List"]</a></li>
+																<li><a href="@Url.Action("Create", "Flight")">@Localizer["Add Flight"]</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li class="has-submenu mega-innermenu">
+										<a href="javascript:void(0);">@Localizer["Hotel"]<i class="fa-solid fa-plus"></i></a>
+										<ul class="submenu mega-submenu">
+											<li>
+												<div class="megamenu-wrapper">
+													<div class="row">
+														<div class="col-lg-6">
+															<h6>@Localizer["Hotel Bookings"]</h6>
+															<ul>
+																<li><a href="@Url.Action("Index", "Hotel")">@Localizer["Hotel List"]</a></li>
+																<li><a href="@Url.Action("Create", "Hotel")">@Localizer["Add Hotel"]</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li class="has-submenu mega-innermenu">
+										<a href="javascript:void(0);">@Localizer["Car"]<i class="fa-solid fa-plus"></i></a>
+										<ul class="submenu mega-submenu">
+											<li>
+												<div class="megamenu-wrapper">
+													<div class="row">
+														<div class="col-lg-6">
+															<h6>@Localizer["Car Bookings"]</h6>
+															<ul>
+																<li><a href="@Url.Action("Index", "Car")">@Localizer["Car List"]</a></li>
+																<li><a href="@Url.Action("Create", "Car")">@Localizer["Add Car"]</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li class="has-submenu mega-innermenu">
+										<a href="@Url.Action("Index", "Markup")">@Localizer["Markup"]</a>
+									</li>
+									<li class="has-submenu mega-innermenu">
+										<a href="javascript:void(0);">@Localizer["User"]<i class="fa-solid fa-plus"></i></a>
+										<ul class="submenu mega-submenu">
+											<li>
+												<div class="megamenu-wrapper">
+													<div class="row">
+														<div class="col-lg-6">
+															<h6>@Localizer["Admin Users"]</h6>
+															<ul>
+																<li><a href="@Url.Action("Index", "User")">@Localizer["User List"]</a></li>
+																<li><a href="@Url.Action("Create", "User")">@Localizer["Add User"]</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							}
+						</nav>
+						<div class="header-btn d-flex align-items-center">
+							<div class="me-3">
+								<a href="javascript:void(0);" id="dark-mode-toggle" class="theme-toggle">
+									<i class="isax isax-moon"></i>
+								</a>
+								<a href="javascript:void(0);" id="light-mode-toggle" class="theme-toggle">
+									<i class="isax isax-sun-1"></i>
+								</a>
+							</div>
 
-                                                @if ("pt-BR".Equals(CultureInfo.CurrentUICulture.Name))
-                                                {
-                                                    <a href="javascript:void(0);" class="dropdown-toggle bg-white border d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <img src="~/img/flags/brazil.svg" class="me-2" alt="flag">BRA
-                                                    </a>
-                                                } else
-                                                {
-                                                    <a href="javascript:void(0);" class="dropdown-toggle bg-white border d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <img src="~/img/flags/us-flag.svg" class="me-2" alt="flag">ENG
-                                                    </a>
-                                                }
-                                                <ul class="dropdown-menu p-2">
-                                                    <li>
-                                                        <a class="dropdown-item rounded d-flex align-items-center" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="en-US" asp-route-returnUrl="@Context.Request.Path">
-                                                            <img src="~/img/flags/us-flag.svg" class="me-2" alt="flag">ENG
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="dropdown-item rounded d-flex align-items-center" asp-controller="Language" asp-action="SetLanguage" asp-route-culture="pt-BR" asp-route-returnUrl="@Context.Request.Path">
-                                                            <img src="~/img/flags/brazil.svg" class="me-2" alt="flag">BRA
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @if (!User.Identity?.IsAuthenticated ?? false)
-                                    {
-                                        <div><a href="@Url.Action("Login", "Account")" class="text-white btn btn-dark w-100 mb-3">Sign In</a></div>
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="offcanvas-overlay"></div>
-                <div class="header-nav">
-                    <div class="main-menu-wrapper">
-                        <div class="navbar-logo">
-                            <a class="logo-white header-logo" href="@Url.Action("Index", "Home")">
-                                <img src="~/img/logo.png" class="logo" alt="Logo">
-                            </a>
-                            <a class="logo-dark header-logo" href="@Url.Action("Index", "Home")">
-                                <img src="~/img/logo-dark.png" class="logo" alt="Logo">
-                            </a>
-                        </div>
-                        <nav id="mobile-menu">
-                            <ul class="main-nav">
-                                <li class="has-submenu megamenu active">
-                                    <a href="@Url.Action("Index", "Home")">Home</a>
-                                </li>
-                                <li class="has-submenu mega-innermenu">
-                                    <a href="javascript:void(0);">Flight<i class="fa-solid fa-plus"></i></a>
-                                    <ul class="submenu mega-submenu">
-                                        <li>
-                                            <div class="megamenu-wrapper">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h6>Flight Bookings</h6>
-                                                        <ul>
-                                                            <li><a href="@Url.Action("Index", "Flight")">Flight List</a></li>
-                                                            <li><a href="@Url.Action("Create", "Flight")">Add Flight</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="has-submenu mega-innermenu">
-                                    <a href="javascript:void(0);">Hotel<i class="fa-solid fa-plus"></i></a>
-                                    <ul class="submenu mega-submenu">
-                                        <li>
-                                            <div class="megamenu-wrapper">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h6>Hotel Bookings</h6>
-                                                        <ul>
-                                                            <li><a href="@Url.Action("Index", "Hotel")">Hotel List</a></li>
-                                                            <li><a href="@Url.Action("Create", "Hotel")">Add Hotel</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="has-submenu mega-innermenu">
-                                    <a href="javascript:void(0);">Car<i class="fa-solid fa-plus"></i></a>
-                                    <ul class="submenu mega-submenu">
-                                        <li>
-                                            <div class="megamenu-wrapper">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h6>Car Bookings</h6>
-                                                        <ul>
-                                                            <li><a href="@Url.Action("Index", "Car")">Car List</a></li>
-                                                            <li><a href="@Url.Action("Create", "Car")">Add Car</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="has-submenu mega-innermenu">
-                                    <a href="@Url.Action("Index", "Markup")">Markup</a>
-                                </li>
-                                <li class="has-submenu mega-innermenu">
-                                    <a href="javascript:void(0);">User<i class="fa-solid fa-plus"></i></a>
-                                    <ul class="submenu mega-submenu">
-                                        <li>
-                                            <div class="megamenu-wrapper">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <h6>Admin Users</h6>
-                                                        <ul>
-                                                            <li><a href="@Url.Action("Index", "User")">User List</a></li>
-                                                            <li><a href="@Url.Action("Create", "User")">Add User</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="header-btn d-flex align-items-center">
-                            <div class="me-3">
-                                <a href="javascript:void(0);" id="dark-mode-toggle" class="theme-toggle">
-                                    <i class="isax isax-moon"></i>
-                                </a>
-                                <a href="javascript:void(0);" id="light-mode-toggle" class="theme-toggle">
-                                    <i class="isax isax-sun-1"></i>
-                                </a>
-                            </div>
+							@if (User.Identity?.IsAuthenticated ?? false)
+							{
+								<div class="dropdown profile-dropdown">
+									<a href="javascript:void(0);" class="d-flex align-items-center" data-bs-toggle="dropdown">
+										<span class="avatar avatar-md">
+											<img src="~/img/users/user-05.jpg" alt="Img" class="img-fluid rounded-circle border border-white border-4">
+										</span>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-end p-3">
+										<li>
+											<a class="dropdown-item d-inline-flex align-items-center rounded fw-medium p-2" href="login.html">@Localizer["Logout"]</a>
+										</li>
+									</ul>
+								</div>
+							}
+							else
+							{
+								<div><a href="@Url.Action("Login", "Account")" class="btn btn-white me-3">@Localizer["Sign In"]</a></div>
+							}
+							<div class="header__hamburger d-xl-none my-auto">
+								<div class="sidebar-menu">
+									<i class="isax isax-menu5"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- /Header -->
+	</div>
 
-                            @if (User.Identity?.IsAuthenticated ?? false)
-                            {
-                                <div class="dropdown profile-dropdown">
-                                    <a href="javascript:void(0);" class="d-flex align-items-center" data-bs-toggle="dropdown">
-                                        <span class="avatar avatar-md">
-                                            <img src="~/img/users/user-05.jpg" alt="Img" class="img-fluid rounded-circle border border-white border-4">
-                                        </span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-end p-3">
-                                        <li>
-                                            <a class="dropdown-item d-inline-flex align-items-center rounded fw-medium p-2" href="login.html">Logout</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            } else
-                            {
-                                <div><a href="@Url.Action("Login", "Account")" class="btn btn-white me-3">Sign In</a></div>
-                            }
-                            <div class="header__hamburger d-xl-none my-auto">
-                                <div class="sidebar-menu">
-                                    <i class="isax isax-menu5"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- /Header -->
-    </div>
+	@RenderBody()
 
-    @RenderBody()
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-top">
+				<div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1">
+					<div class="col">
+						<div class="footer-widget">
+							<h5>@Localizer["Pages"]</h5>
+							<ul class="footer-menu">
+								<li>
+									<a href="@Url.Action("Search", "Flight")">@Localizer["Flights"]</a>
+								</li>
+								<li>
+									<a href="@Url.Action("Search", "Hotel")">@Localizer["Hotels"]</a>
+								</li>
+								<li>
+									<a href="@Url.Action("Search", "Car")">@Localizer["Cars"]</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="footer-widget">
+							<h5>@Localizer["Company"]</h5>
+							<ul class="footer-menu">
+								<li>
+									<a href="javascript:void(0);">@Localizer["About Us"]</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="footer-widget">
+							<h5>@Localizer["Destinations"]</h5>
+							<ul class="footer-menu">
+								<li>
+									<a href="javascript:void(0);">Orlando</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">San Diego</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">Los Angeles</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">Newyork</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="footer-widget">
+							<h5>@Localizer["Support"]</h5>
+							<ul class="footer-menu">
+								<li>
+									<a href="javascript:void(0);">@Localizer["Contact Us"]</a>
+								</li>
+								<li>
+									<a href="privacy-policy.html">@Localizer["Privacy Policy"]</a>
+								</li>
+								<li>
+									<a href="@Url.Action("Term", "Home")">@Localizer["Terms and Conditions"]</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">@Localizer["Refund Policy"]</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col">
+						<div class="footer-widget">
+							<h5>@Localizer["Social Medias"]</h5>
+							<ul class="footer-menu">
+								<li>
+									<a href="javascript:void(0);"><i class="fa-brands fa-facebook"></i> Facebook</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);"><i class="fa-brands fa-instagram"></i> Instagram</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer-wrap bg-white">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-xl-3 col-xxl-3">
+							<div class="mb-3 text-center text-xl-start">
+								<a href="@Url.Action("Index", "Home")" class="d-block footer-logo-light">
+									<img src="~/img/logo-dark.png" alt="logo">
+								</a>
+								<a href="@Url.Action("Index", "Home")" class="footer-logo-dark">
+									<img src="~/img/logo.png" alt="logo">
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-xl-4 col-xxl-4">
+							<div class="d-flex align-items-center justify-content-center flex-wrap">
+							</div>
+						</div>
+						<div class="col-lg-12 col-xl-5 col-xxl-5">
+							<div class="d-sm-flex align-items-center justify-content-center justify-content-xl-end">
+								<div class="d-flex align-items-center justify-content-center justify-content-sm-start me-0 pe-0 me-sm-3 pe-sm-3 border-end mb-3">
+									<span class="avatar avatar-lg bg-primary rounded-circle flex-shrink-0">
+										<i class="ti ti-headphones-filled fs-24"></i>
+									</span>
+									<div class="ms-2">
+										<p class="mb-1">@Localizer["Customer Support"]</p>
+										<p class="fw-medium text-dark">+1 11111 11111</p>
+									</div>
+								</div>
+								<div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3">
+									<span class="avatar avatar-lg bg-secondary rounded-circle flex-shrink-0">
+										<i class="ti ti-message fs-24 text-gray-9"></i>
+									</span>
+									<div class="ms-2">
+										<p class="mb-1">@Localizer["Drop Us an Email"]</p>
+										<p class="fw-medium text-dark">info@example.com</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Bottom -->
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="d-flex align-items-center justify-content-between flex-wrap">
+							<p class="fs-14">Copyright &copy; @DateTime.Now.Year. @Localizer["All Rights Reserved"], <a href="javascript:void(0);" class="text-primary fw-medium">Realize Travel</a></p>
+							<div class="d-flex align-items-center">
+								<ul class="social-icon">
+								</ul>
+							</div>
+							<ul class="card-links">
+								<li>
+									<a href="javascript:void(0);">
+										<img src="~/img/icons/card-06.svg" alt="img">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Footer Bottom -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1">
-                    <div class="col">
-                        <div class="footer-widget">
-                            <h5>Pages</h5>
-                            <ul class="footer-menu">
-                                <li>
-                                    <a href="@Url.Action("Search", "Flight")">Flights</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.Action("Search", "Hotel")">Hotels</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.Action("Search", "Car")">Cars</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="footer-widget">
-                            <h5>Company</h5>
-                            <ul class="footer-menu">
-                                <li>
-                                    <a href="javascript:void(0);">About Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="footer-widget">
-                            <h5>Destinations</h5>
-                            <ul class="footer-menu">
-                                <li>
-                                    <a href="javascript:void(0);">Orlando</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">San Diego</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Los Angeles</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Newyork</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="footer-widget">
-                            <h5>Support</h5>
-                            <ul class="footer-menu">
-                                <li>
-                                    <a href="javascript:void(0);">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="privacy-policy.html">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.Action("Term", "Home")">Terms and Conditions</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);">Refund Policy</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="footer-widget">
-                            <h5>Social Medias</h5>
-                            <ul class="footer-menu">
-                                <li>
-                                    <a href="javascript:void(0);"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                                </li>                               
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-wrap bg-white">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-xl-3 col-xxl-3">
-                            <div class="mb-3 text-center text-xl-start">
-                                <a href="@Url.Action("Index", "Home")" class="d-block footer-logo-light">
-                                    <img src="~/img/logo-dark.png" alt="logo">
-                                </a>
-                                <a href="@Url.Action("Index", "Home")" class="footer-logo-dark">
-                                    <img src="~/img/logo.png" alt="logo">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xl-4 col-xxl-4">
-                            <div class="d-flex align-items-center justify-content-center flex-wrap">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-xl-5 col-xxl-5">
-                            <div class="d-sm-flex align-items-center justify-content-center justify-content-xl-end">
-                                <div class="d-flex align-items-center justify-content-center justify-content-sm-start me-0 pe-0 me-sm-3 pe-sm-3 border-end mb-3">
-                                    <span class="avatar avatar-lg bg-primary rounded-circle flex-shrink-0">
-                                        <i class="ti ti-headphones-filled fs-24"></i>
-                                    </span>
-                                    <div class="ms-2">
-                                        <p class="mb-1">Customer Support</p>
-                                        <p class="fw-medium text-dark">+1 56589 54598</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center justify-content-sm-start mb-3">
-                                    <span class="avatar avatar-lg bg-secondary rounded-circle flex-shrink-0">
-                                        <i class="ti ti-message fs-24 text-gray-9"></i>
-                                    </span>
-                                    <div class="ms-2">
-                                        <p class="mb-1">Drop Us an Email</p>
-                                        <p class="fw-medium text-dark">info@example.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="d-flex align-items-center justify-content-between flex-wrap">
-                            <p class="fs-14">Copyright &copy; @DateTime.Now.Year. All Rights Reserved, <a href="javascript:void(0);" class="text-primary fw-medium">Realize Travel</a></p>
-                            <div class="d-flex align-items-center">
-                                <ul class="social-icon">
-                                </ul>
-                            </div>
-                            <ul class="card-links">
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <img src="~/img/icons/card-06.svg" alt="img">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /Footer Bottom -->
+	</footer>
+	<!-- /Footer -->
 
-    </footer>
-    <!-- /Footer -->
+	<div class="back-to-top">
+		<a class="back-to-top-icon align-items-center justify-content-center d-flex" href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+	</div>
 
-    <div class="back-to-top">
-        <a class="back-to-top-icon align-items-center justify-content-center d-flex" href="#top"><i class="fa-solid fa-arrow-up"></i></a>
-    </div>
+	<!-- Jquery JS -->
+	<script src="~/js/jquery-3.7.1.min.js"></script>
 
-    <!-- Jquery JS -->
-    <script src="~/js/jquery-3.7.1.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="~/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="~/js/bootstrap.bundle.min.js"></script>
+	<!-- Wow JS -->
+	<script src="~/js/wow.min.js"></script>
 
-    <!-- Wow JS -->
-    <script src="~/js/wow.min.js"></script>
+	<!-- MeanMenu Js -->
+	<script src="~/js/jquery.meanmenu.min.js"></script>
 
-    <!-- MeanMenu Js -->
-    <script src="~/js/jquery.meanmenu.min.js"></script>
+	<!-- Owlcarousel Js -->
+	<script src="~/plugins/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Owlcarousel Js -->
-    <script src="~/plugins/owlcarousel/owl.carousel.min.js"></script>
+	<!-- Sticky Sidebar JS -->
+	<script src="~/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+	<script src="~/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
 
-    <!-- Sticky Sidebar JS -->
-    <script src="~/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
-    <script src="~/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+	<!-- Rangeslider JS -->
+	<script src="~/plugins/ion-rangeslider/js/ion.rangeSlider.js"></script>
+	<script src="~/plugins/ion-rangeslider/js/custom-rangeslider.js"></script>
+	<script src="~/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 
-    <!-- Rangeslider JS -->
-    <script src="~/plugins/ion-rangeslider/js/ion.rangeSlider.js"></script>
-    <script src="~/plugins/ion-rangeslider/js/custom-rangeslider.js"></script>
-    <script src="~/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+	<!-- Fancybox JS -->
+	<script src="~/plugins/fancybox/jquery.fancybox.min.js"></script>
 
-    <!-- Fancybox JS -->
-    <script src="~/plugins/fancybox/jquery.fancybox.min.js"></script>
+	<!-- Counter JS -->
+	<script src="~/js/jquery.counterup.min.js"></script>
+	<script src="~/js/jquery.waypoints.min.js"></script>
 
-    <!-- Notyf -->
-    <script src="~/plugins/notyf/notyf.min.js"></script>
+	<!-- Datepicker Core JS -->
+	<script src="~/plugins/moment/moment.js"></script>
+	<script src="~/js/bootstrap-datetimepicker.min.js"></script>
 
-    <!-- Counter JS -->
-    <script src="~/js/jquery.counterup.min.js"></script>
-    <script src="~/js/jquery.waypoints.min.js"></script>
+	<!-- Summernote JS -->
+	<script src="~/plugins/summernote/summernote-lite.min.js"></script>
 
-    <!-- Datepicker Core JS -->
-    <script src="~/plugins/moment/moment.js"></script>
-    <script src="~/js/bootstrap-datetimepicker.min.js"></script>
+	<!-- Select2 JS -->
+	<script src="~/plugins/select2/js/select2.min.js"></script>
 
-    <!-- Summernote JS -->
-    <script src="~/plugins/summernote/summernote-lite.min.js"></script>
+	<!-- cursor JS -->
+	<script src="~/js/cursor.js"></script>
 
-    <!-- Select2 JS -->
-    <script src="~/plugins/select2/js/select2.min.js"></script>
+	<!-- Script JS -->
+	<script src="~/js/script.js"></script>
 
-    <!-- cursor JS -->
-    <script src="~/js/cursor.js"></script>
+	<!-- Notyf -->
+	<script src="~/plugins/notyf/notyf.min.js"></script>
 
-    <!-- Script JS -->
-    <script src="~/js/script.js"></script>
-
-    <script src="~/js/site.js"></script>
+	<script src="~/js/site.js"></script>
 
 </body>
 
@@ -529,30 +534,30 @@
 
 <script type="text/javascript">
 
-    document.addEventListener('DOMContentLoaded', function () {
+	document.addEventListener('DOMContentLoaded', function () {
 
-        const notyf = new Notyf({
-            duration: 0,
-            dismissible: true,
-            position: {
-              x: 'right',
-              y: 'top',
-            }
-        });
+		const notyf = new Notyf({
+			duration: 0,
+			dismissible: true,
+			position: {
+			  x: 'right',
+			  y: 'top',
+			}
+		});
 
-        var erroMessage = '@TempData["ErroMessage"]?.ToString()';
-        var sucessMessage = '@TempData["SucessMessage"]?.ToString()';
+		var erroMessage = '@TempData["ErroMessage"]?.ToString()';
+		var sucessMessage = '@TempData["SucessMessage"]?.ToString()';
 
-        if (erroMessage)
-        {
-            notyf.error(erroMessage);
-        }
+		if (erroMessage)
+		{
+			notyf.error(erroMessage);
+		}
 
-        if (sucessMessage)
-        {
-            notyf.success(sucessMessage);
-        }
+		if (sucessMessage)
+		{
+			notyf.success(sucessMessage);
+		}
 
-    });
+	});
 
 </script>

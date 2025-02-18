@@ -9,17 +9,8 @@ namespace Domain.Entity
 {
     public class Markup
     {
-        [Key]
-        public int Id {  get; set; }
-
-        [Required]
-        public float Flight {  get; set; }
-
-        [Required]
-        public float Car { get; set; }
-
-        [Required]
-        public float Hotel { get; set; }
-
+        public decimal Car { get; set; }
+        public decimal Flight { get; set; }
+        public decimal Hotel { get; set; }
     }
 }

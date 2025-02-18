@@ -10,10 +10,10 @@ namespace Domain.Repository
     public interface ICarRepository
     {
         Task<int> Count(Car item);
-        Task<Car> Get(int id);
-        Task<List<Car>> Get(Car item, int skip, int take);
-        Task Insert(Car item);
+        Task<Car> Get(Guid id);
+        Task<List<Car>> Get(Car item, int skip = 0, int take = 10);
+        Task<Guid> Insert(Car item);
         Task Update(Car item);
-        Task Delete(int id);
+        Task Delete(Guid id);
     }
 }

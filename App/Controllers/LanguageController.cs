@@ -1,11 +1,5 @@
-using App.Models;
-using Domain.Entity;
-using Domain.Service;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using MySqlX.XDevAPI;
-using System.Diagnostics;
 
 namespace Web.Controllers
 {

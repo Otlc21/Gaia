@@ -10,49 +10,21 @@ namespace Domain.Entity
 {
     public class Flight
     {
-        [Key]
-        public int Id { get; set; }
-
-        [Required]
-        public int AirportOrigemId { get; set; }
-
-        [ForeignKey("AirportOrigemId")]
-        public Airport AirportOrigem { get; set; }
-
-        [Required]
-        public int AirportDestinoId { get; set; }
-
-        [ForeignKey("AirportDestinoId")]
-        public Airport AirportDestino { get; set; }
-
-        [Required]
-        public int AirlineId { get; set; }
-
-        [ForeignKey("AirlineId")]
-        public Airline Airline { get; set; }
-
-        [Required]
+        public Guid Id { get; set; }
+        public string Airline { get; set; }
+        public string Name { get; set; }
+        public string Number { get; set; }
+        public string Description { get; set; }
+        public string Type { get; set; }
+        public decimal Price { get; set; }
+        public string From { get; set; }
+        public string To { get; set; }
         public DateTime Departure { get; set; }
+        public DateTime Return { get; set; }
+        public int AvailableSpots { get; set; }
 
-        [Required]
-        public DateTime Arrival { get; set; }
-
-        [Required]
-        public string Class { get; set; }
-
-        [Required]
-        public float Price {  get; set; }
-
-        [Required]
-        public int Amount { get; set; }
-
-        [Required]
-        public int Path { get; set; }
-
-        [Required]
-        public DateTime Creation { get; set; }
-
-        [Required]
+        public string Image { get; set; }
         public bool Active { get; set; }
+        public DateTime Created { get; set; }
     }
 }

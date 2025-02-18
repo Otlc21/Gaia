@@ -10830,7 +10830,7 @@ footer.footer-three .footer-bottom .policy-links li a:hover {
 ============================*/
 .hero-section {
   position: relative;
-  height: 604px;
+  height: 724px;
   padding-top: 114px;
   background: #B3DFEF;
 }
@@ -18040,6 +18040,15 @@ footer.footer-three .footer-bottom .policy-links li a:hover {
 .dark-mode body .banner-form .nav li .nav-link {
   color: #FAFCFF;
 }
+.dark-mode body .place-nav .form-info {
+  border-color: #17222C;
+}
+.dark-mode body .place-nav .form-info .form-item {
+  border-color: #17222C;
+}
+.dark-mode body .place-nav .nav li .nav-link {
+  color: #FAFCFF;
+}
 .dark-mode body .select2-container--default .select2-results > .select2-results__options {
   background: #0D0D0D;
   color: #FFF;
@@ -18117,7 +18126,10 @@ footer.footer-three .footer-bottom .policy-links li a:hover {
   background: #161616;
 }
 .dark-mode .hero-section {
-  background: #161616;
+  background: #181818;
+}
+.dark-mode .breadcrumb-bar {
+  background: #181818;
 }
 .dark-mode .update-section {
   background: #0D0D0D;
