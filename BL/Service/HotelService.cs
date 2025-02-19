@@ -52,9 +52,9 @@ namespace BL.Service
             await _repository.Update(item);
         }
         
-        public Task<List<Hotel>> GetTrending()
+        public async Task<List<Hotel>> GetTrending()
         {
-            throw new NotImplementedException();
+            return await _repository.Get(new Hotel(), 0, 5);
         }
     }
 }

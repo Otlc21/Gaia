@@ -3,12 +3,13 @@ using AutoMapper;
 using Domain.Entity;
 using Domain.Resource;
 using Domain.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
 namespace Web.Controllers
 {
-    //[Authorize(Roles = "ADM")]
+    [Authorize(Roles = "ADM")]
     public class UserController : Controller
     {
         private readonly IUserService _service;
@@ -28,8 +29,8 @@ namespace Web.Controllers
                 model = new UserViewModel();
             try
             {
-                //model.Total = await _service.Count(_mapper.Map<User>(model));
-                //model.Itens = await _service.Get(_mapper.Map<User>(model), model.Skip, model.Take);
+                model.Total = await _service.Count(_mapper.Map<User>(model));
+                model.Itens = await _service.Get(_mapper.Map<User>(model), model.Skip, model.Take);
             }
             catch (Exception ex)
             {
@@ -43,14 +44,14 @@ namespace Web.Controllers
             return View(new UserViewModel());
         }
 
-        [HttpPut]
+        [HttpPost]
         public async Task<IActionResult> Create(UserViewModel model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    //model.Id = await _service.Insert(_mapper.Map<User>(model));
+                    model.Id = await _service.Insert(_mapper.Map<User>(model));
                     TempData["SucessMessage"] = _localizer["Record saved successfully."];
                 }
                 else
@@ -70,11 +71,11 @@ namespace Web.Controllers
 
             try
             {
-                //var item = await _service.Get(id);
-                //if (item == null)
-                //    throw new ArgumentException(_localizer["Record not found"]);
+                var item = await _service.Get(id);
+                if (item == null)
+                    throw new ArgumentException(_localizer["Record not found"]);
 
-                //model = _mapper.Map<UserViewModel>(item);
+                model = _mapper.Map<UserViewModel>(item);
             }
             catch (Exception ex)
             {
@@ -92,7 +93,7 @@ namespace Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    //await _service.Update(_mapper.Map<User>(model));
+                    await _service.Update(_mapper.Map<User>(model));
                     TempData["SucessMessage"] = _localizer["Record saved successfully."];
                 }
                 else

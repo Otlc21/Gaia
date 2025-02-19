@@ -34,209 +34,67 @@
 		<div class="tab-pane fade active show" id="Hotels-list">
 			<div class="owl-carousel place-slider nav-center">
 
-				<!-- Place Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/hotels/hotel-01.jpg" class="img-fluid" alt="img">
-								</a>
+				@foreach (var item in Model.TrendingHotel)
+				{
+					<!-- Place Item-->
+					<div class="place-item mb-4">
+						<div class="place-img">
+							<div class="img-slider image-slide owl-carousel nav-center">
+								<div class="slide-images">
+									<a href="javascript:void(0);">
+										<img src="~/img/hotels/hotel-01.jpg" class="img-fluid" alt="img">
+									</a>
+								</div>
+								<div class="slide-images">
+									<a href="javascript:void(0);">
+										<img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
+									</a>
+								</div>
+								<div class="slide-images">
+									<a href="javascript:void(0);">
+										<img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
+									</a>
+								</div>
 							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
+							<div class="fav-item">
+								<div class="d-flex align-items-center">
+									@* <a href="javascript:void(0);" class="fav-icon me-2">
+									<i class="isax isax-heart5"></i>
 								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-						</div>
-						<div class="fav-item">
-							<span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-							<a href="javascript:void(0);" class="fav-icon selected">
-								<i class="isax isax-heart5"></i>
-							</a>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="d-flex align-items-center mb-1">
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">5.0</span>
-							<p class="fs-14">(400 Reviews)</p>
-						</div>
-						<h5 class="mb-1"><a href="javascript:void(0);">Hotel Plaza Athenee</a></h5>
-						<p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Ciutat Vella, Barcelona</p>
-						<div class="border-top pt-2 mb-2">
-							<h6 class="d-flex align-items-center">Facillities :<i class="isax isax-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h5 class="text-primary">$500 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-							<a href="javascript:void(0);" class="d-flex align-items-center">
-								<span class="avatar avatar-md me-2">
-									<img src="~/img/users/user-01.jpg" class="rounded-circle" alt="img">
-								</span>
-								<p class="fs-14">Beth Williams</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Place Item-->
-				<!-- Place Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<a href="javascript:void(0);">
-							<img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
-						</a>
-						<div class="fav-item">
-							<span class="badge bg-danger d-inline-flex align-items-center"><i class="isax isax-tag me-1"></i>Hot</span>
-							<a href="javascript:void(0);" class="fav-icon">
-								<i class="isax isax-heart5"></i>
-							</a>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="d-flex align-items-center mb-1">
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">5.0</span>
-							<p class="fs-14">(210 Reviews)</p>
-						</div>
-						<h5 class="mb-1"><a href="javascript:void(0);">A Luxury Hotel</a></h5>
-						<p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Downtown, New York</p>
-						<div class="border-top pt-2 mb-2">
-							<h6 class="d-flex align-items-center">Facillities :<i class="isax isax-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-personalcard me-2 text-primary"></i></h6>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h5 class="text-primary">$500 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-							<a href="javascript:void(0);" class="d-flex align-items-center">
-								<span class="avatar avatar-md me-2">
-									<img src="~/img/users/user-06.jpg" class="rounded-circle" alt="img">
-								</span>
-								<p class="fs-14">Kyle Woodward</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Place Item-->
-				<!-- Place Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/hotels/hotel-04.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/hotels/hotel-01.jpg" class="img-fluid" alt="img">
-								</a>
+								<span class="badge bg-indigo">Cheapest</span> *@
+								</div>
+								<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">@item.Rating</span>
 							</div>
 						</div>
-						<div class="fav-item justify-content-end">
-							<a href="javascript:void(0);" class="fav-icon">
-								<i class="isax isax-heart5"></i>
-							</a>
+						<div class="place-content">
+							@* <div class="d-flex align-items-center mb-1">
+								<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">5.0</span>
+								<p class="fs-14">(400 Reviews)</p>
+							</div> *@
+							<h5 class="mb-1"><a href="javascript:void(0);">@item.Name</a></h5>
+							<p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>@item.Location</p>
+							@* <div class="border-top pt-2 mb-2">
+								<h6 class="d-flex align-items-center">Facillities :<i class="isax isax-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
+							</div> *@
+							<div class="d-flex align-items-center justify-content-between border-top pt-3">
+								<h5 class="text-primary">$ @item.Price <span class="fs-14 fw-normal text-default">/ @Localizer["Night"]</span></h5>
+								@* <a href="javascript:void(0);" class="d-flex align-items-center">
+									<span class="avatar avatar-md me-2">
+										<img src="~/img/users/user-01.jpg" class="rounded-circle" alt="img">
+									</span>
+									<p class="fs-14">Beth Williams</p>
+								</a> *@
+								<div class="d-flex align-items-center">
+									<span class="badge bg-outline-success fs-10 fw-medium p-2 me-2">@item.AvailableSpots @Localizer["Spots Left"]</span>
+									@* <a href="javascript:void(0);" class="avatar avatar-sm">
+										<img src="~/img/users/user-11.jpg" class="rounded-circle" alt="img">
+									</a> *@
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="place-content">
-						<div class="d-flex align-items-center mb-1">
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.9</span>
-							<p class="fs-14">(60 Reviews)</p>
-						</div>
-						<h5 class="mb-1"><a href="javascript:void(0);">The Start Hotel, Casino</a></h5>
-						<p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Paris, France</p>
-						<div class="border-top pt-2 mb-2">
-							<h6 class="d-flex align-items-center">Facillities :<i class="isax isax-wifi ms-2 me-2 text-primary"></i><i class="isax isax-note-text me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i></h6>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h5 class="text-primary">$740 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-							<a href="javascript:void(0);" class="d-flex align-items-center">
-								<span class="avatar avatar-md me-2">
-									<img src="~/img/users/user-02.jpg" class="rounded-circle" alt="img">
-								</span>
-								<p class="fs-14">Jeanette Lupo</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Place Item-->
-				<!-- Place Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<a href="javascript:void(0);">
-							<img src="~/img/hotels/hotel-04.jpg" class="img-fluid" alt="img">
-						</a>
-						<div class="fav-item">
-							<span class="badge bg-purple d-inline-flex align-items-center"><i class="isax isax-more-2 me-1"></i>Featured</span>
-							<a href="javascript:void(0);" class="fav-icon">
-								<i class="isax isax-heart5"></i>
-							</a>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="d-flex align-items-center mb-1">
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.9</span>
-							<p class="fs-14">(10 Reviews)</p>
-						</div>
-						<h5 class="mb-1"><a href="javascript:void(0);">K’s House Tokyo Oasis</a></h5>
-						<p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Tokyo, Japan</p>
-						<div class="border-top pt-2 mb-2">
-							<h6 class="d-flex align-items-center">Facillities :<i class="isax isax-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h5 class="text-primary">$147 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-							<a href="javascript:void(0);" class="d-flex align-items-center">
-								<span class="avatar avatar-md me-2">
-									<img src="~/img/users/user-04.jpg" class="rounded-circle" alt="img">
-								</span>
-								<p class="fs-14">Hilda Pate</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Place Item-->
-				<!-- Place Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<a href="javascript:void(0);">
-							<img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
-						</a>
-						<div class="fav-item">
-							<span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-							<a href="javascript:void(0);" class="fav-icon">
-								<i class="isax isax-heart5"></i>
-							</a>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="d-flex align-items-center mb-1">
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">5.0</span>
-							<p class="fs-14">(400 Reviews)</p>
-						</div>
-						<h5 class="mb-1"><a href="javascript:void(0);">Hotel Plaza Athenee</a></h5>
-						<p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Ciutat Vella, Barcelona</p>
-						<div class="border-top pt-2 mb-2">
-							<h6 class="d-flex align-items-center">Facillities :<i class="isax isax-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h5 class="text-primary">$500 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-							<a href="javascript:void(0);" class="d-flex align-items-center">
-								<span class="avatar avatar-md me-2">
-									<img src="~/img/users/user-01.jpg" class="rounded-circle" alt="img">
-								</span>
-								<p class="fs-14">Beth Williams</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Place Item-->
-
+					<!-- /Place Item-->
+				}
 			</div>
 		</div>
 		<!-- /Hotels List -->
@@ -244,260 +102,54 @@
 		<div class="tab-pane fade" id="flight-list">
 			<div class="owl-carousel place-slider nav-center">
 
-				<!-- Flight Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<a href="javascript:void(0);">
-							<img src="~/img/flight/flight-01.jpg" class="img-fluid" alt="img">
-						</a>
-						<div class="fav-item">
-							<div class="d-flex align-items-center">
-								<a href="javascript:void(0);" class="fav-icon me-2">
+				@foreach (var item in Model.TrendingFlight)
+				{
+					<!-- Flight Item-->
+					<div class="place-item mb-4">
+						<div class="place-img">
+							<a href="javascript:void(0);">
+								<img src="~/img/flight/flight-01.jpg" class="img-fluid" alt="img">
+							</a>
+							<div class="fav-item">
+								<div class="d-flex align-items-center">
+									@* <a href="javascript:void(0);" class="fav-icon me-2">
 									<i class="isax isax-heart5"></i>
 								</a>
-								<span class="badge bg-indigo">Cheapest</span>
-							</div>
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.3</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="flight-loc d-flex align-items-center justify-content-between mb-2">
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-45 me-2"></i>Toronto</span>
-							<span class="arrow-icon"><i class="isax isax-arrow-2"></i></span>
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-135 me-2"></i>Bangkok</span>
-						</div>
-						<h5 class="text-truncate mb-1"><a href="javascript:void(0);">AstraFlight 215</a></h5>
-						<div class="d-flex align-items-center mb-2">
-							<span class="avatar avatar-sm me-2">
-								<img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-							</span>
-							<p class="fs-14 mb-0">Indigo</p>
-							<p class="fs-14 mb-0">1-stop at Frankfurt</p>
-						</div>
-						<div class="date-info p-2 mb-3">
-							<p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Sep 04, 2024 - Sep 07, 2024</p>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h6 class="text-primary"><span class="fs-14 fw-normal text-default">@Localizer["From"] </span>$300</h6>
-							<div class="d-flex align-items-center">
-								<span class="badge bg-outline-success fs-10 fw-medium p-2 me-2">22 Seats Left</span>
-								<a href="javascript:void(0);" class="avatar avatar-sm">
-									<img src="~/img/users/user-11.jpg" class="rounded-circle" alt="img">
-								</a>
+								<span class="badge bg-indigo">Cheapest</span> *@
+								</div>
+								<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">@item.Rating</span>
 							</div>
 						</div>
-					</div>
-				</div>
-				<!-- /Flight Item-->
-				<!-- Flight Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/flight/flight-02.jpg" class="img-fluid" alt="img">
-								</a>
+						<div class="place-content">
+							<div class="flight-loc d-flex align-items-center justify-content-between mb-2">
+								<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-45 me-2"></i>@item.From.Split(' ')[0]</span>
+								<span class="arrow-icon"><i class="isax isax-arrow-2"></i></span>
+								<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-135 me-2"></i>@item.To.Split(' ')[0]</span>
 							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/flight/flight-06.jpg" class="img-fluid" alt="img">
-								</a>
+							<h5 class="text-truncate mb-1"><a href="javascript:void(0);">@item.Name</a></h5>
+							<div class="d-flex align-items-center mb-2">
+								<span class="avatar avatar-sm me-2">
+									<img src="~/img/users/user-08.jpg" class="rounded-circle" alt="icon">
+								</span>
+								<p class="fs-14 mb-0">@item.Airline</p>
+								@* <p class="fs-14 mb-0">1-stop at Frankfurt</p> *@
 							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/flight/flight-07.jpg" class="img-fluid" alt="img">
-								</a>
+							<div class="date-info p-2 mb-3">
+								<p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>@item.Departure.ToShortDateString() - @item.Return.ToShortDateString()</p>
 							</div>
-						</div>
-						<div class="fav-item">
-							<div class="d-flex align-items-center">
-								<a href="javascript:void(0);" class="fav-icon me-2">
-									<i class="isax isax-heart5"></i>
-								</a>
-								<span class="badge bg-indigo">Cheapest</span>
-							</div>
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.7</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="flight-loc d-flex align-items-center justify-content-between mb-2">
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-45 me-2"></i>Chicago</span>
-							<span class="arrow-icon"><i class="isax isax-arrow-2"></i></span>
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-135 me-2"></i>Melbourne</span>
-						</div>
-						<h5 class="text-truncate mb-1"><a href="javascript:void(0);">Cloudrider 789</a></h5>
-						<div class="d-flex align-items-center mb-2">
-							<span class="avatar avatar-sm me-2">
-								<img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-							</span>
-							<p class="fs-14 mb-0">Indigo</p>
-							<p class="fs-14 mb-0">1-stop at Dallas</p>
-						</div>
-						<div class="date-info p-2 mb-3">
-							<p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Sep 11, 2024 - Sep 13, 2024</p>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h6 class="text-primary"><span class="fs-14 fw-normal text-default">@Localizer["From"] </span>$550</h6>
-							<div class="d-flex align-items-center">
-								<span class="badge bg-outline-success fs-10 fw-medium p-2 me-2">14 Seats Left</span>
-								<a href="javascript:void(0);" class="avatar avatar-sm">
-									<img src="~/img/users/user-12.jpg" class="rounded-circle" alt="img">
-								</a>
+							<div class="d-flex align-items-center justify-content-between border-top pt-3">
+								<h6 class="text-primary"><span class="fs-14 fw-normal text-default">@Localizer["Price"] </span>$ @item.Price</h6>
+								<div class="d-flex align-items-center">
+									<span class="badge bg-outline-success fs-10 fw-medium p-2 me-2">@item.AvailableSpots @Localizer["Seats Left"]</span>
+									@* <a href="javascript:void(0);" class="avatar avatar-sm">
+										<img src="~/img/users/user-11.jpg" class="rounded-circle" alt="img">
+									</a> *@
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- /Flight Item-->
-				<!-- Flight Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<a href="javascript:void(0);">
-							<img src="~/img/flight/flight-03.jpg" class="img-fluid" alt="img">
-						</a>
-						<div class="fav-item">
-							<div class="d-flex align-items-center">
-								<a href="javascript:void(0);" class="fav-icon me-2">
-									<i class="isax isax-heart5"></i>
-								</a>
-								<span class="badge bg-indigo">Cheapest</span>
-							</div>
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.5</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="flight-loc d-flex align-items-center justify-content-between mb-2">
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-45 me-2"></i>Miami</span>
-							<span class="arrow-icon"><i class="isax isax-arrow-2"></i></span>
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-135 me-2"></i>Tokyo</span>
-						</div>
-						<h5 class="text-truncate mb-1"><a href="javascript:void(0);">Aether Express 901</a></h5>
-						<div class="d-flex align-items-center mb-2">
-							<span class="avatar avatar-sm me-2">
-								<img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-							</span>
-							<p class="fs-14 mb-0">Indigo</p>
-							<p class="fs-14 mb-0">1-stop at Seoul</p>
-						</div>
-						<div class="date-info p-2 mb-3">
-							<p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Sep 22, 2024 - Sep 24, 2024</p>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h6 class="text-primary"><span class="fs-14 fw-normal text-default">@Localizer["From"] </span>$450</h6>
-							<div class="d-flex align-items-center">
-								<span class="badge bg-outline-success fs-10 fw-medium p-2 me-2">12 Seats Left</span>
-								<a href="javascript:void(0);" class="avatar avatar-sm">
-									<img src="~/img/users/user-13.jpg" class="rounded-circle" alt="img">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Flight Item-->
-				<!-- Flight Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/flight/flight-04.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/flight/flight-08.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/flight/flight-10.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-						</div>
-						<div class="fav-item">
-							<div class="d-flex align-items-center">
-								<a href="javascript:void(0);" class="fav-icon me-2">
-									<i class="isax isax-heart5"></i>
-								</a>
-								<span class="badge bg-indigo">Cheapest</span>
-							</div>
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.3</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="flight-loc d-flex align-items-center justify-content-between mb-2">
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-45 me-2"></i>Boston</span>
-							<span class="arrow-icon"><i class="isax isax-arrow-2"></i></span>
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-135 me-2"></i>Singapore</span>
-						</div>
-						<h5 class="text-truncate mb-1"><a href="javascript:void(0);">Silverwing 505</a></h5>
-						<div class="d-flex align-items-center mb-2">
-							<span class="avatar avatar-sm me-2">
-								<img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-							</span>
-							<p class="fs-14 mb-0">Indigo</p>
-							<p class="fs-14 mb-0">1-stop at London</p>
-						</div>
-						<div class="date-info p-2 mb-3">
-							<p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Oct 17, 2024 - Oct 19, 2024</p>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h6 class="text-primary"><span class="fs-14 fw-normal text-default">@Localizer["From"] </span>$700</h6>
-							<div class="d-flex align-items-center">
-								<span class="badge bg-outline-success fs-10 fw-medium p-2 me-2">18 Seats Left</span>
-								<a href="javascript:void(0);" class="avatar avatar-sm">
-									<img src="~/img/users/user-15.jpg" class="rounded-circle" alt="img">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Flight Item-->
-				<!-- Flight Item-->
-				<div class="place-item mb-4">
-					<div class="place-img">
-						<a href="javascript:void(0);">
-							<img src="~/img/flight/flight-10.jpg" class="img-fluid" alt="img">
-						</a>
-						<div class="fav-item">
-							<div class="d-flex align-items-center">
-								<a href="javascript:void(0);" class="fav-icon me-2">
-									<i class="isax isax-heart5"></i>
-								</a>
-								<span class="badge bg-indigo">Cheapest</span>
-							</div>
-							<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.6</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<div class="flight-loc d-flex align-items-center justify-content-between mb-2">
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-45 me-2"></i>Paris</span>
-							<span class="arrow-icon"><i class="isax isax-arrow-2"></i></span>
-							<span class="loc-name d-inline-flex align-items-center"><i class="isax isax-airplane rotate-135 me-2"></i>Cape Town</span>
-						</div>
-						<h5 class="text-truncate mb-1"><a href="javascript:void(0);">Nimbus 345</a></h5>
-						<div class="d-flex align-items-center mb-2">
-							<span class="avatar avatar-sm me-2">
-								<img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-							</span>
-							<p class="fs-14 mb-0">Indigo</p>
-							<p class="fs-14 mb-0">1-stop at Doha</p>
-						</div>
-						<div class="date-info p-2 mb-3">
-							<p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Aug 26, 2024 - Aug 27, 2024</p>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<h6 class="text-primary"><span class="fs-14 fw-normal text-default">@Localizer["From"] </span>$300</h6>
-							<div class="d-flex align-items-center">
-								<span class="badge bg-outline-success fs-10 fw-medium p-2 me-2">27 Seats Left</span>
-								<a href="javascript:void(0);" class="avatar avatar-sm">
-									<img src="~/img/users/user-10.jpg" class="rounded-circle" alt="img">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Flight Item-->
-
+					<!-- /Flight Item-->
+				}
 			</div>
 		</div>
 		<!-- /Flight List -->
@@ -505,337 +157,80 @@
 		<div class="tab-pane fade" id="Cars-list">
 			<div class="owl-carousel place-slider nav-center">
 
-				<!-- Car Item-->
-				<div class="place-item mb-4 flex-fill">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-06.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-07.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-08.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-						</div>
-						<div class="fav-item">
-							<a href="javascript:void(0);" class="fav-icon selected">
-								<i class="isax isax-heart5"></i>
-							</a>
-							<span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<a href="javascript:void(0);" class="avatar avatar-md ms-3 car-avatar-image">
-							<img src="~/img/users/user-08.jpg" class="rounded-circle" alt="img">
-						</a>
-						<div class="d-flex align-items-center justify-content-between mb-1">
-							<div class="d-flex flex-wrap align-items-center">
-								<span class="badge badge-secondary  fs-10 fw-medium me-1">Sedan</span>
-							</div>
-						</div>
-						<h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Toyota Camry SE 400</a></h5>
-						<p class="d-flex align-items-center mb-3"><i class="isax isax-location5 me-2"></i>Ciutat Vella, Barcelona</p>
-						<div class="mb-3 p-2 border rounded d-flex align-items-center justify-content-between">
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-gas-station me-1"></i>Fuel</span>
-								<p class="text-dark fs-14">Hybrid</p>
-							</div>
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-kanban me-1"></i>Gear</span>
-								<p class="text-dark fs-14">Manual</p>
-							</div>
-							<div>
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-routing-2 me-1"></i>Travelled</span>
-								<p class="text-dark fs-14">14,000 KM</p>
-							</div>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<div class="d-flex flex-wrap align-items-center me-2">
-								<h5 class="text-primary">$500 <span class="fs-14 text-gray-6 fw-normal">/ day</span></h5>
-							</div>
-							<div class="ms-2 d-flex align-items-center">
-								<div class="d-flex align-items-center flex-wrap">
-									<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-1">5.0</span>
-									<p class="fs-14">(400 Reviews)</p>
+				@foreach (var item in Model.TrendingCar)
+				{
+					<!-- Car Item-->
+					<div class="place-item mb-4 flex-fill">
+						<div class="place-img">
+							<div class="img-slider image-slide owl-carousel nav-center">
+								<div class="slide-images">
+									<a href="javascript:void(0);">
+										<img src="~/img/cars/car-06.jpg" class="img-fluid" alt="img">
+									</a>
+								</div>
+								<div class="slide-images">
+									<a href="javascript:void(0);">
+										<img src="~/img/cars/car-07.jpg" class="img-fluid" alt="img">
+									</a>
+								</div>
+								<div class="slide-images">
+									<a href="javascript:void(0);">
+										<img src="~/img/cars/car-08.jpg" class="img-fluid" alt="img">
+									</a>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Car Item-->
-				<!-- Car Item-->
-				<div class="place-item mb-4 flex-fill">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-07.jpg" class="img-fluid" alt="img">
+							<div class="fav-item">
+								<div class="d-flex align-items-center">
+									@* <a href="javascript:void(0);" class="fav-icon me-2">
+									<i class="isax isax-heart5"></i>
 								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-08.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-09.jpg" class="img-fluid" alt="img">
-								</a>
+								<span class="badge bg-indigo">Cheapest</span> *@
+								</div>
+								<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">@item.Rating</span>
 							</div>
 						</div>
-						<div class="fav-item">
-							<a href="javascript:void(0);" class="fav-icon">
-								<i class="isax isax-heart5"></i>
+						<div class="place-content">
+							<a href="javascript:void(0);" class="avatar avatar-md ms-3 car-avatar-image">
+								<img src="~/img/users/user-08.jpg" class="rounded-circle" alt="img">
 							</a>
-							<span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<a href="javascript:void(0);" class="avatar avatar-md ms-3 car-avatar-image">
-							<img src="~/img/users/user-09.jpg" class="rounded-circle" alt="img">
-						</a>
-						<div class="d-flex align-items-center justify-content-between mb-1">
-							<div class="d-flex flex-wrap align-items-center">
-								<span class="badge badge-secondary  fs-10 fw-medium me-1">Sedan</span>
-							</div>
-						</div>
-						<h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Ford Mustang 4.0 AT</a></h5>
-						<p class="d-flex align-items-center mb-3"><i class="isax isax-location5 me-2"></i>Oxford Street, London</p>
-						<div class="mb-3 p-2 border rounded d-flex align-items-center justify-content-between">
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-gas-station me-1"></i>Fuel</span>
-								<p class="text-dark fs-14">Hybrid</p>
-							</div>
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-kanban me-1"></i>Gear</span>
-								<p class="text-dark fs-14">Auto</p>
-							</div>
-							<div>
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-routing-2 me-1"></i>Travelled</span>
-								<p class="text-dark fs-14">12,000 KM</p>
-							</div>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<div class="d-flex flex-wrap align-items-center me-2">
-								<h5 class="text-primary">$600 <span class="fs-14 text-gray-6 fw-normal">/ day</span></h5>
-							</div>
-							<div class="ms-2 d-flex align-items-center">
-								<div class="d-flex align-items-center flex-wrap">
-									<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-1">4.7</span>
-									<p class="fs-14">(300 Reviews)</p>
+							<div class="d-flex align-items-center justify-content-between mb-1">
+								<div class="d-flex flex-wrap align-items-center">
+									<span class="badge badge-secondary  fs-10 fw-medium me-1">@item.Type</span>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Car Item-->
-				<!-- Car Item-->
-				<div class="place-item mb-4 flex-fill">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-08.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-09.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-10.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-						</div>
-						<div class="fav-item">
-							<a href="javascript:void(0);" class="fav-icon">
-								<i class="isax isax-heart5"></i>
-							</a>
-							<span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<a href="javascript:void(0);" class="avatar avatar-md ms-3 car-avatar-image">
-							<img src="~/img/users/user-10.jpg" class="rounded-circle" alt="img">
-						</a>
-						<div class="d-flex align-items-center justify-content-between mb-1">
-							<div class="d-flex flex-wrap align-items-center">
-								<span class="badge badge-secondary  fs-10 fw-medium me-1">Sedan</span>
-							</div>
-						</div>
-						<h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Ferrari 458 MM Special</a></h5>
-						<p class="d-flex align-items-center mb-3"><i class="isax isax-location5 me-2"></i>Princes Street, Edinburgh</p>
-						<div class="mb-3 p-2 border rounded d-flex align-items-center justify-content-between">
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-gas-station me-1"></i>Fuel</span>
-								<p class="text-dark fs-14">Hybrid</p>
-							</div>
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-kanban me-1"></i>Gear</span>
-								<p class="text-dark fs-14">Auto</p>
-							</div>
-							<div>
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-routing-2 me-1"></i>Travelled</span>
-								<p class="text-dark fs-14">13,000 KM</p>
-							</div>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<div class="d-flex flex-wrap align-items-center me-2">
-								<h5 class="text-primary">$300 <span class="fs-14 text-gray-6 fw-normal">/ day</span></h5>
-							</div>
-							<div class="ms-2 d-flex align-items-center">
-								<div class="d-flex align-items-center flex-wrap">
-									<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-1">4.0</span>
-									<p class="fs-14">(320 Reviews)</p>
+							<h5 class="mb-1 text-truncate"><a href="javascript:void(0);">@item.Name	</a></h5>
+							<p class="d-flex align-items-center mb-3"><i class="isax isax-location5 me-2"></i>@item.Location</p>
+							<div class="mb-3 p-2 border rounded d-flex align-items-center justify-content-between">
+								<div class="pe-4 border-end">
+									<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-gas-station me-1"></i>@Localizer["Fuel"]</span>
+									<p class="text-dark fs-14">@item.Fuel</p>
+								</div>
+								<div class="pe-4 border-end">
+									<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-kanban me-1"></i>@Localizer["Gear"]</span>
+									<p class="text-dark fs-14">@item.Transmission</p>
+								</div>
+								<div>
+									<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-routing-2 me-1"></i>@Localizer["Year"]</span>
+									<p class="text-dark fs-14">@item.Year</p>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Car Item-->
-				<!-- Car Item-->
-				<div class="place-item mb-4 flex-fill">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-10.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-11.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-12.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-						</div>
-						<div class="fav-item">
-							<a href="javascript:void(0);" class="fav-icon">
-								<i class="isax isax-heart5"></i>
-							</a>
-							<span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<a href="javascript:void(0);" class="avatar avatar-md ms-3 car-avatar-image">
-							<img src="~/img/users/user-12.jpg" class="rounded-circle" alt="img">
-						</a>
-						<div class="d-flex align-items-center justify-content-between mb-1">
-							<div class="d-flex flex-wrap align-items-center">
-								<span class="badge badge-secondary  fs-10 fw-medium me-1">Sedan</span>
-							</div>
-						</div>
-						<h5 class="mb-1 text-truncate"><a href="javascript:void(0);">BMW 3.0 Gran Turismo</a></h5>
-						<p class="d-flex align-items-center mb-3"><i class="isax isax-location5 me-2"></i>King’s Road, Chelsea</p>
-						<div class="mb-3 p-2 border rounded d-flex align-items-center justify-content-between">
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-gas-station me-1"></i>Fuel</span>
-								<p class="text-dark fs-14">Petrol</p>
-							</div>
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-kanban me-1"></i>Gear</span>
-								<p class="text-dark fs-14">Manual</p>
-							</div>
-							<div>
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-routing-2 me-1"></i>Travelled</span>
-								<p class="text-dark fs-14">12,800 KM</p>
-							</div>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<div class="d-flex flex-wrap align-items-center me-2">
-								<h5 class="text-primary">$550 <span class="fs-14 text-gray-6 fw-normal">/ day</span></h5>
-							</div>
-							<div class="ms-2 d-flex align-items-center">
-								<div class="d-flex align-items-center flex-wrap">
-									<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-1">4.3</span>
-									<p class="fs-14">(300 Reviews)</p>
+							<div class="d-flex align-items-center justify-content-between border-top pt-3">
+								<div class="d-flex flex-wrap align-items-center me-2">
+									<h5 class="text-primary">$ @item.Price <span class="fs-14 text-gray-6 fw-normal">/ @Localizer["day"]</span></h5>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Car Item-->
-				<!-- Car Item-->
-				<div class="place-item mb-4 flex-fill">
-					<div class="place-img">
-						<div class="img-slider image-slide owl-carousel nav-center">
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-11.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-12.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-							<div class="slide-images">
-								<a href="javascript:void(0);">
-									<img src="~/img/cars/car-13.jpg" class="img-fluid" alt="img">
-								</a>
-							</div>
-						</div>
-						<div class="fav-item">
-							<a href="javascript:void(0);" class="fav-icon">
-								<i class="isax isax-heart5"></i>
-							</a>
-							<span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-						</div>
-					</div>
-					<div class="place-content">
-						<a href="javascript:void(0);" class="avatar avatar-md ms-3 car-avatar-image">
-							<img src="~/img/users/user-13.jpg" class="rounded-circle" alt="img">
-						</a>
-						<div class="d-flex align-items-center justify-content-between mb-1">
-							<div class="d-flex flex-wrap align-items-center">
-								<span class="badge badge-secondary  fs-10 fw-medium me-1">Sedan</span>
-							</div>
-						</div>
-						<h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Infiniti QX60 </a></h5>
-						<p class="d-flex align-items-center mb-3"><i class="isax isax-location5 me-2"></i>Bold Street, Liverpool</p>
-						<div class="mb-3 p-2 border rounded d-flex align-items-center justify-content-between">
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-gas-station me-1"></i>Fuel</span>
-								<p class="text-dark fs-14">Diesel</p>
-							</div>
-							<div class="pe-4 border-end">
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-kanban me-1"></i>Gear</span>
-								<p class="text-dark fs-14">Auto</p>
-							</div>
-							<div>
-								<span class="fs-14 d-flex align-items-center text-dark"><i class="isax isax-routing-2 me-1"></i>Travelled</span>
-								<p class="text-dark fs-14">13,500 KM</p>
-							</div>
-						</div>
-						<div class="d-flex align-items-center justify-content-between border-top pt-3">
-							<div class="d-flex flex-wrap align-items-center me-2">
-								<h5 class="text-primary">$450 <span class="fs-14 text-gray-6 fw-normal">/ day</span></h5>
-							</div>
-							<div class="ms-2 d-flex align-items-center">
-								<div class="d-flex align-items-center flex-wrap">
-									<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-1">4.1</span>
-									<p class="fs-14">(450 Reviews)</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Car Item-->
+								<div class="ms-2 d-flex align-items-center">
+									<span class="badge bg-outline-success fs-10 fw-medium p-2 me-2">@item.AvailableSpots @Localizer["Spots Left"]</span>
 
+									@* <div class="d-flex align-items-center flex-wrap">
+										<span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-1">5.0</span>
+										<p class="fs-14">(400 Reviews)</p>
+									</div> *@
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /Car Item-->
+				}
 			</div>
 
 		</div>

@@ -24,7 +24,7 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="mb-3">
 					<label class="form-label">@Localizer["Rating"]</label>
-					<select asp-for="Rating" class="select">
+					<select asp-for="Rating" class="form-control select">
 						<option value="0">Select</option>
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -37,7 +37,7 @@
 			<div class="col-xl-4 col-md-6">
 				<div class="mb-3">
 					<label class="form-label">@Localizer["Vehicle Type"]</label>
-					<select asp-for="Type" class="select">
+					<select asp-for="Type" class="form-control select">
 						<option value="">@Localizer["Select"]</option>
 						<option value="Sedan">@Localizer["Sedan"]</option>
 						<option value="Sports">@Localizer["Sports"]</option>
@@ -49,7 +49,7 @@
 				<div class="mb-3">
 					<label class="form-label">@Localizer["Valid From"]</label>
 					<div class="input-icon-end position-relative">
-						<input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy" value="02-05-2024">
+						<input asp-for="ValidFrom" type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
 						<span class="input-icon-addon">
 							<i class="isax isax-calendar"></i>
 						</span>
@@ -60,7 +60,7 @@
 				<div class="mb-3">
 					<label class="form-label">@Localizer["Valid Until"]</label>
 					<div class="input-icon-end position-relative">
-						<input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy" value="02-05-2024">
+						<input asp-for="ValidUtil" type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
 						<span class="input-icon-addon">
 							<i class="isax isax-calendar"></i>
 						</span>
@@ -76,7 +76,7 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="mb-3">
 					<label class="form-label">@Localizer["Active"]</label>
-					<input asp-for="Active" type="checkbox" class="form-control" checked>
+					<input asp-for="Active" class="form-check-input mt-0" type="checkbox">
 				</div>
 			</div>
 		</div>
@@ -95,7 +95,7 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="mb-3">
 					<label class="form-label">@Localizer["Transmission"]</label>
-					<select asp-for="Transmission" class="select">
+					<select asp-for="Transmission" class="form-control select">
 						<option value="">@Localizer["Select"]</option>
 						<option value="Auto">@Localizer["Auto"]</option>
 						<option value="Manual">@Localizer["Manual"]</option>
@@ -117,7 +117,7 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="mb-3">
 					<label class="form-label">@Localizer["Fuel Type"]</label>
-					<select asp-for="Fuel" class="select">
+					<select asp-for="Fuel" class="form-control select">
 						<option value="">@Localizer["Select"]</option>
 						<option value="Petrol">@Localizer["Petrol"]</option>
 						<option value="Diesel">@Localizer["Diesel"]</option>

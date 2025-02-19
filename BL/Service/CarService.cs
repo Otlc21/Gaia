@@ -52,9 +52,9 @@ namespace BL.Service
             await _repository.Update(item);
         }
 
-        public Task<List<Car>> GetTrending()
+        public async Task<List<Car>> GetTrending()
         {
-            throw new NotImplementedException();
+            return await _repository.Get(new Car(), 0, 5);
         }
     }
 }

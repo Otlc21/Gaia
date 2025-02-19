@@ -19,14 +19,14 @@ namespace Domain.Entity
         public decimal Price { get; set; }
         public string From { get; set; }
         public string To { get; set; }
+        public byte Rating { get; set; }
         public DateTime Departure { get; set; }
         public DateTime Return { get; set; }
         public int AvailableSpots { get; set; }
-
         public string Image { get; set; }
-        public bool Active { get; set; }
-        
-        public Guid CreatedBy { get; set; }
+        public bool Active { get; set; } = true;        
+        public Guid CreatedById { get; set; }
+        public User CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
     }
 }

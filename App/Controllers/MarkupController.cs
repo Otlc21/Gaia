@@ -1,13 +1,15 @@
 ﻿using App.Models;
 using AutoMapper;
+using Domain.Entity;
 using Domain.Resource;
 using Domain.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
 namespace Web.Controllers
 {
-    //[Authorize(Roles = "ADM")]
+    [Authorize(Roles = "ADM")]
     public class MarkupController : Controller
     {
         private readonly IMarkupService _service;
@@ -27,11 +29,11 @@ namespace Web.Controllers
 
             try
             {
-                //var item = await _service.Get(new Markup(), 0, 1);
-                //if (item == null)
-                //    throw new ArgumentException(_localizer["Record not found"]);
+                var item = await _service.Get(new Markup(), 0, 1);
+                if (item == null)
+                    throw new ArgumentException(_localizer["Record not found"]);
 
-                //model = _mapper.Map<MarkupViewModel>(item);
+                model = _mapper.Map<MarkupViewModel>(item.FirstOrDefault());
             }
             catch (Exception ex)
             {
@@ -48,7 +50,7 @@ namespace Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    //await _service.Update(_mapper.Map<Markup>(model));
+                    await _service.Update(_mapper.Map<Markup>(model));
                     TempData["SucessMessage"] = _localizer["Record saved successfully."];
                 }
                 else

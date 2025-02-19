@@ -57,7 +57,7 @@ namespace Web.Controllers
                             new ClaimsPrincipal(claimsIdentity),
                             authProperties);
 
-                        return RedirectToAction("Home", "Index");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
 
@@ -88,7 +88,7 @@ namespace Web.Controllers
                     if (sucesso)
                     {
                         TempData["SucessMessage"] = mensagem;
-                        return RedirectToAction("Home", "Index");
+                        return RedirectToAction("Index", "Home");
                     }
                 }
 

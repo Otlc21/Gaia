@@ -8,5 +8,6 @@ namespace Domain.DTO
 {
     public class AppSettings
     {
+        public string ConnectionString { get; set; }
     }
 }

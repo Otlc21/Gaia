@@ -1,7 +1,9 @@
 ﻿using App.Models;
 using AutoMapper;
+using Domain.Entity;
 using Domain.Resource;
 using Domain.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
@@ -20,15 +22,15 @@ namespace Web.Controllers
             _mapper = mapper;
         }
 
-        //[Authorize(Roles = "ADM")]
+        [Authorize(Roles = "ADM")]
         public async Task<IActionResult> Index(HotelViewModel model)
         {
             if (model == null)
                 model = new HotelViewModel();
             try
             {
-                //model.Total = await _service.Count(_mapper.Map<Hotel>(model));
-                //model.Itens = await _service.Get(_mapper.Map<Hotel>(model), model.Skip, model.Take);
+                model.Total = await _service.Count(_mapper.Map<Hotel>(model));
+                model.Itens = await _service.Get(_mapper.Map<Hotel>(model), model.Skip, model.Take);
             }
             catch (Exception ex)
             {
@@ -42,21 +44,21 @@ namespace Web.Controllers
             return View();
         }
 
-        //[Authorize(Roles = "ADM")]
+        [Authorize(Roles = "ADM")]
         public IActionResult Create()
         {
             return View(new HotelViewModel());
         }
 
-        [HttpPut]
-        //[Authorize(Roles = "ADM")]
+        [HttpPost]
+        [Authorize(Roles = "ADM")]
         public async Task<IActionResult> Create(HotelViewModel model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    //model.Id = await _service.Insert(_mapper.Map<Hotel>(model));
+                    model.Id = await _service.Insert(_mapper.Map<Hotel>(model));
                     TempData["SucessMessage"] = _localizer["Record saved successfully."];
                 }
                 else
@@ -70,18 +72,18 @@ namespace Web.Controllers
             return RedirectToAction("Edit", new { codigo = model.Id });
         }
 
-        //[Authorize(Roles = "ADM")]
+        [Authorize(Roles = "ADM")]
         public async Task<IActionResult> Edit(Guid id)
         {
             HotelViewModel model = new HotelViewModel();
 
             try
             {
-                //var item = await _service.Get(id);
-                //if (item == null)
-                //    throw new ArgumentException(_localizer["Record not found"]);
+                var item = await _service.Get(id);
+                if (item == null)
+                    throw new ArgumentException(_localizer["Record not found"]);
 
-                //model = _mapper.Map<HotelViewModel>(item);
+                model = _mapper.Map<HotelViewModel>(item);
             }
             catch (Exception ex)
             {
@@ -93,14 +95,14 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = "ADM")]
+        [Authorize(Roles = "ADM")]
         public async Task<IActionResult> Edit(HotelViewModel model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    //await _service.Update(_mapper.Map<Hotel>(model));
+                    await _service.Update(_mapper.Map<Hotel>(model));
                     TempData["SucessMessage"] = _localizer["Record saved successfully."];
                 }
                 else

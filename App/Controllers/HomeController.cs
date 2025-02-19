@@ -27,9 +27,9 @@ namespace App.Controllers
         {
             HomeViewModel model = new HomeViewModel();
 
-            //model.TrendingHotel = await _hotelService.GetTrending();
-            //model.TrendingCar = await _carService.GetTrending();
-            //model.TrendingFlight = await _flightService.GetTrending();
+            model.TrendingHotel = await _hotelService.GetTrending();
+            model.TrendingCar = await _carService.GetTrending();
+            model.TrendingFlight = await _flightService.GetTrending();
 
             return View(model);
         }

@@ -1,5 +1,5 @@
 ﻿@{
-	ViewData["Title"] = "Search Flight";
+    ViewData["Title"] = "Search Flight";
 }
 
 @model FlightSearchViewModel;
@@ -30,7 +30,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="banner-form">
-                    <form asp-controller="Flight" asp-action="Search" class="">
+                    <form method="post" asp-controller="Flight" asp-action="Search" class="">
                         <div class="d-flex align-items-center justify-content-between flex-wrap mb-2">
                             <div class="d-flex align-items-center">
                                 <div class="form-check d-flex align-items-center me-3 mb-2">
@@ -236,7 +236,7 @@
                         <a href="javascript:void(0);" class="fs-14 link-primary">Reset</a>
                     </div>
                     <div class="card-body p-0">
-                        <form asp-controller="Flight" asp-action="Search">
+                        <form method="post" asp-controller="Flight" asp-action="Search">
                             <div class="p-3 border-bottom">
                                 <label class="form-label fs-16">Search by Airline Names</label>
                                 <div class="input-icon">
@@ -586,7 +586,7 @@
                                 <span class="fw-medium text-gray-9">Sort By : </span>Recommended
                             </a>
                             <div class="dropdown-menu dropdown-sm">
-                                <form asp-controller="Flight" asp-action="Search">
+                                <form method="post" asp-controller="Flight" asp-action="Search">
                                     <h6 class="fw-medium fs-16 mb-3">Sort By</h6>
                                     <div class="form-check d-flex align-items-center ps-0 mb-2">
                                         <input class="form-check-input ms-0 mt-0" name="recommend" type="checkbox" id="recommend1" checked>
@@ -634,494 +634,85 @@
                 <div class="hotel-list">
                     <div class="row justify-content-center">
                         <div class="col-md-12">
-                            <!-- Flight List -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-09.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-05.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-07.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-02.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <div class="d-flex align-items-center">
-                                            <a href="javascript:void(0);" class="fav-icon me-2 selected">
-                                                <i class="isax isax-heart5"></i>
-                                            </a>
-                                            <span class="badge bg-indigo">Cheapest</span>
-                                        </div>
-                                        <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">5.0</span>
-                                    </div>
-                                </div>
-                                <div class="place-content">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
-                                        <div>
-                                            <h5 class="text-truncate mb-1"><a href="javascript:void(0);">Antonov An-32</a></h5>
-                                            <div class="d-flex">
-                                                <span class="avatar avatar-sm me-2">
-                                                    <img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-                                                </span>
-                                                <p class="fs-14 mb-0 me-2">Air India</p>
-                                                <p class="fs-14 mb-0"><i class="ti ti-point-filled text-primary me-2"></i>1-stop at Texas</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="badge bg-outline-success fs-10 fw-medium  me-2">20 Seats Left</span>
-                                            <a href="javascript:void(0);" class="avatar avatar-sm">
-                                                <img src="~/img/users/user-08.jpg" class="rounded-circle" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class=" fs-14 mb-3">Experience top-notch service, in-flight amenities, and smooth takeoffs for a stress-free journey.</p>
-                                    <div class="flight-loc d-flex align-items-center justify-content-between mb-3">
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-45 me-2"></i>Newyork</span>
-                                        <a href="javascript:void(0);" class="arrow-icon flex-shrink-0 mx-2"><i class="isax isax-arrow-2"></i></a>
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-135 me-2"></i>Sydney</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between border-top flex-wrap gap-2 pt-3">
-                                        <div class="date-info p-2">
-                                            <p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Aug 01, 2024 - Aug 03, 2024</p>
-                                        </div>
-                                        <h6 class="text-primary"><span class="fs-14 fw-normal text-default">From </span>$500</h6>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Flight List -->
-                            <!-- Flight List -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-08.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-06.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-03.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-01.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <div class="d-flex align-items-center">
-                                            <a href="javascript:void(0);" class="fav-icon me-2 ">
-                                                <i class="isax isax-heart5"></i>
-                                            </a>
-                                            <span class="badge bg-indigo">Cheapest</span>
-                                        </div>
-                                        <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.5</span>
-                                    </div>
-                                </div>
-                                <div class="place-content">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
-                                        <div>
-                                            <h5 class="text-truncate mb-1"><a href="javascript:void(0);">SkyBound 102</a></h5>
-                                            <div class="d-flex">
-                                                <span class="avatar avatar-sm me-2">
-                                                    <img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-                                                </span>
-                                                <p class="fs-14 mb-0 me-2">Indigo</p>
-                                                <p class="fs-14 mb-0"><i class="ti ti-point-filled text-primary me-2"></i>1-stop at Dubai</p>
+                            @foreach (var item in Model.Itens)
+                            {
+                                <!-- Flight List -->
+                                <div class="place-item mb-4">
+                                    <div class="place-img">
+                                        <div class="img-slider image-slide owl-carousel nav-center">
+                                            <div class="slide-images">
+                                                <a href="javascript:void(0);">
+                                                    <img src="~/img/flight/flight-09.jpg" class="img-fluid" alt="img">
+                                                </a>
+                                            </div>
+                                            <div class="slide-images">
+                                                <a href="javascript:void(0);">
+                                                    <img src="~/img/flight/flight-05.jpg" class="img-fluid" alt="img">
+                                                </a>
+                                            </div>
+                                            <div class="slide-images">
+                                                <a href="javascript:void(0);">
+                                                    <img src="~/img/flight/flight-07.jpg" class="img-fluid" alt="img">
+                                                </a>
+                                            </div>
+                                            <div class="slide-images">
+                                                <a href="javascript:void(0);">
+                                                    <img src="~/img/flight/flight-02.jpg" class="img-fluid" alt="img">
+                                                </a>
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="badge bg-outline-success fs-10 fw-medium  me-2">18 Seats Left</span>
-                                            <a href="javascript:void(0);" class="avatar avatar-sm">
-                                                <img src="~/img/users/user-09.jpg" class="rounded-circle" alt="img">
-                                            </a>
+                                        <div class="fav-item">
+                                            <div class="d-flex align-items-center">
+                                                @* <a href="javascript:void(0);" class="fav-icon me-2 selected">
+                                                    <i class="isax isax-heart5"></i>
+                                                </a> *@
+                                                @* <span class="badge bg-indigo">Cheapest</span> *@
+                                            </div>
+                                            <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">@item.Rating</span>
                                         </div>
                                     </div>
-                                    <p class=" fs-14 mb-3">Enjoy a comfortable and seamless journey with top-notch service on every flight.</p>
-                                    <div class="flight-loc d-flex align-items-center justify-content-between mb-3">
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-45 me-2"></i>London</span>
-                                        <a href="javascript:void(0);" class="arrow-icon flex-shrink-0 mx-2"><i class="isax isax-arrow-2"></i></a>
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-135 me-2"></i>London</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between border-top flex-wrap gap-2 pt-3">
-                                        <div class="date-info p-2">
-                                            <p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Aug 13, 2024 - Aug 15, 2024</p>
+                                    <div class="place-content">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
+                                            <div>
+                                                <h5 class="text-truncate mb-1"><a href="javascript:void(0);">@item.Name</a></h5>
+                                                <div class="d-flex">
+                                                    <span class="avatar avatar-sm me-2">
+                                                        <img src="~/img/users/user-08.jpg" class="rounded-circle" alt="icon">
+                                                    </span>
+                                                    <p class="fs-14 mb-0 me-2">@item.Airline</p>
+                                                    @* <p class="fs-14 mb-0"><i class="ti ti-point-filled text-primary me-2"></i>1-stop at Texas</p> *@
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="badge bg-outline-success fs-10 fw-medium  me-2">@item.AvailableSpots @Localizer["Seats Left"]</span>
+                                                @* <a href="javascript:void(0);" class="avatar avatar-sm">
+                                                    <img src="~/img/users/user-08.jpg" class="rounded-circle" alt="img">
+                                                </a> *@
+                                            </div>
                                         </div>
-                                        <h6 class="text-primary"><span class="fs-14 fw-normal text-default">From </span>$600</h6>
+                                        <p class=" fs-14 mb-3">@item.Description</p>
+                                        <div class="flight-loc d-flex align-items-center justify-content-between mb-3">
+                                            <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-45 me-2"></i>@item.From</span>
+                                            <a href="javascript:void(0);" class="arrow-icon flex-shrink-0 mx-2"><i class="isax isax-arrow-2"></i></a>
+                                            <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-135 me-2"></i>@item.To</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between border-top flex-wrap gap-2 pt-3">
+                                            <div class="date-info p-2">
+                                                <p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>@item.Departure.ToShortDateString() - @item.Return.ToShortDateString()</p>
+                                            </div>
+                                            <h6 class="text-primary"><span class="fs-14 fw-normal text-default">From </span>$ @item.Price</h6>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- /Flight List -->
-                            <!-- Flight List -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-06.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-01.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-09.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-05.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <div class="d-flex align-items-center">
-                                            <a href="javascript:void(0);" class="fav-icon me-2 ">
-                                                <i class="isax isax-heart5"></i>
-                                            </a>
-                                            <span class="badge bg-indigo">Cheapest</span>
-                                        </div>
-                                        <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.9</span>
-                                    </div>
-                                </div>
-                                <div class="place-content">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
-                                        <div>
-                                            <h5 class="text-truncate mb-1"><a href="javascript:void(0);">Nimbus 345</a></h5>
-                                            <div class="d-flex">
-                                                <span class="avatar avatar-sm me-2">
-                                                    <img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-                                                </span>
-                                                <p class="fs-14 mb-0 me-2">Indigo</p>
-                                                <p class="fs-14 mb-0"><i class="ti ti-point-filled text-primary me-2"></i>1-stop at Dubai</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="badge bg-outline-success fs-10 fw-medium  me-2">27 Seats Left</span>
-                                            <a href="javascript:void(0);" class="avatar avatar-sm">
-                                                <img src="~/img/users/user-10.jpg" class="rounded-circle" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class=" fs-14 mb-3">Enjoy a hassle-free journey with reliable service, spacious seating, and friendly staff.</p>
-                                    <div class="flight-loc d-flex align-items-center justify-content-between mb-3">
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-45 me-2"></i>Paris</span>
-                                        <a href="javascript:void(0);" class="arrow-icon flex-shrink-0 mx-2"><i class="isax isax-arrow-2"></i></a>
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-135 me-2"></i>Cape Town</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between border-top flex-wrap gap-2 pt-3">
-                                        <div class="date-info p-2">
-                                            <p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Aug 26, 2024 - Aug 27, 2024</p>
-                                        </div>
-                                        <h6 class="text-primary"><span class="fs-14 fw-normal text-default">From </span>$300</h6>
+                                <!-- /Flight List -->
+                            }
+                            
+                            @if (!Model.Itens.Any())
+                            {
 
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Flight List -->
-                            <!-- Flight List -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-01.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-02.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-03.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-04.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <div class="d-flex align-items-center">
-                                            <a href="javascript:void(0);" class="fav-icon me-2 ">
-                                                <i class="isax isax-heart5"></i>
-                                            </a>
-                                            <span class="badge bg-indigo">Cheapest</span>
-                                        </div>
-                                        <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.3</span>
-                                    </div>
-                                </div>
-                                <div class="place-content">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
-                                        <div>
-                                            <h5 class="text-truncate mb-1"><a href="javascript:void(0);">AstraFlight 215</a></h5>
-                                            <div class="d-flex">
-                                                <span class="avatar avatar-sm me-2">
-                                                    <img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-                                                </span>
-                                                <p class="fs-14 mb-0 me-2">Indigo</p>
-                                                <p class="fs-14 mb-0"><i class="ti ti-point-filled text-primary me-2"></i>1-stop at Frankfurt</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="badge bg-outline-success fs-10 fw-medium  me-2">27 Seats Left</span>
-                                            <a href="javascript:void(0);" class="avatar avatar-sm">
-                                                <img src="~/img/users/user-11.jpg" class="rounded-circle" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class=" fs-14 mb-3">Travel smart with affordable fares, seamless connections, and exceptional in-flight comfort.</p>
-                                    <div class="flight-loc d-flex align-items-center justify-content-between mb-3">
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-45 me-2"></i>Toronto</span>
-                                        <a href="javascript:void(0);" class="arrow-icon flex-shrink-0 mx-2"><i class="isax isax-arrow-2"></i></a>
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-135 me-2"></i>Bangkok</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between border-top flex-wrap gap-2 pt-3">
-                                        <div class="date-info p-2">
-                                            <p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Sep 04, 2024 - Sep 07, 2024</p>
-                                        </div>
-                                        <h6 class="text-primary"><span class="fs-14 fw-normal text-default">From </span>$300</h6>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Flight List -->
-                            <!-- Flight List -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-02.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-05.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-07.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-08.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <div class="d-flex align-items-center">
-                                            <a href="javascript:void(0);" class="fav-icon me-2 ">
-                                                <i class="isax isax-heart5"></i>
-                                            </a>
-                                            <span class="badge bg-indigo">Cheapest</span>
-                                        </div>
-                                        <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.1</span>
-                                    </div>
-                                </div>
-                                <div class="place-content">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
-                                        <div>
-                                            <h5 class="text-truncate mb-1"><a href="javascript:void(0);">Cloudrider 789</a></h5>
-                                            <div class="d-flex">
-                                                <span class="avatar avatar-sm me-2">
-                                                    <img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-                                                </span>
-                                                <p class="fs-14 mb-0 me-2">Air India</p>
-                                                <p class="fs-14 mb-0"><i class="ti ti-point-filled text-primary me-2"></i>1-stop at Dallas</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="badge bg-outline-success fs-10 fw-medium  me-2">14 Seats Left</span>
-                                            <a href="javascript:void(0);" class="avatar avatar-sm">
-                                                <img src="~/img/users/user-12.jpg" class="rounded-circle" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class=" fs-14 mb-3">Experience top-notch service, in-flight amenities, and smooth takeoffs for a stress-free journey.</p>
-                                    <div class="flight-loc d-flex align-items-center justify-content-between mb-3">
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-45 me-2"></i>Chicago</span>
-                                        <a href="javascript:void(0);" class="arrow-icon flex-shrink-0 mx-2"><i class="isax isax-arrow-2"></i></a>
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-135 me-2"></i>Melbourne</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between border-top flex-wrap gap-2 pt-3">
-                                        <div class="date-info p-2">
-                                            <p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Sep 11, 2024 - Sep 13, 2024</p>
-                                        </div>
-                                        <h6 class="text-primary"><span class="fs-14 fw-normal text-default">From </span>$550</h6>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Flight List -->
-                            <!-- Flight List -->
-                            <div class="place-item mb-4">
-                                <div class="place-img ">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-03.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-06.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-08.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-01.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <div class="d-flex align-items-center">
-                                            <a href="javascript:void(0);" class="fav-icon me-2 ">
-                                                <i class="isax isax-heart5"></i>
-                                            </a>
-                                            <span class="badge bg-indigo">Cheapest</span>
-                                        </div>
-                                        <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.6</span>
-                                    </div>
-                                </div>
-                                <div class="place-content">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
-                                        <div>
-                                            <h5 class="text-truncate mb-1"><a href="javascript:void(0);">Aether Express 901</a></h5>
-                                            <div class="d-flex">
-                                                <span class="avatar avatar-sm me-2">
-                                                    <img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-                                                </span>
-                                                <p class="fs-14 mb-0 me-2">Indigo</p>
-                                                <p class="fs-14 mb-0"><i class="ti ti-point-filled text-primary me-2"></i>1-stop at Seoul</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="badge bg-outline-success fs-10 fw-medium  me-2">12 Seats Left</span>
-                                            <a href="javascript:void(0);" class="avatar avatar-sm">
-                                                <img src="~/img/users/user-13.jpg" class="rounded-circle" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class=" fs-14 mb-3">Fly with confidence, knowing our comfortable cabins and efficient service make every trip a breeze.</p>
-                                    <div class="flight-loc d-flex align-items-center justify-content-between mb-3">
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-45 me-2"></i>Miami</span>
-                                        <a href="javascript:void(0);" class="arrow-icon flex-shrink-0 mx-2"><i class="isax isax-arrow-2"></i></a>
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-135 me-2"></i>Tokyo</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between border-top flex-wrap gap-2 pt-3">
-                                        <div class="date-info p-2">
-                                            <p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Sep 22, 2024 - Sep 24, 2024</p>
-                                        </div>
-                                        <h6 class="text-primary"><span class="fs-14 fw-normal text-default">From </span>$450</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Flight List -->
-                            <!-- Flight List -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-07.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-04.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-09.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/flight/flight-02.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <div class="d-flex align-items-center">
-                                            <a href="javascript:void(0);" class="fav-icon me-2 ">
-                                                <i class="isax isax-heart5"></i>
-                                            </a>
-                                            <span class="badge bg-indigo">Cheapest</span>
-                                        </div>
-                                        <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">4.8</span>
-                                    </div>
-                                </div>
-                                <div class="place-content">
-                                    <div class="d-flex justify-content-between align-items-center flex-wrap row-gap-2 mb-3">
-                                        <div>
-                                            <h5 class="text-truncate mb-1"><a href="javascript:void(0);">Voyager 658</a></h5>
-                                            <div class="d-flex">
-                                                <span class="avatar avatar-sm me-2">
-                                                    <img src="~/img/icons/airindia.svg" class="rounded-circle" alt="icon">
-                                                </span>
-                                                <p class="fs-14 mb-0 me-2">Air India</p>
-                                                <p class="fs-14 mb-0"><i class="ti ti-point-filled text-primary me-2"></i>1-stop at Sydney</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <span class="badge bg-outline-success fs-10 fw-medium  me-2">21 Seats Left</span>
-                                            <a href="javascript:void(0);" class="avatar avatar-sm">
-                                                <img src="~/img/users/user-14.jpg" class="rounded-circle" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class=" fs-14 mb-3">Relax and enjoy your flight with on-time schedules, comfortable seats, and world-class service.</p>
-                                    <div class="flight-loc d-flex align-items-center justify-content-between mb-3">
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-45 me-2"></i>Frankfurt</span>
-                                        <a href="javascript:void(0);" class="arrow-icon flex-shrink-0 mx-2"><i class="isax isax-arrow-2"></i></a>
-                                        <span class="loc-name d-inline-flex justify-content-center align-items-center w-100"><i class="isax isax-airplane rotate-135 me-2"></i>Auckland</span>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between border-top flex-wrap gap-2 pt-3">
-                                        <div class="date-info p-2">
-                                            <p class="d-flex align-items-center"><i class="isax isax-calendar-2 me-2"></i>Oct 04, 2024 - Oct 07, 2024</p>
-                                        </div>
-                                        <h6 class="text-primary"><span class="fs-14 fw-normal text-default">From </span>$350</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Flight List -->
+                            }
                         </div>
                     </div>
 

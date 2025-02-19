@@ -30,7 +30,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="banner-form">
-                    <form asp-controller="Hotel" asp-action="Search" class="d-lg-flex">
+                    <form method="post" asp-controller="Hotel" asp-action="Search" class="d-lg-flex">
                         <div class="d-flex  form-info">
                             <div class="form-item dropdown">
                                 <div data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" role="menu">
@@ -226,7 +226,7 @@
                         <a href="javascript:void(0);" class="fs-14 link-primary">Reset</a>
                     </div>
                     <div class="card-body p-0">
-                        <form asp-controller="Hotel" asp-action="Search">
+                        <form method="post" asp-controller="Hotel" asp-action="Search">
                             <div class="p-3 border-bottom">
                                 <label class="form-label fs-16">Search by Hotel Name</label>
                                 <input type="text" class="form-control" placeholder="Search by Hotel Name">
@@ -694,7 +694,7 @@
                                 <span class="fw-medium text-gray-9">Sort By : </span>Recommended
                             </a>
                             <div class="dropdown-menu dropdown-sm">
-                                <form asp-controller="Hotel" asp-action="Search">
+                                <form method="post" asp-controller="Hotel" asp-action="Search">
                                     <h6 class="fw-medium fs-16 mb-3">Sort By</h6>
                                     <div class="form-check d-flex align-items-center ps-0 mb-2">
                                         <input class="form-check-input ms-0 mt-0" name="recommend" type="checkbox" id="recommend1" checked>
@@ -743,450 +743,77 @@
 
                         <div class="col-md-12">
 
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-01.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon selected">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div>
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Hotel Plaza Athenee</a></h5>
-                                            <p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Ciutat Vella, Barcelona</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
-                                                    <img src="~/img/users/user-01.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">Beth Williams</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">5.0</span>
-                                                <p class="fs-14">(400)</p>
+                            @foreach (var item in Model.Itens)
+                            {
+                                <!-- Hotel Grid -->
+                                <div class="place-item mb-4">
+                                    <div class="place-img">
+                                        <div class="img-slider image-slide owl-carousel nav-center">
+                                            <div class="slide-images">
+                                                <a href="javascript:void(0);">
+                                                    <img src="~/img/hotels/hotel-01.jpg" class="img-fluid" alt="img">
+                                                </a>
+                                            </div>
+                                            <div class="slide-images">
+                                                <a href="javascript:void(0);">
+                                                    <img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
+                                                </a>
+                                            </div>
+                                            <div class="slide-images">
+                                                <a href="javascript:void(0);">
+                                                    <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
+                                                </a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <p class="line-ellipsis fs-14">Experience luxury and comfort at our centrally located hotel, featuring modern amenities, spacious rooms, and exceptional service.</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$500 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Hotel Grid -->
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <a href="javascript:void(0);">
-                                        <img src="~/img/hotels/hotel-05.jpg" class="img-fluid" alt="img">
-                                    </a>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon selected">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div>
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">The Luxe Haven</a></h5>
-                                            <p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Oxford Street, London</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
-                                                    <img src="~/img/users/user-02.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">Tom Andrews</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.7</span>
-                                                <p class="fs-14">(360)</p>
+                                        <div class="fav-item">
+                                            <div class="d-flex align-items-center">
+                                                @* <a href="javascript:void(0);" class="fav-icon me-2 selected">
+                                                    <i class="isax isax-heart5"></i>
+                                                </a> *@
+                                                @* <span class="badge bg-indigo">Cheapest</span> *@
                                             </div>
+                                            <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium rounded">@item.Rating</span>
                                         </div>
                                     </div>
-                                    <p class="line-ellipsis fs-14">Stay in luxury at our hotel, featuring premium amenities, stunning cityscape views, and an on-site spa for the ultimate relaxation experience</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$600 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Hotel Grid -->
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <a href="javascript:void(0);">
-                                        <img src="~/img/hotels/hotel-06.jpg" class="img-fluid" alt="img">
-                                    </a>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon selected">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">The Urban Retreat</a></h5>
-                                            <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Princes Street, Edinburgh</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
-                                                    <img src="~/img/users/user-03.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">Rober Cowell</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.5</span>
-                                                <p class="fs-14">(500)</p>
+                                    <div class="place-content pb-1">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                            <div>
+                                                <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">@item.Name</a></h5>
+                                                <p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>@item.Location</p>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <p class="line-ellipsis fs-14">Conveniently located near top attractions, our hotel offers modern rooms, free parking, and a complimentary breakfast to start your day right.</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$300 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Hotel Grid -->
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-07.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon selected">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">The Grand Horizon</a></h5>
-                                            <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Deansgate, Manchester</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
-                                                    <img src="~/img/users/user-05.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">Timothy Brewer</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.9</span>
-                                                <p class="fs-14">(450)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="line-ellipsis fs-14">Discover the perfect balance of luxury and affordability at our hotel, with a 24-hour concierge, free Wi-Fi, and easy access to local hotspots.</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$400 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Hotel Grid -->
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-08.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-02.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Hotel Evergreen </a></h5>
-                                            <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>King’s Road, Chelsea</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
-                                                    <img src="~/img/users/user-06.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">Timothy Rio</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.5</span>
-                                                <p class="fs-14">(500)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="line-ellipsis fs-14">Our hotel offers pet-friendly rooms, complimentary shuttle service, and comfortable accommodations just minutes from key attractions and business centers.</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$300 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Hotel Grid -->
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-10.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-04.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-06.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon selected">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Stardust Hotel</a></h5>
-                                            <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Bold Street, Liverpool</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
-                                                    <img src="~/img/users/user-07.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">Brent Holmes</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.1</span>
-                                                <p class="fs-14">(270)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="line-ellipsis fs-14">Relax in our elegantly designed rooms with stunning views, on-site dining, and premium amenities, ideal for both business and leisure stays</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$450 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Hotel Grid -->
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-11.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-05.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon selected">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Hotel Serene Valley</a></h5>
-                                            <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Broad Street, Bristol</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
+                                            <div class="d-flex align-items-center">
+                                                <span class="badge bg-outline-success fs-10 fw-medium  me-2">@item.AvailableSpots @Localizer["Spots Left"]</span>
+                                                @* <a href="javascript:void(0);" class="avatar avatar-sm">
                                                     <img src="~/img/users/user-08.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">John James</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.6</span>
-                                                <p class="fs-14">(650)</p>
+                                                </a> *@
                                             </div>
+                                            @* <div class="d-flex align-items-center mb-2">
+                                                <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
+                                                    <span class="avatar avatar-md flex-shrink-0 me-2">
+                                                        <img src="~/img/users/user-01.jpg" class="rounded-circle" alt="img">
+                                                    </span>
+                                                    <p class="fs-14 text-truncate">Beth Williams</p>
+                                                </a>
+                                                <div class="d-flex align-items-center text-nowrap">
+                                                    <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">5.0</span>
+                                                    <p class="fs-14">(400)</p>
+                                                </div>
+                                            </div> *@
                                         </div>
-                                    </div>
-                                    <p class="line-ellipsis fs-14">Whether you're here for business or leisure, our hotel provides modern amenities, free Wi-Fi, and easy access to the city's vibrant downtown area</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$350 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
+                                        <p class="line-ellipsis fs-14">@item.Description</p>
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
+                                            @* <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6> *@
+                                            <h5 class="text-primary text-nowrap me-2 mb-3">$ @item.Price <span class="fs-14 fw-normal text-default">/ Night</span></h5>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- /Hotel Grid -->
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <div class="img-slider image-slide owl-carousel nav-center">
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-12.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-08.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="slide-images">
-                                            <a href="javascript:void(0);">
-                                                <img src="~/img/hotels/hotel-10.jpg" class="img-fluid" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div class="overflow-hidden">
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">Hotel Aurora Bliss</a></h5>
-                                            <p class="d-flex align-items-center text-truncate mb-2"><i class="isax isax-location5 me-2"></i>Castle Street, Cambridge</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
-                                                    <img src="~/img/users/user-09.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">Roald Mourie</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.8</span>
-                                                <p class="fs-14">(700)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="line-ellipsis fs-14">Stay in the heart of the action at our hotel, featuring well-appointed rooms, on-site dining, and easy access to popular attractions and nightlife</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$650 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Hotel Grid -->
-                            <!-- Hotel Grid -->
-                            <div class="place-item mb-4">
-                                <div class="place-img">
-                                    <a href="javascript:void(0);">
-                                        <img src="~/img/hotels/hotel-03.jpg" class="img-fluid" alt="img">
-                                    </a>
-                                    <div class="fav-item">
-                                        <span class="badge bg-info d-inline-flex align-items-center"><i class="isax isax-ranking me-1"></i>Trending</span>
-                                        <a href="javascript:void(0);" class="fav-icon selected">
-                                            <i class="isax isax-heart5"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="place-content pb-1">
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap">
-                                        <div>
-                                            <h5 class="mb-1 text-truncate"><a href="javascript:void(0);">The Skyline</a></h5>
-                                            <p class="d-flex align-items-center mb-2"><i class="isax isax-location5 me-2"></i>Chapel Street, London</p>
-                                        </div>
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="javascript:void(0);" class="d-flex align-items-center overflow-hidden border-end pe-2 me-2">
-                                                <span class="avatar avatar-md flex-shrink-0 me-2">
-                                                    <img src="~/img/users/user-10.jpg" class="rounded-circle" alt="img">
-                                                </span>
-                                                <p class="fs-14 text-truncate">John Doe</p>
-                                            </a>
-                                            <div class="d-flex align-items-center text-nowrap">
-                                                <span class="badge badge-warning badge-xs text-gray-9 fs-13 fw-medium me-2">4.7</span>
-                                                <p class="fs-14">(160)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="line-ellipsis fs-14">Our hotel has featuring premium amenities, stunning cityscape views, and an on-site spa for the ultimate relaxation experience</p>
-                                    <div class="d-flex align-items-center justify-content-between flex-wrap border-top pt-3">
-                                        <h6 class="d-flex align-items-center mb-3">Facillities :<i class="isax isax-home-wifi ms-2 me-2 text-primary"></i><i class="isax isax-scissor me-2 text-primary"></i><i class="isax isax-profile-2user me-2 text-primary"></i><i class="isax isax-wind-2 me-2 text-primary"></i><a href="javascript:void(0);" class="fs-14 fw-normal text-default d-inline-block">+2</a></h6>
-                                        <h5 class="text-primary text-nowrap me-2 mb-3">$600 <span class="fs-14 fw-normal text-default">/ Night</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Hotel Grid -->
+                                <!-- /Hotel Grid -->
+                            }
+
+                            @if (!Model.Itens.Any())
+                            {
+
+                            }
 
                         </div>
 

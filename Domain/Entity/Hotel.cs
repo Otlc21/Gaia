@@ -20,10 +20,10 @@ namespace Domain.Entity
         public DateTime ValidFrom { get; set; }
         public DateTime ValidUntil { get; set; }
         public int AvailableSpots { get; set; }
-
         public string Image { get; set; }
-        public bool Active { get; set; }
-        public Guid CreatedBy { get; set; }
+        public bool Active { get; set; } = true;
+        public Guid CreatedById { get; set; }
+        public User CreatedBy { get; set; }
         public DateTime CreatedOn { get; set; }
     }
 }

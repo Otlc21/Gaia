@@ -1,11 +1,11 @@
-using Microsoft.AspNetCore.Mvc.Razor;
-using Serilog;
+using App.Models.Utils;
 using DI;
-using Microsoft.AspNetCore.Localization;
-using System.Globalization;
 using Domain.DTO;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using App.Models.Utils;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Serilog;
+using System.Globalization;
 
 namespace App
 {
@@ -30,6 +30,11 @@ namespace App
                 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
                 builder.Services.Configure<AppSettings>(builder.Configuration);
+
+                //var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+                //builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                //    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
                 builder.Services.AddDomainService()
                     .AddClient()

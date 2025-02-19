@@ -191,7 +191,7 @@
 							</a>
 						</div>
 						<nav id="mobile-menu">
-							@if (!User.Identity?.IsAuthenticated ?? false && User.IsInRole("ADM"))
+							@if (User.Identity?.IsAuthenticated ?? false && User.IsInRole("ADM"))
 							{
 								<ul class="main-nav">
 									<li class="has-submenu megamenu active">
@@ -295,7 +295,7 @@
 									</a>
 									<ul class="dropdown-menu dropdown-menu-end p-3">
 										<li>
-											<a class="dropdown-item d-inline-flex align-items-center rounded fw-medium p-2" href="login.html">@Localizer["Logout"]</a>
+											<a class="dropdown-item d-inline-flex align-items-center rounded fw-medium p-2" href="@Url.Action("Login", "Account")">@Localizer["Logout"]</a>
 										</li>
 									</ul>
 								</div>
@@ -377,10 +377,12 @@
 									<a href="javascript:void(0);">@Localizer["Contact Us"]</a>
 								</li>
 								<li>
-									<a href="privacy-policy.html">@Localizer["Privacy Policy"]</a>
+									<a href="javascript:void(0)">@Localizer["Privacy Policy"]</a>
 								</li>
 								<li>
-									<a href="@Url.Action("Term", "Home")">@Localizer["Terms and Conditions"]</a>
+									@* <a href="@Url.Action("Term", "Home")">@Localizer["Terms and Conditions"]</a> *@
+									<a href="javascript:void(0)">@Localizer["Terms and Conditions"]</a>
+
 								</li>
 								<li>
 									<a href="javascript:void(0);">@Localizer["Refund Policy"]</a>

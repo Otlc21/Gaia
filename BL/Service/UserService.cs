@@ -83,7 +83,7 @@ namespace BL.Service
                     Email = email,
                     Password = BCrypt.Net.BCrypt.HashPassword(password),
                     Profile = "User",
-                    Created = DateTime.Now
+                    CreatedOn = DateTime.Now
                 };
 
                 await _repository.Insert(user);

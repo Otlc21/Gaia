@@ -53,9 +53,9 @@ namespace BL.Service
             await _repository.Update(item);
         }
 
-        public Task<List<Flight>> GetTrending()
+        public async Task<List<Flight>> GetTrending()
         {
-            throw new NotImplementedException();
+            return await _repository.Get(new Flight(), 0, 5);
         }
     }
 }

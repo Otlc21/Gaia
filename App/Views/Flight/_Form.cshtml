@@ -11,43 +11,56 @@
             <div class="col-md-12">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Airline Name"]</label>
-                    <input type="text" class="form-control">
+                    <input asp-for="Airline" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Flight Name"]</label>
-                    <input type="text" class="form-control">
+                    <input asp-for ="Name" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Flight Number"]</label>
-                    <input type="text" class="form-control">
+                    <input asp-for="Number" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Type"]</label>
-                    <input type="text" class="form-control">
+                    <input asp-for="Type" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Price"]</label>
-                    <input type="text" class="form-control">
+                    <input asp-for="Price" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Available Spots"]</label>
-                    <input type="text" class="form-control">
+                    <input asp-for="AvailableSpots" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mb-3">
+                    <label class="form-label">@Localizer["Rating"]</label>
+                    <select asp-for="Rating" class="form-control select">
+                        <option value="0">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Active"]</label>
-                    <input asp-for="Active" type="checkbox" class="form-control" checked>
+                    <input asp-for="Active" class="form-check-input mt-0" type="checkbox">
                 </div>
             </div>
         </div>
@@ -123,7 +136,7 @@
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Arrival Date"]</label>
                     <div class="input-icon-end position-relative">
-                        <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+                        <input asp-for="Departure" type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
                         <span class="input-icon-addon">
                             <i class="isax isax-calendar"></i>
                         </span>
@@ -145,7 +158,7 @@
                 <div class="mb-3">
                     <label class="form-label">@Localizer["Departure Date"]</label>
                     <div class="input-icon-end position-relative">
-                        <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+                        <input asp-for="Return" type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
                         <span class="input-icon-addon">
                             <i class="isax isax-calendar"></i>
                         </span>
@@ -206,13 +219,13 @@
             <div class="col-md-12">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["From"]</label>
-                    <input type="text" class="form-control">
+                    <input asp-for="From" type="text" class="form-control">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="mb-3">
                     <label class="form-label">@Localizer["To"]</label>
-                    <input type="text" class="form-control">
+                    <input asp-for="To" type="text" class="form-control">
                 </div>
             </div>
 @*             <div class="col-md-12">
