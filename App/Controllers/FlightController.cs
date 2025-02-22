@@ -39,9 +39,11 @@ namespace Web.Controllers
             return View(model);
         }
 
-        public IActionResult Search()
+        public async Task<IActionResult> Search()
         {
-            return View();
+            var model = new FlightSearchViewModel();
+            model.Itens = await _service.Get(new Flight(), 0, 30);
+            return View(model);
         }
 
         [Authorize(Roles = "ADM")]

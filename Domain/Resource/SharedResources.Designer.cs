@@ -59,5 +59,1445 @@ namespace Domain.Resource {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        public static string About_Us {
+            get {
+                return ResourceManager.GetString("About Us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Active.
+        /// </summary>
+        public static string Active {
+            get {
+                return ResourceManager.GetString("Active", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Car.
+        /// </summary>
+        public static string Add_Car {
+            get {
+                return ResourceManager.GetString("Add Car", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Flight.
+        /// </summary>
+        public static string Add_Flight {
+            get {
+                return ResourceManager.GetString("Add Flight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Hotel.
+        /// </summary>
+        public static string Add_Hotel {
+            get {
+                return ResourceManager.GetString("Add Hotel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add New.
+        /// </summary>
+        public static string Add_New {
+            get {
+                return ResourceManager.GetString("Add New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add User.
+        /// </summary>
+        public static string Add_User {
+            get {
+                return ResourceManager.GetString("Add User", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Admin Users.
+        /// </summary>
+        public static string Admin_Users {
+            get {
+                return ResourceManager.GetString("Admin Users", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adults.
+        /// </summary>
+        public static string Adults {
+            get {
+                return ResourceManager.GetString("Adults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Airline Name.
+        /// </summary>
+        public static string Airline_Name {
+            get {
+                return ResourceManager.GetString("Airline Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apartment.
+        /// </summary>
+        public static string Apartment {
+            get {
+                return ResourceManager.GetString("Apartment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        public static string Apply {
+            get {
+                return ResourceManager.GetString("Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrival &amp;Departure.
+        /// </summary>
+        public static string Arrival__Departure {
+            get {
+                return ResourceManager.GetString("Arrival &Departure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrival Date.
+        /// </summary>
+        public static string Arrival_Date {
+            get {
+                return ResourceManager.GetString("Arrival Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auto.
+        /// </summary>
+        public static string Auto {
+            get {
+                return ResourceManager.GetString("Auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Available Spots.
+        /// </summary>
+        public static string Available_Spots {
+            get {
+                return ResourceManager.GetString("Available Spots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basic Info.
+        /// </summary>
+        public static string Basic_Info {
+            get {
+                return ResourceManager.GetString("Basic Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brazil.
+        /// </summary>
+        public static string Brazil {
+            get {
+                return ResourceManager.GetString("Brazil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Canada.
+        /// </summary>
+        public static string Canada {
+            get {
+                return ResourceManager.GetString("Canada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Car &amp; Type.
+        /// </summary>
+        public static string Car___Type {
+            get {
+                return ResourceManager.GetString("Car & Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Car Bookings.
+        /// </summary>
+        public static string Car_Bookings {
+            get {
+                return ResourceManager.GetString("Car Bookings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Car List.
+        /// </summary>
+        public static string Car_List {
+            get {
+                return ResourceManager.GetString("Car List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Car Name.
+        /// </summary>
+        public static string Car_Name {
+            get {
+                return ResourceManager.GetString("Car Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cars.
+        /// </summary>
+        public static string Cars {
+            get {
+                return ResourceManager.GetString("Cars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cars Search.
+        /// </summary>
+        public static string Cars_Search {
+            get {
+                return ResourceManager.GetString("Cars Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        public static string Change_Password {
+            get {
+                return ResourceManager.GetString("Change Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check In.
+        /// </summary>
+        public static string Check_In {
+            get {
+                return ResourceManager.GetString("Check In", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Out.
+        /// </summary>
+        public static string Check_Out {
+            get {
+                return ResourceManager.GetString("Check Out", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Childrens.
+        /// </summary>
+        public static string Childrens {
+            get {
+                return ResourceManager.GetString("Childrens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        public static string Confirm_Password {
+            get {
+                return ResourceManager.GetString("Confirm Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string Contact_Us {
+            get {
+                return ResourceManager.GetString("Contact Us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created By.
+        /// </summary>
+        public static string Created_By {
+            get {
+                return ResourceManager.GetString("Created By", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer Support.
+        /// </summary>
+        public static string Customer_Support {
+            get {
+                return ResourceManager.GetString("Customer Support", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to day.
+        /// </summary>
+        public static string day {
+            get {
+                return ResourceManager.GetString("day", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Departure Date.
+        /// </summary>
+        public static string Departure_Date {
+            get {
+                return ResourceManager.GetString("Departure Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destinations.
+        /// </summary>
+        public static string Destinations {
+            get {
+                return ResourceManager.GetString("Destinations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diesel.
+        /// </summary>
+        public static string Diesel {
+            get {
+                return ResourceManager.GetString("Diesel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Different Drop off.
+        /// </summary>
+        public static string Different_Drop_off {
+            get {
+                return ResourceManager.GetString("Different Drop off", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t you have an account?.
+        /// </summary>
+        public static string Don_t_you_have_an_account_ {
+            get {
+                return ResourceManager.GetString("Don\'t you have an account?", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drop Us an Email.
+        /// </summary>
+        public static string Drop_Us_an_Email {
+            get {
+                return ResourceManager.GetString("Drop Us an Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Car.
+        /// </summary>
+        public static string Edit_Car {
+            get {
+                return ResourceManager.GetString("Edit Car", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Flight.
+        /// </summary>
+        public static string Edit_Flight {
+            get {
+                return ResourceManager.GetString("Edit Flight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Hotel.
+        /// </summary>
+        public static string Edit_Hotel {
+            get {
+                return ResourceManager.GetString("Edit Hotel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Markup.
+        /// </summary>
+        public static string Edit_Markup {
+            get {
+                return ResourceManager.GetString("Edit Markup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit User.
+        /// </summary>
+        public static string Edit_User {
+            get {
+                return ResourceManager.GetString("Edit User", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Email.
+        /// </summary>
+        public static string Enter_Email {
+            get {
+                return ResourceManager.GetString("Enter Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Email Address.
+        /// </summary>
+        public static string Enter_Email_Address {
+            get {
+                return ResourceManager.GetString("Enter Email Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Full Name.
+        /// </summary>
+        public static string Enter_Full_Name {
+            get {
+                return ResourceManager.GetString("Enter Full Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Password.
+        /// </summary>
+        public static string Enter_Password {
+            get {
+                return ResourceManager.GetString("Enter Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to entries.
+        /// </summary>
+        public static string entries {
+            get {
+                return ResourceManager.GetString("entries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flight.
+        /// </summary>
+        public static string Flight {
+            get {
+                return ResourceManager.GetString("Flight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flight Bookings.
+        /// </summary>
+        public static string Flight_Bookings {
+            get {
+                return ResourceManager.GetString("Flight Bookings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flight List.
+        /// </summary>
+        public static string Flight_List {
+            get {
+                return ResourceManager.GetString("Flight List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flight Name.
+        /// </summary>
+        public static string Flight_Name {
+            get {
+                return ResourceManager.GetString("Flight Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flight Number.
+        /// </summary>
+        public static string Flight_Number {
+            get {
+                return ResourceManager.GetString("Flight Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forgot Password.
+        /// </summary>
+        public static string Forgot_Password {
+            get {
+                return ResourceManager.GetString("Forgot Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frequently Asked Questions.
+        /// </summary>
+        public static string Frequently_Asked_Questions {
+            get {
+                return ResourceManager.GetString("Frequently Asked Questions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string From {
+            get {
+                return ResourceManager.GetString("From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From - To.
+        /// </summary>
+        public static string From___To {
+            get {
+                return ResourceManager.GetString("From - To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fuel.
+        /// </summary>
+        public static string Fuel {
+            get {
+                return ResourceManager.GetString("Fuel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fuel Type.
+        /// </summary>
+        public static string Fuel_Type {
+            get {
+                return ResourceManager.GetString("Fuel Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gallery.
+        /// </summary>
+        public static string Gallery {
+            get {
+                return ResourceManager.GetString("Gallery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gear.
+        /// </summary>
+        public static string Gear {
+            get {
+                return ResourceManager.GetString("Gear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guest House.
+        /// </summary>
+        public static string Guest_House {
+            get {
+                return ResourceManager.GetString("Guest House", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guests.
+        /// </summary>
+        public static string Guests {
+            get {
+                return ResourceManager.GetString("Guests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Highlights.
+        /// </summary>
+        public static string Highlights {
+            get {
+                return ResourceManager.GetString("Highlights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hotel.
+        /// </summary>
+        public static string Hotel {
+            get {
+                return ResourceManager.GetString("Hotel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hotel Bookings.
+        /// </summary>
+        public static string Hotel_Bookings {
+            get {
+                return ResourceManager.GetString("Hotel Bookings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hotel Details.
+        /// </summary>
+        public static string Hotel_Details {
+            get {
+                return ResourceManager.GetString("Hotel Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hotel List.
+        /// </summary>
+        public static string Hotel_List {
+            get {
+                return ResourceManager.GetString("Hotel List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hotel Name.
+        /// </summary>
+        public static string Hotel_Name {
+            get {
+                return ResourceManager.GetString("Hotel Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hybrid.
+        /// </summary>
+        public static string Hybrid {
+            get {
+                return ResourceManager.GetString("Hybrid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string ID {
+            get {
+                return ResourceManager.GetString("ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inactive.
+        /// </summary>
+        public static string Inactive {
+            get {
+                return ResourceManager.GetString("Inactive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid data..
+        /// </summary>
+        public static string Invalid_data_ {
+            get {
+                return ResourceManager.GetString("Invalid data.", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        public static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Locations.
+        /// </summary>
+        public static string Locations {
+            get {
+                return ResourceManager.GetString("Locations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lodge.
+        /// </summary>
+        public static string Lodge {
+            get {
+                return ResourceManager.GetString("Lodge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        public static string Logout {
+            get {
+                return ResourceManager.GetString("Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manual.
+        /// </summary>
+        public static string Manual {
+            get {
+                return ResourceManager.GetString("Manual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Markup.
+        /// </summary>
+        public static string Markup {
+            get {
+                return ResourceManager.GetString("Markup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mileage.
+        /// </summary>
+        public static string Mileage {
+            get {
+                return ResourceManager.GetString("Mileage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Night.
+        /// </summary>
+        public static string Night {
+            get {
+                return ResourceManager.GetString("Night", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        public static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number.
+        /// </summary>
+        public static string Number {
+            get {
+                return ResourceManager.GetString("Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oneway.
+        /// </summary>
+        public static string Oneway {
+            get {
+                return ResourceManager.GetString("Oneway", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pages.
+        /// </summary>
+        public static string Pages {
+            get {
+                return ResourceManager.GetString("Pages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Petrol.
+        /// </summary>
+        public static string Petrol {
+            get {
+                return ResourceManager.GetString("Petrol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Popular Amenities.
+        /// </summary>
+        public static string Popular_Amenities {
+            get {
+                return ResourceManager.GetString("Popular Amenities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string Price {
+            get {
+                return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price per Night.
+        /// </summary>
+        public static string Price_per_Night {
+            get {
+                return ResourceManager.GetString("Price per Night", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pricing.
+        /// </summary>
+        public static string Pricing {
+            get {
+                return ResourceManager.GetString("Pricing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Policy.
+        /// </summary>
+        public static string Privacy_Policy {
+            get {
+                return ResourceManager.GetString("Privacy Policy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile.
+        /// </summary>
+        public static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rating.
+        /// </summary>
+        public static string Rating {
+            get {
+                return ResourceManager.GetString("Rating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Record not found.
+        /// </summary>
+        public static string Record_not_found {
+            get {
+                return ResourceManager.GetString("Record not found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Record saved successfully..
+        /// </summary>
+        public static string Record_saved_successfully_ {
+            get {
+                return ResourceManager.GetString("Record saved successfully.", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refund Policy.
+        /// </summary>
+        public static string Refund_Policy {
+            get {
+                return ResourceManager.GetString("Refund Policy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remember Password?.
+        /// </summary>
+        public static string Remember_Password_ {
+            get {
+                return ResourceManager.GetString("Remember Password?", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset.
+        /// </summary>
+        public static string Reset {
+            get {
+                return ResourceManager.GetString("Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Password.
+        /// </summary>
+        public static string Reset_Password {
+            get {
+                return ResourceManager.GetString("Reset Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Password Sent to.
+        /// </summary>
+        public static string Reset_Password_Sent_to {
+            get {
+                return ResourceManager.GetString("Reset Password Sent to", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Room &amp; Guest.
+        /// </summary>
+        public static string Room___Guest {
+            get {
+                return ResourceManager.GetString("Room & Guest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Room Types.
+        /// </summary>
+        public static string Room_Types {
+            get {
+                return ResourceManager.GetString("Room Types", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rooms.
+        /// </summary>
+        public static string Rooms {
+            get {
+                return ResourceManager.GetString("Rooms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Round Trip.
+        /// </summary>
+        public static string Round_Trip {
+            get {
+                return ResourceManager.GetString("Round Trip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Same Drop-off.
+        /// </summary>
+        public static string Same_Drop_off {
+            get {
+                return ResourceManager.GetString("Same Drop-off", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search for Airport.
+        /// </summary>
+        public static string Search_for_Airport {
+            get {
+                return ResourceManager.GetString("Search for Airport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search for Car.
+        /// </summary>
+        public static string Search_for_Car {
+            get {
+                return ResourceManager.GetString("Search for Car", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search for Location.
+        /// </summary>
+        public static string Search_for_Location {
+            get {
+                return ResourceManager.GetString("Search for Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search Location.
+        /// </summary>
+        public static string Search_Location {
+            get {
+                return ResourceManager.GetString("Search Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seats Left.
+        /// </summary>
+        public static string Seats_Left {
+            get {
+                return ResourceManager.GetString("Seats Left", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sedan.
+        /// </summary>
+        public static string Sedan {
+            get {
+                return ResourceManager.GetString("Sedan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string Select {
+            get {
+                return ResourceManager.GetString("Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Travelers.
+        /// </summary>
+        public static string Select_Travelers {
+            get {
+                return ResourceManager.GetString("Select Travelers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show.
+        /// </summary>
+        public static string Show {
+            get {
+                return ResourceManager.GetString("Show", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sign In.
+        /// </summary>
+        public static string Sign_In {
+            get {
+                return ResourceManager.GetString("Sign In", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sign Up.
+        /// </summary>
+        public static string Sign_Up {
+            get {
+                return ResourceManager.GetString("Sign Up", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signup for New Offers &amp; Updates from.
+        /// </summary>
+        public static string Signup_for_New_Offers___Updates_from {
+            get {
+                return ResourceManager.GetString("Signup for New Offers & Updates from", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Social Medias.
+        /// </summary>
+        public static string Social_Medias {
+            get {
+                return ResourceManager.GetString("Social Medias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specifications.
+        /// </summary>
+        public static string Specifications {
+            get {
+                return ResourceManager.GetString("Specifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sports.
+        /// </summary>
+        public static string Sports {
+            get {
+                return ResourceManager.GetString("Sports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spots.
+        /// </summary>
+        public static string Spots {
+            get {
+                return ResourceManager.GetString("Spots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        public static string State {
+            get {
+                return ResourceManager.GetString("State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stay Updated.
+        /// </summary>
+        public static string Stay_Updated {
+            get {
+                return ResourceManager.GetString("Stay Updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subscribe.
+        /// </summary>
+        public static string Subscribe {
+            get {
+                return ResourceManager.GetString("Subscribe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Support.
+        /// </summary>
+        public static string Support {
+            get {
+                return ResourceManager.GetString("Support", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SUV.
+        /// </summary>
+        public static string SUV {
+            get {
+                return ResourceManager.GetString("SUV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Terms and Conditions.
+        /// </summary>
+        public static string Terms_and_Conditions {
+            get {
+                return ResourceManager.GetString("Terms and Conditions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ticket.
+        /// </summary>
+        public static string Ticket {
+            get {
+                return ResourceManager.GetString("Ticket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string To {
+            get {
+                return ResourceManager.GetString("To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transmission.
+        /// </summary>
+        public static string Transmission {
+            get {
+                return ResourceManager.GetString("Transmission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Travellers.
+        /// </summary>
+        public static string Travellers {
+            get {
+                return ResourceManager.GetString("Travellers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string Type {
+            get {
+                return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to United States.
+        /// </summary>
+        public static string United_States {
+            get {
+                return ResourceManager.GetString("United States", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload Feature Image First, Image size should below 5MB.
+        /// </summary>
+        public static string Upload_Feature_Image_First__Image_size_should_below_5MB {
+            get {
+                return ResourceManager.GetString("Upload Feature Image First, Image size should below 5MB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload Gallery Images.
+        /// </summary>
+        public static string Upload_Gallery_Images {
+            get {
+                return ResourceManager.GetString("Upload Gallery Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User.
+        /// </summary>
+        public static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User List.
+        /// </summary>
+        public static string User_List {
+            get {
+                return ResourceManager.GetString("User List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valid From.
+        /// </summary>
+        public static string Valid_From {
+            get {
+                return ResourceManager.GetString("Valid From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valid Until.
+        /// </summary>
+        public static string Valid_Until {
+            get {
+                return ResourceManager.GetString("Valid Until", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validity.
+        /// </summary>
+        public static string Validity {
+            get {
+                return ResourceManager.GetString("Validity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle Type.
+        /// </summary>
+        public static string Vehicle_Type {
+            get {
+                return ResourceManager.GetString("Vehicle Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Villa.
+        /// </summary>
+        public static string Villa {
+            get {
+                return ResourceManager.GetString("Villa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yrs.
+        /// </summary>
+        public static string Yrs {
+            get {
+                return ResourceManager.GetString("Yrs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zip Code.
+        /// </summary>
+        public static string Zip_Code {
+            get {
+                return ResourceManager.GetString("Zip Code", resourceCulture);
+            }
+        }
     }
 }

@@ -117,4 +117,481 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Invalid data." xml:space="preserve">
+    <value>Dados inválidos.</value>
+  </data>
+  <data name="Record saved successfully." xml:space="preserve">
+    <value>Registro salvo com sucesso.</value>
+  </data>
+  <data name="Record not found" xml:space="preserve">
+    <value>Registro não encontrado</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Alterar Senha</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="Enter Password" xml:space="preserve">
+    <value>Digite a Senha</value>
+  </data>
+  <data name="Confirm Password" xml:space="preserve">
+    <value>Confirmar Senha</value>
+  </data>
+  <data name="Forgot Password" xml:space="preserve">
+    <value>Esqueceu a Senha</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Enter Email" xml:space="preserve">
+    <value>Digite o Email</value>
+  </data>
+  <data name="Reset Password Sent to" xml:space="preserve">
+    <value>Redefinição de Senha Enviada para</value>
+  </data>
+  <data name="Reset Password" xml:space="preserve">
+    <value>Redefinir Senha</value>
+  </data>
+  <data name="Remember Password?" xml:space="preserve">
+    <value>Lembrar Senha?</value>
+  </data>
+  <data name="Sign In" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="Don't you have an account?" xml:space="preserve">
+    <value>Não tem uma conta?</value>
+  </data>
+  <data name="Sign Up" xml:space="preserve">
+    <value>Cadastre-se</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Enter Full Name" xml:space="preserve">
+    <value>Digite o Nome Completo</value>
+  </data>
+  <data name="Add Car" xml:space="preserve">
+    <value>Adicionar Carro</value>
+  </data>
+  <data name="Basic Info" xml:space="preserve">
+    <value>Info Básica</value>
+  </data>
+  <data name="Specifications" xml:space="preserve">
+    <value>Especificações</value>
+  </data>
+  <data name="Locations" xml:space="preserve">
+    <value>Locais</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Edit Car" xml:space="preserve">
+    <value>Editar Carro</value>
+  </data>
+  <data name="Car List" xml:space="preserve">
+    <value>Lista de Carros</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Car &amp; Type" xml:space="preserve">
+    <value>Carro e Tipo</value>
+  </data>
+  <data name="Created By" xml:space="preserve">
+    <value>Criado por</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="Available Spots" xml:space="preserve">
+    <value>Assentos Disponíveis</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="Validity" xml:space="preserve">
+    <value>Validade</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Spots" xml:space="preserve">
+    <value>Vagas</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inativo</value>
+  </data>
+  <data name="Cars" xml:space="preserve">
+    <value>Carros</value>
+  </data>
+  <data name="Cars Search" xml:space="preserve">
+    <value>Busca de Carros</value>
+  </data>
+  <data name="Fuel" xml:space="preserve">
+    <value>Combustível</value>
+  </data>
+  <data name="Gear" xml:space="preserve">
+    <value>Câmbio</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="day" xml:space="preserve">
+    <value>dia</value>
+  </data>
+  <data name="Car Name" xml:space="preserve">
+    <value>Nome do Carro</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Avaliação</value>
+  </data>
+  <data name="Vehicle Type" xml:space="preserve">
+    <value>Tipo de Veículo</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Selecione</value>
+  </data>
+  <data name="Sedan" xml:space="preserve">
+    <value>Sedã</value>
+  </data>
+  <data name="Sports" xml:space="preserve">
+    <value>Esportivo</value>
+  </data>
+  <data name="SUV" xml:space="preserve">
+    <value>SUV</value>
+  </data>
+  <data name="Valid From" xml:space="preserve">
+    <value>Válido de</value>
+  </data>
+  <data name="Valid Until" xml:space="preserve">
+    <value>Válido até</value>
+  </data>
+  <data name="Transmission" xml:space="preserve">
+    <value>Transmissão</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Automático</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="Mileage" xml:space="preserve">
+    <value>Quilometragem</value>
+  </data>
+  <data name="Fuel Type" xml:space="preserve">
+    <value>Tipo de Combustível</value>
+  </data>
+  <data name="Petrol" xml:space="preserve">
+    <value>Gasolina</value>
+  </data>
+  <data name="Diesel" xml:space="preserve">
+    <value>Diesel</value>
+  </data>
+  <data name="Hybrid" xml:space="preserve">
+    <value>Híbrido</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="United States" xml:space="preserve">
+    <value>Estados Unidos</value>
+  </data>
+  <data name="Canada" xml:space="preserve">
+    <value>Canadá</value>
+  </data>
+  <data name="Brazil" xml:space="preserve">
+    <value>Brasil</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Zip Code" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Galeria</value>
+  </data>
+  <data name="Upload Gallery Images" xml:space="preserve">
+    <value>Carregar Imagens da Galeria</value>
+  </data>
+  <data name="Upload Feature Image First, Image size should below 5MB" xml:space="preserve">
+    <value>Envie a Imagem de Destaque Primeiro, tamanho abaixo de 5MB</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="Add Flight" xml:space="preserve">
+    <value>Adicionar Voo</value>
+  </data>
+  <data name="Edit Flight" xml:space="preserve">
+    <value>Editar Voo</value>
+  </data>
+  <data name="Arrival &amp;Departure" xml:space="preserve">
+    <value>Chegada &amp; Partida</value>
+  </data>
+  <data name="Flight List" xml:space="preserve">
+    <value>Lista de Voos</value>
+  </data>
+  <data name="Flight" xml:space="preserve">
+    <value>Voo</value>
+  </data>
+  <data name="Ticket" xml:space="preserve">
+    <value>Passagem</value>
+  </data>
+  <data name="From - To" xml:space="preserve">
+    <value>De - Para</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>Preços</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>registros</value>
+  </data>
+  <data name="Travellers" xml:space="preserve">
+    <value>Viajantes</value>
+  </data>
+  <data name="Seats Left" xml:space="preserve">
+    <value>Assentos Restantes</value>
+  </data>
+  <data name="Airline Name" xml:space="preserve">
+    <value>Nome da Companhia Aérea</value>
+  </data>
+  <data name="Flight Name" xml:space="preserve">
+    <value>Nome do Voo</value>
+  </data>
+  <data name="Flight Number" xml:space="preserve">
+    <value>Número do Voo</value>
+  </data>
+  <data name="Arrival Date" xml:space="preserve">
+    <value>Data de Chegada</value>
+  </data>
+  <data name="Departure Date" xml:space="preserve">
+    <value>Data de Partida</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Para</value>
+  </data>
+  <data name="Frequently Asked Questions" xml:space="preserve">
+    <value>Perguntas Frequentes</value>
+  </data>
+  <data name="Stay Updated" xml:space="preserve">
+    <value>Fique Atualizado</value>
+  </data>
+  <data name="Signup for New Offers &amp; Updates from" xml:space="preserve">
+    <value>Cadastre-se para Novas Ofertas e Atualizações da</value>
+  </data>
+  <data name="Enter Email Address" xml:space="preserve">
+    <value>Digite o Endereço de Email</value>
+  </data>
+  <data name="Subscribe" xml:space="preserve">
+    <value>Inscrever-se</value>
+  </data>
+  <data name="Add Hotel" xml:space="preserve">
+    <value>Adicionar Hotel</value>
+  </data>
+  <data name="Edit Hotel" xml:space="preserve">
+    <value>Editar Hotel</value>
+  </data>
+  <data name="Hotel List" xml:space="preserve">
+    <value>Lista de Hotéis</value>
+  </data>
+  <data name="Room &amp; Guest" xml:space="preserve">
+    <value>Quarto e Hóspede</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="Add New" xml:space="preserve">
+    <value>Adicionar Novo</value>
+  </data>
+  <data name="Room Types" xml:space="preserve">
+    <value>Tipos de Quarto</value>
+  </data>
+  <data name="Popular Amenities" xml:space="preserve">
+    <value>Comodidades Populares</value>
+  </data>
+  <data name="Highlights" xml:space="preserve">
+    <value>Destaques</value>
+  </data>
+  <data name="Hotel Details" xml:space="preserve">
+    <value>Detalhes do Hotel</value>
+  </data>
+  <data name="Hotel Name" xml:space="preserve">
+    <value>Nome do Hotel</value>
+  </data>
+  <data name="Villa" xml:space="preserve">
+    <value>Villa</value>
+  </data>
+  <data name="Apartment" xml:space="preserve">
+    <value>Apartamento</value>
+  </data>
+  <data name="Guest House" xml:space="preserve">
+    <value>Casa de Hóspedes</value>
+  </data>
+  <data name="Lodge" xml:space="preserve">
+    <value>Pousada</value>
+  </data>
+  <data name="Edit Markup" xml:space="preserve">
+    <value>Editar Markup</value>
+  </data>
+  <data name="Markup" xml:space="preserve">
+    <value>Markup</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Usuário</value>
+  </data>
+  <data name="User List" xml:space="preserve">
+    <value>Lista de Usuários</value>
+  </data>
+  <data name="Add User" xml:space="preserve">
+    <value>Adicionar Usuário</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Editar Usuário</value>
+  </data>
+  <data name="Pages" xml:space="preserve">
+    <value>Páginas</value>
+  </data>
+  <data name="About Us" xml:space="preserve">
+    <value>Sobre Nós</value>
+  </data>
+  <data name="Destinations" xml:space="preserve">
+    <value>Destinos</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Suporte</value>
+  </data>
+  <data name="Contact Us" xml:space="preserve">
+    <value>Fale Conosco</value>
+  </data>
+  <data name="Privacy Policy" xml:space="preserve">
+    <value>Política de Privacidade</value>
+  </data>
+  <data name="Terms and Conditions" xml:space="preserve">
+    <value>Termos e Condições</value>
+  </data>
+  <data name="Refund Policy" xml:space="preserve">
+    <value>Política de Reembolso</value>
+  </data>
+  <data name="Social Medias" xml:space="preserve">
+    <value>Redes Sociais</value>
+  </data>
+  <data name="Customer Support" xml:space="preserve">
+    <value>Atendimento ao Cliente</value>
+  </data>
+  <data name="Drop Us an Email" xml:space="preserve">
+    <value>Envie-nos um Email</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="Flight Bookings" xml:space="preserve">
+    <value>Reservas de Voos</value>
+  </data>
+  <data name="Hotel Bookings" xml:space="preserve">
+    <value>Reservas de Hotéis</value>
+  </data>
+  <data name="Car Bookings" xml:space="preserve">
+    <value>Reservas de Carros</value>
+  </data>
+  <data name="Admin Users" xml:space="preserve">
+    <value>Usuários Administradores</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="Oneway" xml:space="preserve">
+    <value>Só Ida</value>
+  </data>
+  <data name="Round Trip" xml:space="preserve">
+    <value>Ida e Volta</value>
+  </data>
+  <data name="Search Location" xml:space="preserve">
+    <value>Pesquisar Localização</value>
+  </data>
+  <data name="Check In" xml:space="preserve">
+    <value>Check-in</value>
+  </data>
+  <data name="Check Out" xml:space="preserve">
+    <value>Check-out</value>
+  </data>
+  <data name="Guests" xml:space="preserve">
+    <value>Hóspedes</value>
+  </data>
+  <data name="Select Travelers" xml:space="preserve">
+    <value>Selecione os Viajantes</value>
+  </data>
+  <data name="Rooms" xml:space="preserve">
+    <value>Quartos</value>
+  </data>
+  <data name="Adults" xml:space="preserve">
+    <value>Adultos</value>
+  </data>
+  <data name="Childrens" xml:space="preserve">
+    <value>Crianças</value>
+  </data>
+  <data name="Yrs" xml:space="preserve">
+    <value>Anos</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Aplicar</value>
+  </data>
+  <data name="Price per Night" xml:space="preserve">
+    <value>Preço por Noite</value>
+  </data>
+  <data name="Same Drop-off" xml:space="preserve">
+    <value>Mesmo Local</value>
+  </data>
+  <data name="Different Drop off" xml:space="preserve">
+    <value>Local Diferente</value>
+  </data>
+  <data name="Search for Location" xml:space="preserve">
+    <value>Pesquisar Localização</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pesquisar</value>
+  </data>
+  <data name="Search for Car" xml:space="preserve">
+    <value>Pesquisar Carro</value>
+  </data>
+  <data name="Search for Airport" xml:space="preserve">
+    <value>Pesquisar Aeroporto</value>
+  </data>
+  <data name="Night" xml:space="preserve">
+    <value>Noite</value>
+  </data>
 </root>

@@ -38,9 +38,11 @@ namespace Web.Controllers
             }
             return View(model);
         }
-        public IActionResult Search()
+        public async Task<IActionResult> Search()
         {
-            return View();
+            var model = new CarSearchViewModel();
+            model.Itens = await _service.Get(new Car(), 0, 30);
+            return View(model);
         }
 
         [Authorize(Roles = "ADM")]

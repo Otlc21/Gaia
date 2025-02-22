@@ -50,6 +50,7 @@ namespace Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    model.Id = 1;
                     await _service.Update(_mapper.Map<Markup>(model));
                     TempData["SucessMessage"] = _localizer["Record saved successfully."];
                 }
