@@ -682,6 +682,15 @@ namespace Domain.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Going To.
+        /// </summary>
+        public static string Going_To {
+            get {
+                return ResourceManager.GetString("Going To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Guest House.
         /// </summary>
         public static string Guest_House {
@@ -795,6 +804,15 @@ namespace Domain.Resource {
         public static string Invalid_data_ {
             get {
                 return ResourceManager.GetString("Invalid data.", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leaving from.
+        /// </summary>
+        public static string Leaving_from {
+            get {
+                return ResourceManager.GetString("Leaving from", resourceCulture);
             }
         }
         

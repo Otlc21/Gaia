@@ -13,6 +13,8 @@ namespace DI
     {
         public static IServiceCollection AddDomainService(this IServiceCollection services)
         {
+            services.AddScoped<IAirportService, AirportService>();
+
             services.AddScoped<ICarService, CarService>();
 
             services.AddScoped<IFlightService, FlightService>();
@@ -35,6 +37,8 @@ namespace DI
 
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddScoped<IAirportRepository, AirportRepository>();
+
             services.AddScoped<ICarRepository, CarRepository>();
 
             services.AddScoped<IFlightRepository, FlightRepository>();

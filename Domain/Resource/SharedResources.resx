@@ -597,4 +597,10 @@
   <data name="Night" xml:space="preserve">
     <value>Night</value>
   </data>
+  <data name="Going To" xml:space="preserve">
+    <value>Going To</value>
+  </data>
+  <data name="Leaving from" xml:space="preserve">
+    <value>Leaving from</value>
+  </data>
 </root>
