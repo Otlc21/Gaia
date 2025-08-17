@@ -8,7 +8,31 @@ namespace Skeleton
 {
     public class DocIssuance_IssueTicket
     {
-        public string _xml = $@"";
+        public string _xml = $@"
+<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:sec=""http://xml.amadeus.com/2010/06/Security_v1"" xmlns:typ=""http://xml.amadeus.com/2010/06/Types_v1"" xmlns:iat=""http://www.iata.org/IATA/2007/00/IATA2010.1"" xmlns:app=""http://xml.amadeus.com/2010/06/AppMdw_CommonTypes_v3"" xmlns:link=""http://wsdl.amadeus.com/2010/06/ws/Link_v1"" xmlns:ses=""http://xml.amadeus.com/2010/06/Session_v3"">
+   <soapenv:Header xmlns:add=""http://www.w3.org/2005/08/addressing"">
+	<add:MessageID>${{#TestCase#MessageId}}</add:MessageID>
+	<add:Action>${{=request.operation.action}}</add:Action>
+	<add:To>${{#Endpoint}}/${{#Project#WSAP}}</add:To>
+	<awsse:Session TransactionStatusCode=""InSeries"" xmlns:awsse=""http://xml.amadeus.com/2010/06/Session_v3"">
+		<awsse:SessionId>${{#TestCase#SessionId}}</awsse:SessionId>
+		<awsse:SequenceNumber>${{=${{#TestCase#SequenceNumber}}+1}}</awsse:SequenceNumber>
+		<awsse:SecurityToken>${{#TestCase#SecurityToken}}</awsse:SecurityToken>
+	</awsse:Session>
+</soapenv:Header>
+   <soapenv:Body>
+      <DocIssuance_IssueTicket>
+         <optionGroup>
+            <switches>
+               <statusDetails>
+                  <indicator>RT</indicator>
+               </statusDetails>
+            </switches>
+         </optionGroup>
+      </DocIssuance_IssueTicket>
+   </soapenv:Body>
+</soapenv:Envelope>
+";
         public string _service = "TTKTIQ_15_1_1A";
 
         public string GetXML()
